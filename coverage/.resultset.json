@@ -343,6 +343,42 @@
         null,
         null
       ],
+      "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/contact_forms_controller.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/concerns/skip_authorization.rb": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
       "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/admin/users_controller.rb": [
         1,
         null,
@@ -450,42 +486,6 @@
         1,
         null
       ],
-      "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/concerns/skip_authorization.rb": [
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/contact_forms_controller.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/bwood/code/rails/5.1/ccc-class-planner/app/controllers/users/registrations_controller.rb": [
         1,
         1,
@@ -555,6 +555,6 @@
         null
       ]
     },
-    "timestamp": 1544048586
+    "timestamp": 1544052910
   }
 }
