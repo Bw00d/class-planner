@@ -25,7 +25,7 @@ It consists of a Rails 5.1.3 app, including:
 [better_errors](https://github.com/charliesome/better_errors).
 - Preconfigured test environment, including:
     - [RSpec](http://rspec.info),
-    [FactoryGirl](https://github.com/thoughtbot/factory_girl),
+    [FactoryBot](https://github.com/thoughtbot/factory_bot),
     [Capybara](https://github.com/teamcapybara/capybara) configured to work with
     [Selenium](http://www.seleniumhq.org/projects/webdriver/) and
     [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/),
