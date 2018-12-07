@@ -1,0 +1,106 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCC Fire</title>
+  <meta name="description" content="CCC Fire" />
+  
+  <link rel="stylesheet" media="all" href="/assets/application-a1cbf29a0f852f5ca99b2784cee7b9dda3569421ed1efbf3f8038e9b0470f8ab.css" data-turbolinks-track="reload" />
+  <script src="/assets/application-ed41dba3d303d24d91316ddb70749f7d8b8f2b95ec5e72a03ad1eb0eb41ab5f8.js" data-turbolinks-track="reload"></script>
+</head>
+
+<body class="sessions-controller new-action guest-layout">
+  <header>
+    <nav class="navbar-default navbar-fixed-top navbar-custom">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img class="navbar-logo d-md-none" alt="CCC Fire logo" src="/assets/logo-d87b28ed13a2649213c8bf12087be477df729296571c00572b22fde925ff1a06.png" />
+            </a><a class="navbar-brand" href="/">CCC FIRE</a>
+          
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+
+            <!-- <li></li> -->
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="/users/sign_up">Sign up</a></li>
+                <li><a href="/users/sign_in">Sign in</a></li>
+          </ul>
+
+        </div><!-- navbar-collapse -->
+      </div><!-- container-fluid -->
+    </nav>
+  </header>
+
+
+  <main role="main">
+    <div class="container-fluid">
+      <div id="flash-messages" class="row">
+      </div><!-- flash-messages -->
+
+      <div class="col-md-4 center-block">
+  <div class="panel panel-default devise-bs">
+    <div class="panel-heading">
+      <h4>Sign in</h4>
+    </div>
+    <div class="panel-body">
+      <form role="form" class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" />
+        <div class="form-group required">
+          <label for="user_email">E-mail</label>
+          <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />
+        </div>
+
+        <div class="form-group required">
+          <label for="user_password">Password</label>
+          <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" />
+        </div>
+
+          <div class="field">
+            <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+            <label for="user_remember_me">Remember me</label>
+          </div>
+
+        <input type="submit" name="commit" value="Sign in" class="btn btn-primary" data-disable-with="Sign in" />
+</form>    </div>
+  </div>
+  
+  <a href="/users/sign_up">Sign up</a><br />
+
+  <a href="/users/password/new">Forgot your password?</a><br />
+
+
+  <a href="/users/unlock/new">Didn't receive unlock instructions?</a><br />
+
+
+</div>
+
+    </div><!-- container-fluid -->
+  </main>
+
+  <footer>
+    <div class="container-fluid footer text-center">
+      <div class="row">
+        <footer class="footer">
+          <div class="container">
+            <p class="text-muted">© CCC Fire</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body></html>

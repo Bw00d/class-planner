@@ -16,9 +16,10 @@ FactoryBot.define do
       role { 'admin' }
     end
 
-    after(:create) do |user|
-      # Required when using Devise's confirmable module
-      user.confirm
-    end
+    # for confirmation only
+    # after(:create) do |user|
+    #   # Required when using Devise's confirmable module
+    #   # user.confirm
+    # end
   end
 end
