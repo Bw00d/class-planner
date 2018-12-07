@@ -3129,3 +3129,7 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 113ms (Views: 103.7ms | ActiveRecord: 2.4ms)
 
 
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
