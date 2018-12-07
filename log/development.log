@@ -3260,3 +3260,488 @@ DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood
 Completed 200 OK in 3869ms (Views: 3775.0ms | ActiveRecord: 39.0ms)
 
 
+Started GET "/courses/1" for 127.0.0.1 at 2018-12-07 12:04:41 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (1.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347854101080 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347854101080 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347854101080 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347854101080 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1845.0ms)
+Completed 200 OK in 1863ms (Views: 1856.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2018-12-07 12:05:39 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (0.7ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (56.4ms)
+Completed 200 OK in 71ms (Views: 64.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/courses/1/edit" for 127.0.0.1 at 2018-12-07 12:05:40 -0800
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/edit.html.erb within layouts/admin
+  Rendered courses/_form.html.erb (18.8ms)
+  Rendered courses/edit.html.erb within layouts/admin (23.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (92.4ms)
+Completed 200 OK in 134ms (Views: 125.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:05:45 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (67.3ms)
+Completed 200 OK in 86ms (Views: 78.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2018-12-07 12:06:15 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (1.0ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (69.6ms)
+Completed 200 OK in 89ms (Views: 81.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:10:32 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944668260 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944668260 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944668260 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944668260 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1791.0ms)
+Completed 200 OK in 1808ms (Views: 1801.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:14:44 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347846412980 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (97.3ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 1.8ms)
+
+
+
+Sass::SyntaxError - Undefined variable: "$primary-blue".:
+  sass (3.5.1) lib/sass/script/tree/variable.rb:49:in `_perform'
+  sass (3.5.1) lib/sass/script/tree/node.rb:50:in `perform'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+  sass (3.5.1) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.5.1) lib/sass/stack.rb:135:in `with_frame'
+  sass (3.5.1) lib/sass/stack.rb:79:in `with_base'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:162:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+  sass (3.5.1) lib/sass/stack.rb:88:in `block in with_import'
+  sass (3.5.1) lib/sass/stack.rb:135:in `with_frame'
+  sass (3.5.1) lib/sass/stack.rb:88:in `with_import'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+  sass (3.5.1) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.5.1) lib/sass/stack.rb:135:in `with_frame'
+  sass (3.5.1) lib/sass/stack.rb:79:in `with_base'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:162:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:52:in `visit_children'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:36:in `block in visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+  sass (3.5.1) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:161:in `visit'
+  sass (3.5.1) lib/sass/tree/visitors/perform.rb:10:in `visit'
+  sass (3.5.1) lib/sass/tree/root_node.rb:36:in `css_tree'
+  sass (3.5.1) lib/sass/tree/root_node.rb:20:in `render'
+  sass (3.5.1) lib/sass/engine.rb:290:in `render'
+  sass-rails (5.0.6) lib/sass/rails/template.rb:47:in `evaluate'
+  tilt (2.0.8) lib/tilt/template.rb:109:in `render'
+  sprockets (3.7.2) lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.7.2) lib/sprockets/utils.rb:200:in `dfs'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/base.rb:66:in `find_asset'
+  sprockets (3.7.2) lib/sprockets/base.rb:92:in `[]'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:355:in `find_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:347:in `find_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:229:in `block in lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:242:in `block in resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:241:in `resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:228:in `lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:170:in `block in stylesheet_link_tag'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:169:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2299691271980687624_70347846412980'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb___4399453571035156761_70347850899640'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.6.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.6.1) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/bwood/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+  bullet (5.6.1) lib/bullet/rack.rb:12:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.6) lib/rack/etag.rb:25:in `call'
+  rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.6) lib/rack/head.rb:12:in `call'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiler.rb:282:in `call'
+  railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/bee68f2b7e3587b5/variables" for 127.0.0.1 at 2018-12-07 12:14:44 -0800
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:15:07 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347866259960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347866259960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347866259960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347866259960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1712.1ms)
+Completed 200 OK in 1727ms (Views: 1721.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-12-07 12:15:35 -0800
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/admin
+  Rendered courses/_form.html.erb (1.5ms)
+  Rendered courses/new.html.erb within layouts/admin (6.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (64.1ms)
+Completed 200 OK in 89ms (Views: 80.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-12-07 12:16:00 -0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0WqnIWKs1VSefUc8BiHyPGl/0iMZyITIfuI2W95ozjHh61hsRlMS+3ICYwRlqnTFnQp9uFv+iaLWtjA/TyQRtg==", "course"=>{"title"=>"Firefighter Training", "course_number"=>"S-130", "description"=>"This course is designed to provide entry level firefighters skills. Field time is encouraged, and many of the units are set up so they can be taught in either the classroom or the field. The field exercise for Unit 12 is required. A version of L-180, Human Factors on the Fireline, has been included as part of this course.", "hours"=>"30-35.5"}, "commit"=>"SUBMIT"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "course_number", "hours", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Firefighter Training"], ["description", "This course is designed to provide entry level firefighters skills. Field time is encouraged, and many of the units are set up so they can be taught in either the classroom or the field. The field exercise for Unit 12 is required. A version of L-180, Human Factors on the Fireline, has been included as part of this course."], ["course_number", "S-130"], ["hours", "30-35.5"], ["created_at", "2018-12-07 20:16:00.202843"], ["updated_at", "2018-12-07 20:16:00.202843"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/2
+Completed 302 Found in 13ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2018-12-07 12:16:00 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (0.7ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (59.4ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:16:04 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (86.0ms)
+Completed 200 OK in 104ms (Views: 97.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-12-07 12:16:15 -0800
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/admin
+  Rendered courses/_form.html.erb (1.5ms)
+  Rendered courses/new.html.erb within layouts/admin (4.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (72.3ms)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-12-07 12:16:55 -0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tp17Qi9XUjmjQ1bqi6aji8lO37iqQwWeWLbg/hQkvaqGHIQPC6iVlk88ctLoLSVyPTtwI+h1CPTw4uaahWhiLQ==", "course"=>{"title"=>"Introduction to Wildland Fire Behavior", "course_number"=>"S-190", "description"=>"This course provides instruction in the primary factors affecting the start and spread of wildfire and recognition of potentially hazardous situations. S-190 is typically taught in conjunction with or prior to Basic Firefighter Training, S-130. It is designed to meet the fire behavior training needs of a firefighter type 2 (FFT2) on an incident as outlined in the PMS 310-1, Wildland Fire Qualification System Guide and the position task book developed for the position.", "hours"=>"6-8"}, "commit"=>"SUBMIT"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "course_number", "hours", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Introduction to Wildland Fire Behavior"], ["description", "This course provides instruction in the primary factors affecting the start and spread of wildfire and recognition of potentially hazardous situations. S-190 is typically taught in conjunction with or prior to Basic Firefighter Training, S-130. It is designed to meet the fire behavior training needs of a firefighter type 2 (FFT2) on an incident as outlined in the PMS 310-1, Wildland Fire Qualification System Guide and the position task book developed for the position."], ["course_number", "S-190"], ["hours", "6-8"], ["created_at", "2018-12-07 20:16:55.337435"], ["updated_at", "2018-12-07 20:16:55.337435"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/3
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/courses/3" for 127.0.0.1 at 2018-12-07 12:16:55 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (0.7ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (52.8ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:17:01 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (74.2ms)
+Completed 200 OK in 91ms (Views: 85.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-12-07 12:17:30 -0800
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/admin
+  Rendered courses/_form.html.erb (1.9ms)
+  Rendered courses/new.html.erb within layouts/admin (5.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (72.0ms)
+Completed 200 OK in 93ms (Views: 86.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-12-07 12:17:52 -0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sPOAYsI3KF9WeFrViztWfk12ITzBS1Xp+pcY9cRpZSGAcn8v5sjv8LoHfu3osNCHuQOOp4N9WINSwx6RVSW6pg==", "course"=>{"title"=>"Firefighter Type 1", "course_number"=>"S-131", "description"=>"Firefighter Type 1, S-131, is a twelve-hour course designed to meet the training needs of the Firefighter Type 1 (FFT1) and/or Incident Commander Type 5 (ICT5). This course is designed to be interactive in nature. It contains class discussion and several tactical decision games designed to facilitate learning the objectives. Topics include operational leadership, communications, LCES and tactical decision making.", "hours"=>"12"}, "commit"=>"SUBMIT"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "course_number", "hours", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Firefighter Type 1"], ["description", "Firefighter Type 1, S-131, is a twelve-hour course designed to meet the training needs of the Firefighter Type 1 (FFT1) and/or Incident Commander Type 5 (ICT5). This course is designed to be interactive in nature. It contains class discussion and several tactical decision games designed to facilitate learning the objectives. Topics include operational leadership, communications, LCES and tactical decision making."], ["course_number", "S-131"], ["hours", "12"], ["created_at", "2018-12-07 20:17:52.718584"], ["updated_at", "2018-12-07 20:17:52.718584"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/4
+Completed 302 Found in 12ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/courses/4" for 127.0.0.1 at 2018-12-07 12:17:52 -0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (1.0ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (81.2ms)
+Completed 200 OK in 97ms (Views: 90.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:17:56 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (4.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (73.4ms)
+Completed 200 OK in 94ms (Views: 86.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 12:57:18 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (3.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (72.1ms)
+Completed 200 OK in 88ms (Views: 82.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-12-07 13:01:16 -0800
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/admin (2.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.6ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347940882700 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347940882700 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347940882700 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347940882700 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1711.0ms)
+Completed 200 OK in 1727ms (Views: 1720.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-12-07 13:01:32 -0800
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/new.html.erb within layouts/admin
+  Rendered courses/_form.html.erb (1.3ms)
+  Rendered courses/new.html.erb within layouts/admin (3.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (65.8ms)
+Completed 200 OK in 85ms (Views: 77.8ms | ActiveRecord: 1.1ms)
+
+

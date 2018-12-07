@@ -20,11 +20,16 @@
 
 
 // Base colors
-$brand-primary: #D20000;
+$brand-primary: #242E62;
+$primary-red: #D20000;
 // Used in navbar and button hovers and in links
 $brand-light:           lighten(desaturate($brand-primary, 20%), 15%);
 // Used in form input field focus (glowing border), the "info" color
 $brand-lighter:         lighten(desaturate($brand-primary, 20%), 30%);
+
+$red-light:           lighten(desaturate($primary-red, 20%), 15%);
+
+$red-lighter:         lighten(desaturate($primary-red, 20%), 30%);
 
 // Shades of gray
 $gray-lighter:           lighten(#000, 93.5%);
@@ -151,14 +156,14 @@ label, dt {
 // Navbar
 $navbar-height:                    75px;
 $navbar-default-color:             white;
-$navbar-default-bg:                desaturate($brand-primary, 10%);
+$navbar-default-bg:                desaturate($primary-red, 10%);
 $navbar-default-link-color:                white;
 $navbar-default-link-hover-color:          white;
-$navbar-default-link-hover-bg:             $brand-light;
+$navbar-default-link-hover-bg:             $red-light;
 $navbar-default-link-active-color:         white;
-$navbar-default-link-active-bg:            $brand-light;
+$navbar-default-link-active-bg:            $red-light;
 $navbar-default-link-disabled-color:       $gray-lighter;
-$navbar-default-link-disabled-bg:          $brand-light;
+$navbar-default-link-disabled-bg:          $red-light;
 
 .navbar-nav {
   float: right;
