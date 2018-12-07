@@ -87,6 +87,14 @@ RSpec.configure do |config|
     end
   end
 
+  Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
   # Add ability to login/out programatically in controller specs (Devise)
   config.include Devise::Test::ControllerHelpers, type: :controller
   # Load the helpers in spec/support/helpers/devise_controller_spec_login.rb

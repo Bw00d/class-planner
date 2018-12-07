@@ -3133,3 +3133,130 @@ DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood
 DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
 DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
 DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from load at /Users/bwood/.rvm/gems/ruby-2.3.7/bin/rake:23)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+title { "Firefighter Training" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/bwood/code/rails/5.1/ccc-class-planner/spec/factories/courses.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "Course Description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/bwood/code/rails/5.1/ccc-class-planner/spec/factories/courses.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+course_number { "S-130" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/bwood/code/rails/5.1/ccc-class-planner/spec/factories/courses.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+hours { 1 }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <top (required)> at /Users/bwood/code/rails/5.1/ccc-class-planner/spec/factories/courses.rb:6)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(220963415657341770)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20181207191626)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (62.9ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "description" text, "course_number" character varying, "hours" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207191626"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(220963415657341770)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (134.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ccc_class_planner_test"[0m
+  [1m[35m (2780.3ms)[0m  [1m[35mCREATE DATABASE "ccc_class_planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses" CASCADE[0m
+  [1m[35m (26.8ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "description" text, "course_number" character varying, "hours" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "role" integer, "first_name" character varying, "last_name" character varying, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_slug" ON "users"  ("slug")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181207191626)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170816134443),
+(20170815132601);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-07 19:20:39.383599"], ["updated_at", "2018-12-07 19:20:39.383599"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-07 19:20:39.387627"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/courses/1" for 127.0.0.1 at 2018-12-07 12:00:56 -0800
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (2.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/admin
+  Rendered courses/show.html.erb within layouts/admin (2.6ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347924986460 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347924986460 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347924986460 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347924986460 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (3323.9ms)
+Completed 200 OK in 3869ms (Views: 3775.0ms | ActiveRecord: 39.0ms)
+
+

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-lg-8 center-block">
+    <%= link_to 'Back', courses_path %>
+    <div>
+      <strong>Title:</strong>
+      <%= @course.title %>
+    </div>
+
+    <div>
+      <strong>Course number:</strong>
+      <%= @course.course_number %>
+    </div>
+
+    <div>
+      <strong>Description:</strong>
+      <%= @course.description %>
+    </div>
+
+    <div>
+      <strong>Hours:</strong>
+      <%= @course.hours %>
+    </div>
+
+    <div>
+      <%= link_to (fa_icon('pencil-alt')), edit_course_path(@course), class: "btn edit-button btn-info"%></br>
+      <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+  </div>
+</div>

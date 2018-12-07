@@ -60,9 +60,11 @@ gem 'select2-rails'
 # Get e-mail notifications when exceptions happen in the production environment
 gem 'exception_notification'
 # Add this to update active job
+gem 'font_awesome5_rails'
 
 group :test do
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development, :test do
