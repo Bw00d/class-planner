@@ -55,6 +55,8 @@ controller and action allows the implementation of page-specific CSS and JS %>
                                                 method: 'delete' %></a></li>
                   </ul>
                 </li>
+                <li><%= link_to t('navigation.deliveries'), deliveries_path %></li>
+                <li><%= link_to t('navigation.courses'), courses_path %></li>
             <% else %>
                 <li><%= link_to t('navigation.sign-up'), new_user_registration_path %></li>
                 <li><%= link_to t('navigation.sign-in'), new_user_session_path %></li>

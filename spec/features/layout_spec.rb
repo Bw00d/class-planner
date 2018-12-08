@@ -27,7 +27,10 @@ describe 'layout and UI elements', type: :feature, js: true do
       login_as(ordinary_user)
       visit '/'
       expect(page).to have_selector('body.user-layout')
-
+      expect(page).to have_link(I18n.t('navigation.courses'),
+                                href: courses_path)
+      expect(page).to have_link(I18n.t('navigation.deliveries'),
+                                href: deliveries_path)
       expect(page).not_to have_link(I18n.t('navigation.users'),
                                     href: admin_users_path)
     end

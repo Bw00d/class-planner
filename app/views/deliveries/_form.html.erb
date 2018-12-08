@@ -1,0 +1,82 @@
+<%= form_with(model: delivery, local: true) do |form| %>
+  <% if delivery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+
+      <ul>
+      <% delivery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :course_number %>
+    <%= form.text_field :course_number, id: :delivery_course_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.text_field :course_id, id: :delivery_course_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credits %>
+    <%= form.text_field :credits, id: :delivery_credits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fees %>
+    <%= form.number_field :fees, id: :delivery_fees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seat_load %>
+    <%= form.number_field :seat_load, id: :delivery_seat_load %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date, id: :delivery_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, id: :delivery_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time, id: :delivery_start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time, id: :delivery_end_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_area :location, id: :delivery_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requestor %>
+    <%= form.text_field :requestor, id: :delivery_requestor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :poc %>
+    <%= form.text_field :poc, id: :delivery_poc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :delivery_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

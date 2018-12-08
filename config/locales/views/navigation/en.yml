@@ -1,6 +1,7 @@
 en:
   navigation:
-    home: Home
+    courses: Courses
+    deliveries: Deliveries
     users: Users
     contact: Contact
     sign-in: Sign in

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course number:</strong>
+  <%= @delivery.course_number %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @delivery.course_id %>
+</p>
+
+<p>
+  <strong>Credits:</strong>
+  <%= @delivery.credits %>
+</p>
+
+<p>
+  <strong>Fees:</strong>
+  <%= @delivery.fees %>
+</p>
+
+<p>
+  <strong>Seat load:</strong>
+  <%= @delivery.seat_load %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @delivery.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @delivery.end_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @delivery.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @delivery.end_time %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @delivery.location %>
+</p>
+
+<p>
+  <strong>Requestor:</strong>
+  <%= @delivery.requestor %>
+</p>
+
+<p>
+  <strong>Poc:</strong>
+  <%= @delivery.poc %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @delivery.notes %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_path(@delivery) %> |
+<%= link_to 'Back', deliveries_path %>
