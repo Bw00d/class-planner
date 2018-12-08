@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :deliveries
   root to: 'home#index'
 
   devise_for :users, controllers: {
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   # form_for is easier to use with a resourceful route
   resources :contact_forms, only: [:create]
   resources :courses
+  resources :deliveries
   # A non-resourceful route was used to place the contact form at /contact
   get 'contact' => 'contact_forms#new', as: 'contact'
 end
