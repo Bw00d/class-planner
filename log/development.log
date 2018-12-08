@@ -3783,3 +3783,495 @@ Processing by Admin::UsersController#new as HTML
 Completed 200 OK in 97ms (Views: 89.4ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:15:17 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (2.9ms)
+  Rendered admin/users/new.html.erb within layouts/admin (5.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (53.2ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:15:31 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (2.9ms)
+  Rendered admin/users/new.html.erb within layouts/admin (5.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (51.4ms)
+Completed 200 OK in 70ms (Views: 64.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:16:27 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.0ms)
+  Rendered admin/users/new.html.erb within layouts/admin (6.0ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (74.1ms)
+Completed 200 OK in 93ms (Views: 87.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:16:35 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (4.5ms)
+  Rendered admin/users/new.html.erb within layouts/admin (8.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (83.5ms)
+Completed 200 OK in 107ms (Views: 100.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:17:13 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (4.0ms)
+  Rendered admin/users/new.html.erb within layouts/admin (7.8ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (71.8ms)
+Completed 200 OK in 94ms (Views: 88.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:17:31 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.5ms)
+  Rendered admin/users/new.html.erb within layouts/admin (6.6ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (61.2ms)
+Completed 200 OK in 81ms (Views: 75.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:17:40 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.0ms)
+  Rendered admin/users/new.html.erb within layouts/admin (5.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (63.7ms)
+Completed 200 OK in 82ms (Views: 76.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:17:46 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.2ms)
+  Rendered admin/users/new.html.erb within layouts/admin (6.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (61.0ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:18:17 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.3ms)
+  Rendered admin/users/new.html.erb within layouts/admin (6.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (60.6ms)
+Completed 200 OK in 80ms (Views: 74.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:18:25 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.1ms)
+  Rendered admin/users/new.html.erb within layouts/admin (6.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (59.3ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:19:27 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.1ms)
+  Rendered admin/users/new.html.erb within layouts/admin (5.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (61.7ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 13:19:46 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.6ms)
+  Rendered admin/users/new.html.erb within layouts/admin (5.9ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (52.6ms)
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 14:10:37 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (3.7ms)
+  Rendered admin/users/new.html.erb within layouts/admin (7.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (69.9ms)
+Completed 200 OK in 92ms (Views: 85.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-12-07 14:10:43 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/users/new.html.erb within layouts/admin
+  Rendered admin/users/_form.html.erb (2.7ms)
+  Rendered admin/users/new.html.erb within layouts/admin (4.8ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (54.2ms)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:11:12 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (65.4ms)
+Completed 200 OK in 81ms (Views: 74.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:11:12 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (99.6ms)
+Completed 200 OK in 114ms (Views: 108.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:13:29 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957840020 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957840020 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957840020 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957840020 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1729.5ms)
+Completed 200 OK in 1744ms (Views: 1739.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:13:51 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347946984240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347946984240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347946984240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347946984240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1667.7ms)
+Completed 200 OK in 1683ms (Views: 1677.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:14:12 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347959972340 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347959972340 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347959972340 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347959972340 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1650.5ms)
+Completed 200 OK in 1665ms (Views: 1658.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:14:34 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347717490360 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347717490360 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347717490360 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347717490360 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1597.8ms)
+Completed 200 OK in 1611ms (Views: 1605.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:14:46 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (58.4ms)
+Completed 200 OK in 74ms (Views: 66.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:14:53 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (65.0ms)
+Completed 200 OK in 80ms (Views: 73.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:15:00 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (52.0ms)
+Completed 200 OK in 65ms (Views: 59.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:15:28 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347726861300 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347726861300 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:15:30 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347911537940 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347726861300 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347726861300 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (2116.8ms)
+Completed 200 OK in 2135ms (Views: 2129.3ms | ActiveRecord: 1.3ms)
+
+
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347911537940 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1938.7ms)
+Completed 200 OK in 2026ms (Views: 1956.8ms | ActiveRecord: 51.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:15:40 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (55.8ms)
+Completed 200 OK in 69ms (Views: 63.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:15:52 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957723840 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957723840 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957723840 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347957723840 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1670.6ms)
+Completed 200 OK in 1683ms (Views: 1678.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:17:17 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347947246960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347947246960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347947246960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347947246960 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1766.9ms)
+Completed 200 OK in 1780ms (Views: 1775.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:17:24 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944449800 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944449800 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944449800 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347944449800 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1691.2ms)
+Completed 200 OK in 1704ms (Views: 1699.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:17:31 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347925130140 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347925130140 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347925130140 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__2299691271980687624_70347925130140 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (1821.6ms)
+Completed 200 OK in 1835ms (Views: 1829.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:17:39 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (72.0ms)
+Completed 200 OK in 88ms (Views: 80.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:17:52 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (61.7ms)
+Completed 200 OK in 76ms (Views: 70.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:18:02 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (58.5ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:18:03 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (92.6ms)
+Completed 200 OK in 108ms (Views: 102.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:19:20 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (62.3ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:19:32 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.6ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (88.8ms)
+Completed 200 OK in 111ms (Views: 102.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:19:37 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (72.1ms)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:19:44 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.3ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (85.2ms)
+Completed 200 OK in 99ms (Views: 93.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:20:34 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (64.8ms)
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:23:25 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin
+  Rendered home/index.html.erb within layouts/admin (0.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.6ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (63.1ms)
+Completed 200 OK in 77ms (Views: 72.0ms | ActiveRecord: 0.9ms)
+
+
