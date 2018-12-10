@@ -10,10 +10,11 @@ RSpec.describe Delivery, type: :model do
   it { should respond_to :end_date }
   it { should respond_to :start_time }
   it { should respond_to :end_time }
-  it { should respond_to :location }
+  it { should respond_to :address }
   it { should respond_to :requestor }
   it { should respond_to :poc }
   it { should respond_to :notes }
+  it { should respond_to :booked }
 
   let(:valid_attributes) { FactoryBot.attributes_for(:delivery) }
 

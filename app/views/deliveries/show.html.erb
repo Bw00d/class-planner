@@ -1,13 +1,46 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Course number:</strong>
+  <strong>Course:</strong>
   <%= @delivery.course_number %>
 </p>
 
 <p>
   <strong>Course:</strong>
-  <%= @delivery.course_id %>
+  <%= @delivery.course.title %>
+</p>
+
+<p>
+  <strong>NWGC Equiv:</strong>
+  <%= @delivery.course.course_number %>
+</p>
+
+<p>
+  <strong>Dates:</strong>
+  <%= @delivery.start_date.try(:strftime, '%b %e') %> - <%= @delivery.end_date.try(:strftime,'%b %e, %Y') %> 
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @delivery.start_time.try(:strftime,'%l:%M%p') %> - <%= @delivery.end_time.try(:strftime,'%l:%M%p') %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @delivery.city %>, <%= @delivery.state %>
+</p>
+
+<p>
+  <strong>Requestor:</strong>
+  <%= @delivery.requestor %>
+</p>
+
+<p>
+  <strong>Point of Contact:</strong>
+  <%= simple_format(@delivery.poc) %>
+</p>
+
+<p>
+  <strong>Seat load:</strong>
+  <%= @delivery.seat_load %>
 </p>
 
 <p>
@@ -21,48 +54,8 @@
 </p>
 
 <p>
-  <strong>Seat load:</strong>
-  <%= @delivery.seat_load %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @delivery.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @delivery.end_date %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @delivery.start_time %>
-</p>
-
-<p>
-  <strong>End time:</strong>
-  <%= @delivery.end_time %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @delivery.location %>
-</p>
-
-<p>
-  <strong>Requestor:</strong>
-  <%= @delivery.requestor %>
-</p>
-
-<p>
-  <strong>Poc:</strong>
-  <%= @delivery.poc %>
-</p>
-
-<p>
   <strong>Notes:</strong>
-  <%= @delivery.notes %>
+  <%= simple_format(@delivery.notes) %>
 </p>
 
 <%= link_to 'Edit', edit_delivery_path(@delivery) %> |

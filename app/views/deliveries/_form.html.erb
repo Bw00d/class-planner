@@ -1,82 +1,94 @@
-<%= form_with(model: delivery, local: true) do |form| %>
+<%= form_with(model: delivery, local: true) do |f| %>
   <% if delivery.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
 
       <ul>
-      <% delivery.errors.full_messages.each do |message| %>
+      <% @delivery.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :course_number %>
-    <%= form.text_field :course_number, id: :delivery_course_number %>
+  <div class="form-group">
+    <%= f.label :course_number %>
+    <%= f.text_field :course_number, id: :delivery_course_number, class: "form-control", placeholder: "COURSE NUMBER(EX. FRP-190)" %>
   </div>
 
-  <div class="field">
-    <%= form.label :course_id %>
-    <%= form.text_field :course_id, id: :delivery_course_id %>
+  <div class="form-group">
+    <%= f.label :course_id %>
+    <%#= f.text_field :course_id, id: :delivery_course_id, class: "form-control" %>
+    <% courses_array = Course.all.map { |course| [course.course_number + " - " + course.title, course.id] } %>
+    <%= f.select(:course_id, options_for_select(courses_array), { prompt: "CHOOSE COURSE" } )%>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :credits %>
-    <%= form.text_field :credits, id: :delivery_credits %>
+  <div class="form-group">
+    <%= f.label :credits %>
+    <%= f.text_field :credits, id: :delivery_credits, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :fees %>
-    <%= form.number_field :fees, id: :delivery_fees %>
+  <div class="form-group">
+    <%= f.label :fees %>
+    <%= f.text_field :fees, id: :delivery_fees, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :seat_load %>
-    <%= form.number_field :seat_load, id: :delivery_seat_load %>
+  <div class="form-group">
+    <%= f.label :seat_load %>
+    <%= f.text_field :seat_load, id: :delivery_seat_load, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.date_select :start_date, id: :delivery_start_date %>
+  <div class="form-group">
+    <%= f.label :start_date %>
+    <%= f.date_select :start_date, id: :delivery_start_date, class: "form-control" %>
+    <%= f.label :start_time %>
+    <%= f.time_select :start_time, id: :delivery_start_time, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.date_select :end_date, id: :delivery_end_date %>
+  <div class="form-group">
+    <%= f.label :end_date %>
+    <%= f.date_select :end_date, id: :delivery_end_date, class: "form-control" %>
+    <%= f.label :end_time %>
+    <%= f.time_select :end_time, id: :delivery_end_time, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time, id: :delivery_start_time %>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_area :address, id: :delivery_address, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time, id: :delivery_end_time %>
+  <div class="form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city, id: :delivery_city, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_area :location, id: :delivery_location %>
+  <div class="form-group">
+    <%= f.label :state %>
+    <%= f.text_field :state, id: :delivery_state, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :requestor %>
-    <%= form.text_field :requestor, id: :delivery_requestor %>
+  <div class="form-group">
+    <%= f.label "Zipcode" %>
+    <%= f.text_field :zip, id: :delivery_zip, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :poc %>
-    <%= form.text_field :poc, id: :delivery_poc %>
+  <div class="form-group">
+    <%= f.label :requestor %>
+    <%= f.text_field :requestor, id: :delivery_requestor, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_area :notes, id: :delivery_notes %>
+  <div class="form-group">
+    <%= f.label :poc %>
+    <%= f.text_field :poc, id: :delivery_poc, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :notes %>
+    <%= f.text_area :notes, id: :delivery_notes, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit "SUBMIT", class: "btn btn-success" %>
   </div>
 <% end %>

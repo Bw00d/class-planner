@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20181208051451) do
 
   create_table "deliveries", force: :cascade do |t|
     t.string "course_number"
+    t.string "title"
+    t.string "nwcg_equiv"
+    t.string "hours"
     t.integer "course_id"
     t.integer "credits"
     t.integer "fees"
@@ -34,10 +37,14 @@ ActiveRecord::Schema.define(version: 20181208051451) do
     t.date "end_date"
     t.time "start_time"
     t.time "end_time"
-    t.text "location"
+    t.text "address"
     t.string "requestor"
     t.string "poc"
     t.text "notes"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.boolean "booked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -9,7 +9,7 @@ FactoryBot.define do
     end_date { "2018-12-07" }
     start_time { "2018-12-07 21:14:51" }
     end_time { "2018-12-07 21:14:51" }
-    location { "MyText" }
+    address { "MyText" }
     requestor { "MyString" }
     poc { "MyString" }
     notes { "MyText" }

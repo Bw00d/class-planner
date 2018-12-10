@@ -5,7 +5,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries
   # GET /deliveries.json
   def index
-    @deliveries = Delivery.all
+    @deliveries = Delivery.all.order('start_date ASC')
   end
 
   # GET /deliveries/1
@@ -70,6 +70,9 @@ class DeliveriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def delivery_params
-      params.require(:delivery).permit(:course_number, :course_id, :credits, :fees, :seat_load, :start_date, :end_date, :start_time, :end_time, :location, :requestor, :poc, :notes)
+      params.require(:delivery).permit(:course_number, :course_id, :credits, :fees,
+                                       :seat_load, :start_date, :end_date, :start_time,
+                                       :end_time, :city, :state, :requestor, :poc, :notes,
+                                       :zip, :booked)
     end
 end
