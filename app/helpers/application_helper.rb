@@ -46,4 +46,14 @@ module ApplicationHelper
 
     html.html_safe
   end
+
+  def display_location(place)
+    if place.city.present? && place.state.present?
+      place.city + ', ' + place.state
+    elsif place.city.present? && !place.state.present?
+      place.city
+    elsif !place.city.present? && place.state.present?
+      place.state
+    end
+  end
 end

@@ -26,7 +26,7 @@
             <td><%= delivery.course.course_number %></td>
             <td><%= delivery.start_date.strftime("%b %e") %> - <%= delivery.end_date.strftime("%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
-            <td><%= delivery.city %>, <%= delivery.state %></td>
+            <td><%= display_location(delivery) %></td>
         </tr>
       <% end %>
       </tbody>
