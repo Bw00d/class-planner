@@ -7,11 +7,11 @@ FactoryBot.define do
     seat_load { 1 }
     start_date { "2018-12-07" }
     end_date { "2018-12-07" }
-    start_time { "2018-12-07 21:14:51" }
-    end_time { "2018-12-07 21:14:51" }
+    times { "8am - 5pm" }
     address { "MyText" }
     requestor { "MyString" }
     poc { "MyString" }
     notes { "MyText" }
+    booked { false }
   end
 end

@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.7'
+ruby '2.4.5'
 
 # Choose between PostgreSQL and MySQL (comment out one of the following gems)
 gem 'pg', '~> 0.21.0'
@@ -70,6 +70,7 @@ gem 'best_in_place', '~> 3.0.1'
 group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
 end
 
 group :development, :test do

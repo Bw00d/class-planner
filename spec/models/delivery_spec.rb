@@ -8,8 +8,7 @@ RSpec.describe Delivery, type: :model do
   it { should respond_to :seat_load }
   it { should respond_to :start_date }
   it { should respond_to :end_date }
-  it { should respond_to :start_time }
-  it { should respond_to :end_time }
+  it { should respond_to :times }
   it { should respond_to :address }
   it { should respond_to :requestor }
   it { should respond_to :poc }
