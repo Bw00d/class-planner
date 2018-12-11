@@ -1,103 +1,106 @@
-<%= link_to 'ALL DELIVERIES', deliveries_path, class: 'btn btn-info' %>
-</br></br>
-<p>
-  <strong>Course:</strong>
-  <%= best_in_place @delivery, :course_number, :as => :input %>
-</p> 
+<div id="delivery" class="container">
+  <div class="row">
+    <%= link_to 'ALL DELIVERIES', deliveries_path, class: 'btn btn-info' %>
+    </br></br>
+      <div class="col-sm-4">
+        <strong>Course:</strong>
+        <%= best_in_place @delivery, :course_number, :as => :input %>
+      </div>
+      <div class="col-sm-4">
+        <strong>Title:</strong>
+        <%= @delivery.course.title %>
+      </div>
+      <div class="col-sm-4">
+        <strong>NWGC Equiv:</strong>
+        <%= @delivery.course.course_number %>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-sm-4">
+        <strong>Dates:</strong>
+          <%= @delivery.start_date.try(:strftime, '%b %e') %> - <%= @delivery.end_date.try(:strftime,'%b %e, %Y') %> 
+      </div>
+      <div class="col-sm-4">
+        <strong>Time:</strong>
+        <%= @delivery.times %>
+      </div>
+      <div class="col-sm-4">
+        <strong>Location:</strong>
+          <%= display_location(@delivery) %>
+      </div>
+    </div>
 
-<p>
-  <strong>Course:</strong>
-  <%= @delivery.course.title %>
-</p>
+    <div class="row">
+      <div class="col-sm-4">
+        <strong>Association:</strong>
+        <%= @delivery.requestor %>
+      </div>
+      <div class="col-sm-8">
+        <strong>Point of Contact:</strong>
+        <%= @delivery.poc %>
+      </div>
+    </div>
 
-<p>
-  <strong>NWGC Equiv:</strong>
-  <%= @delivery.course.course_number %>
-</p>
+    <div class="row">
+      <div class="col-sm-4">
+        <strong>Seat load:</strong>
+        <%= @delivery.seat_load %>
+      </div>
+      <div class="col-sm-4">
+        <strong>Credits:</strong>
+        <%= @delivery.credits %>
+      </div>
+      <div class="col-sm-4">
+        <strong>Fees:</strong>
+        <%= @delivery.fees %>
+      </div>
+    </div>
+  </br>
+    <div>
+      <span class="md-margin-right"><%= check_box_tag 'Scheduled', @delivery.booked, @delivery.booked, disabled: true %>
+          <%= label_tag 'Scheduled' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Has audio/visual', @delivery.audio_visual, @delivery.audio_visual, disabled: true %>
+          <%= label_tag 'Has audio/visual' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Flyer sent', @delivery.flyer_sent, @delivery.flyer_sent, disabled: true %>
+          <%= label_tag 'Flyer sent' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Reg form', @delivery.reg_form, @delivery.reg_form, disabled: true %>
+        <%= label_tag 'Reg form' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Roster', @delivery.roster, @delivery.roster, disabled: true %>
+        <%= label_tag 'Roster' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Welcome Letter', @delivery.welcome_letter, @delivery.welcome_letter, disabled: true %>
+        <%= label_tag 'Welcome Letter' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Agenda', @delivery.agenda, @delivery.agenda, disabled: true %>
+        <%= label_tag 'Agenda' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Materials', @delivery.materials, @delivery.materials, disabled: true %>
+        <%= label_tag 'Materials' %></span>
+    
+        <span class="md-margin-right"><%= check_box_tag 'Certificates', @delivery.certificates, @delivery.certificates, disabled: true %>
+        <%= label_tag 'Certificates' %></span>
+  
+        <span class="md-margin-right"><%= check_box_tag 'TA', @delivery.ta, @delivery.ta, disabled: true %>
+        <%= label_tag 'TA' %></span>
+  
+        <span class="md-margin-right"><%= check_box_tag 'Invoiced', @delivery.invoiced, @delivery.invoiced, disabled: true %>
+        <%= label_tag 'Invoiced' %></span>
+  
+        <span class="md-margin-right"><%= check_box_tag 'FAC', @delivery.fac, @delivery.fac, disabled: true %>
+        <%= label_tag 'FAC' %></span>
+      </div>
 
-<p>
-  <strong>Dates:</strong>
-  <%= @delivery.start_date.try(:strftime, '%b %e') %> - <%= @delivery.end_date.try(:strftime,'%b %e, %Y') %> 
-</p>
+  </p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @delivery.times %>
-</p>
+  <p>
+    <strong>Notes:</strong>
+    <%= simple_format(@delivery.notes) %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= display_location(@delivery) %>
-</p>
-
-<p>
-  <strong>Requestor:</strong>
-  <%= @delivery.requestor %>
-</p>
-
-<p>
-  <strong>Point of Contact:</strong>
-  <%= @delivery.poc %>
-</p>
-
-<p>
-  <strong>Seat load:</strong>
-  <%= @delivery.seat_load %>
-</p>
-
-<p>
-  <strong>Credits:</strong>
-  <%= @delivery.credits %>
-</p>
-
-<p>
-  <strong>Fees:</strong>
-  <%= @delivery.fees %>
-</p>
-
-<p>
-  <div class="md-margin-right"><%= check_box_tag 'Scheduled', @delivery.booked, @delivery.booked, disabled: true %>
-    <%= label_tag 'Scheduled' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Has audio/visual', @delivery.audio_visual, @delivery.audio_visual, disabled: true %>
-    <%= label_tag 'Has audio/visual' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Flyer sent', @delivery.flyer_sent, @delivery.flyer_sent, disabled: true %>
-    <%= label_tag 'Flyer sent' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Reg form', @delivery.reg_form, @delivery.reg_form, disabled: true %>
-  <%= label_tag 'Reg form' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Roster', @delivery.roster, @delivery.roster, disabled: true %>
-  <%= label_tag 'Roster' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Welcome Letter', @delivery.welcome_letter, @delivery.welcome_letter, disabled: true %>
-  <%= label_tag 'Welcome Letter' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Agenda', @delivery.agenda, @delivery.agenda, disabled: true %>
-  <%= label_tag 'Agenda' %></div>
-
-  <div class="md-margin-right"><%= check_box_tag 'Materials', @delivery.materials, @delivery.materials, disabled: true %>
-  <%= label_tag 'Materials' %></div>
-
-    <div class="md-margin-right"><%= check_box_tag 'Certificates', @delivery.certificates, @delivery.certificates, disabled: true %>
-    <%= label_tag 'Certificates' %></div>
-
-    <div class="md-margin-right"><%= check_box_tag 'TA', @delivery.ta, @delivery.ta, disabled: true %>
-    <%= label_tag 'TA' %></div>
-
-    <div class="md-margin-right"><%= check_box_tag 'Invoiced', @delivery.invoiced, @delivery.invoiced, disabled: true %>
-    <%= label_tag 'Invoiced' %></div>
-
-    <div class="md-margin-right"><%= check_box_tag 'FAC', @delivery.fac, @delivery.fac, disabled: true %>
-    <%= label_tag 'FAC' %></div>
-
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= simple_format(@delivery.notes) %>
-</p>
-
-<%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+  <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+</div>

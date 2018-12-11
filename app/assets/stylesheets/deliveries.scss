@@ -10,6 +10,11 @@ $gray-lightest:          lighten(#000, 98%);
     display: inline;
   }
 }
+#delivery {
+  div {
+    line-height: 2em;
+  }
+}
 
 table.delivery-table tr:hover td {
   background-color: $gray-lighter;
