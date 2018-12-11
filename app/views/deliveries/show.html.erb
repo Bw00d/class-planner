@@ -1,7 +1,8 @@
 <p>
   <strong>Course:</strong>
-  <%= @delivery.course_number %>
-</p>
+  <%= best_in_place @delivery, :course_number, :as => :input %>
+</p> 
+
 
 <p>
   <strong>Course:</strong>

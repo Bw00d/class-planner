@@ -63,6 +63,7 @@ gem 'exception_notification'
 gem 'font_awesome5_rails'
 gem 'bootstrap-datepicker-rails'
 gem 'american_date'
+gem 'best_in_place', '~> 3.0.1'
 
 group :test do
   gem 'database_cleaner'

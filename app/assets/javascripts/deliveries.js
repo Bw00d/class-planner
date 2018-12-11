@@ -3,4 +3,6 @@
 
 $(document).ready(function(){
   $('.datepicker').datepicker();
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
 });

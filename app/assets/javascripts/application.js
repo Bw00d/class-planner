@@ -23,4 +23,5 @@
 //= require sweetalert2/dist/sweetalert2
 //= require font_awesome5
 //= require bootstrap-datepicker
+//= require best_in_place
 //= require_tree .
