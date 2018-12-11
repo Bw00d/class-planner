@@ -6,7 +6,7 @@
     <h4>Deliveries</h4>
     <div class="table-responsive">
       
-    <table class="table">
+    <table class="table delivery-table">
       <thead>
         <tr>
           <th>Course</th>
@@ -20,7 +20,7 @@
       <tbody>
           
           <% @deliveries.each do |delivery| %>
-        <tr data-link="<%= delivery_path(delivery) %>">
+        <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= delivery.course_number %></td>
             <td><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>

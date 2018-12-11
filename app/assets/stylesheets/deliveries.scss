@@ -1,8 +1,16 @@
 // Place all the styles related to the Deliveries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Shades of gray
+$gray-lighter:           lighten(#000, 93.5%);
+$gray-lightest:          lighten(#000, 98%);
 #deliveries {
   li {
     display: inline;
   }
+}
+
+table.delivery-table tr:hover td {
+background-color: $gray-lighter;
 }

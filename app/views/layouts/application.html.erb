@@ -44,6 +44,8 @@ controller and action allows the implementation of page-specific CSS and JS %>
           <ul class="nav navbar-nav navbar-right">
             <%# Devise %>
             <% if user_signed_in? %>
+                <li><%= link_to t('navigation.deliveries'), deliveries_path %></li>
+                <li><%= link_to t('navigation.courses'), courses_path %></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b><%= current_user.full_name %></b> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -55,8 +57,6 @@ controller and action allows the implementation of page-specific CSS and JS %>
                                                 method: 'delete' %></a></li>
                   </ul>
                 </li>
-                <li><%= link_to t('navigation.deliveries'), deliveries_path %></li>
-                <li><%= link_to t('navigation.courses'), courses_path %></li>
             <% else %>
                 <li><%= link_to t('navigation.sign-up'), new_user_registration_path %></li>
                 <li><%= link_to t('navigation.sign-in'), new_user_session_path %></li>
