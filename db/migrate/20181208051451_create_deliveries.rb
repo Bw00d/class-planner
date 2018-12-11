@@ -11,8 +11,7 @@ class CreateDeliveries < ActiveRecord::Migration[5.1]
       t.integer :seat_load
       t.date    :start_date
       t.date    :end_date
-      t.time    :start_time
-      t.time    :end_time
+      t.string  :times
       t.text    :address
       t.string  :requestor
       t.string  :poc

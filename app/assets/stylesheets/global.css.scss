@@ -306,3 +306,7 @@ dt, dd {
     color: $link-hover-color !important;
   }
 }
+
+.datepicker {
+  z-index:1001 !important;
+}

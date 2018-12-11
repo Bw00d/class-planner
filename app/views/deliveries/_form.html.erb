@@ -1,94 +1,102 @@
-<%= form_with(model: delivery, local: true) do |f| %>
-  <% if delivery.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+<div class="row">
+  <div class="sm-8-col">
+    <%= form_with(model: delivery, local: true) do |f| %>
+      <% if delivery.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
 
-      <ul>
-      <% @delivery.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @delivery.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :course_number %>
-    <%= f.text_field :course_number, id: :delivery_course_number, class: "form-control", placeholder: "COURSE NUMBER(EX. FRP-190)" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :course_number %>
+        <%= f.text_field :course_number, id: :delivery_course_number, class: "form-control", placeholder: "COURSE NUMBER(EX. FRP-190)" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :course_id %>
-    <%#= f.text_field :course_id, id: :delivery_course_id, class: "form-control" %>
-    <% courses_array = Course.all.map { |course| [course.course_number + " - " + course.title, course.id] } %>
-    <%= f.select(:course_id, options_for_select(courses_array), { prompt: "CHOOSE COURSE" } )%>
-    
-  </div>
+      <div class="form-group">
+        <% courses_array = Course.all.map { |course| [course.course_number + " - " + course.title, course.id] } %>
+        <%= f.select(:course_id, options_for_select(courses_array), { prompt: "CHOOSE COURSE" } )%>
+        
+      </div>
 
-  <div class="form-group">
-    <%= f.label :credits %>
-    <%= f.text_field :credits, id: :delivery_credits, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label "Association" %>
+        <%= f.text_field :requestor, id: :delivery_requestor, class: "form-control", placeholder: "REQUEST ASSOCIATION" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :fees %>
-    <%= f.text_field :fees, id: :delivery_fees, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :start_date %>
+        <%= f.text_field :start_date, id: :delivery_start_date, :data => {:provide => "datepicker"}, 
+                         class: "form-control", placeholder: "START DATE" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :seat_load %>
-    <%= f.text_field :seat_load, id: :delivery_seat_load, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :end_date %>
+        <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"}, class: "form-control", placeholder: "END DATE" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :start_date %>
-    <%= f.date_select :start_date, id: :delivery_start_date, class: "form-control" %>
-    <%= f.label :start_time %>
-    <%= f.time_select :start_time, id: :delivery_start_time, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :times %>
+        <%= f.text_field :times, id: :delivery_times,  class: "form-control", placeholder: "TIMES" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :end_date %>
-    <%= f.date_select :end_date, id: :delivery_end_date, class: "form-control" %>
-    <%= f.label :end_time %>
-    <%= f.time_select :end_time, id: :delivery_end_time, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_area :address, id: :delivery_address, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_area :address, id: :delivery_address, class: "form-control", placeholder: "ADDRESS" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :city %>
-    <%= f.text_field :city, id: :delivery_city, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, id: :delivery_city, class: "form-control", placeholder: "CITY" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :state %>
-    <%= f.text_field :state, id: :delivery_state, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :state %>
+        <%= f.text_field :state, id: :delivery_state, class: "form-control", placeholder: "STATE" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label "Zipcode" %>
-    <%= f.text_field :zip, id: :delivery_zip, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label "Zipcode" %>
+        <%= f.text_field :zip, id: :delivery_zip, class: "form-control", placeholder: "ZIPCODE" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :requestor %>
-    <%= f.text_field :requestor, id: :delivery_requestor, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :poc %>
-    <%= f.text_field :poc, id: :delivery_poc, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :poc %>
+        <%= f.text_area :poc, id: :delivery_poc, class: "form-control", placeholder: "POINT OF CONTACT" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :notes %>
-    <%= f.text_area :notes, id: :delivery_notes, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :credits %>
+        <%= f.text_field :credits, id: :delivery_credits, class: "form-control", placeholder: "CREDITS" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "SUBMIT", class: "btn btn-success" %>
+      <div class="form-group">
+        <%= f.label :fees %>
+        <%= f.text_field :fees, id: :delivery_fees, class: "form-control", placeholder: "FEES" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :seat_load %>
+        <%= f.text_field :seat_load, id: :delivery_seat_load, class: "form-control", placeholder: "SEAT LOAD" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :notes %>
+        <%= f.text_area :notes, id: :delivery_notes, class: "form-control", placeholder: "NOTES" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "SUBMIT", class: "btn btn-success" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
+

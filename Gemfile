@@ -61,6 +61,8 @@ gem 'select2-rails'
 gem 'exception_notification'
 # Add this to update active job
 gem 'font_awesome5_rails'
+gem 'bootstrap-datepicker-rails'
+gem 'american_date'
 
 group :test do
   gem 'database_cleaner'
