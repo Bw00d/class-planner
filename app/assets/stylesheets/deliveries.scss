@@ -12,5 +12,6 @@ $gray-lightest:          lighten(#000, 98%);
 }
 
 table.delivery-table tr:hover td {
-background-color: $gray-lighter;
+  background-color: $gray-lighter;
+  cursor: pointer;
 }
