@@ -1,3 +1,5 @@
+<%= link_to 'ALL DELIVERIES', deliveries_path, class: 'btn btn-info' %>
+</br></br>
 <p>
   <strong>Course:</strong>
   <%= best_in_place @delivery, :course_number, :as => :input %>
@@ -59,5 +61,4 @@
   <%= simple_format(@delivery.notes) %>
 </p>
 
-<%= link_to 'Edit', edit_delivery_path(@delivery) %> |
-<%= link_to 'Back', deliveries_path %>
+<%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
