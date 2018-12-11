@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181211201922) do
+ActiveRecord::Schema.define(version: 20181211212508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 20181211201922) do
     t.datetime "updated_at", null: false
     t.boolean "flyer_sent", default: false
     t.boolean "audio_visual", default: false
+    t.boolean "term_master", default: false
+    t.boolean "reg_form", default: false
+    t.boolean "roster", default: false
+    t.boolean "welcome_letter", default: false
+    t.boolean "agenda", default: false
+    t.boolean "materials", default: false
+    t.boolean "ta", default: false
+    t.boolean "invoiced", default: false
+    t.boolean "certificates", default: false
+    t.boolean "fac", default: false
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|

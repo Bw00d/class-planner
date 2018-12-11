@@ -16462,3 +16462,158 @@ Migrating to ChangeFeeColumnOnDeliveries (20181211201922)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-11 20:21:24.023419"], ["key", "environment"]]
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(220963415657341770)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRosterToDeliveries (20181211212508)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "term_master" boolean DEFAULT 'f'[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "reg_form" boolean DEFAULT 'f'[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "roster" boolean DEFAULT 'f'[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "welcome_letter" boolean DEFAULT 'f'[0m
+  [1m[35m (5.8ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "agenda" boolean DEFAULT 'f'[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "materials" boolean DEFAULT 'f'[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "ta" boolean DEFAULT 'f'[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "invoiced" boolean DEFAULT 'f'[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "certifcates" boolean DEFAULT 'f'[0m
+  [1m[35m (5.6ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "fac" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181211212508"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(220963415657341770)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (136.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ccc_class_planner_test"[0m
+  [1m[35m (324.2ms)[0m  [1m[35mCREATE DATABASE "ccc_class_planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "description" text, "course_number" character varying, "hours" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "deliveries" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "deliveries" ("id" bigserial primary key, "course_number" character varying, "title" character varying, "nwcg_equiv" character varying, "hours" character varying, "course_id" integer, "credits" integer, "fees" character varying, "seat_load" integer, "start_date" date, "end_date" date, "times" character varying, "address" text, "requestor" character varying, "poc" character varying, "notes" text, "city" character varying, "state" character varying, "zip" character varying, "booked" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "flyer_sent" boolean DEFAULT 'f', "audio_visual" boolean DEFAULT 'f', "term_master" boolean DEFAULT 'f', "reg_form" boolean DEFAULT 'f', "roster" boolean DEFAULT 'f', "welcome_letter" boolean DEFAULT 'f', "agenda" boolean DEFAULT 'f', "materials" boolean DEFAULT 'f', "ta" boolean DEFAULT 'f', "invoiced" boolean DEFAULT 'f', "certifcates" boolean DEFAULT 'f', "fac" boolean DEFAULT 'f')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "role" integer, "first_name" character varying, "last_name" character varying, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_slug" ON "users"  ("slug")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181211212508)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181211201922),
+(20181207191626),
+(20181211201547),
+(20170816134443),
+(20181208051451),
+(20170815132601);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-11 21:31:02.083446"], ["updated_at", "2018-12-11 21:31:02.083446"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-11 21:31:02.086596"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(220963415657341770)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRosterToDeliveries (20181211212508)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "fac"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "certifcates"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "invoiced"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "ta"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "materials"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "agenda"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "welcome_letter"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "roster"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "reg_form"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "deliveries" DROP "term_master"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181211212508"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(220963415657341770)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(220963415657341770)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRosterToDeliveries (20181211212508)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "term_master" boolean DEFAULT 'f'[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "reg_form" boolean DEFAULT 'f'[0m
+  [1m[35m (5.1ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "roster" boolean DEFAULT 'f'[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "welcome_letter" boolean DEFAULT 'f'[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "agenda" boolean DEFAULT 'f'[0m
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "materials" boolean DEFAULT 'f'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "ta" boolean DEFAULT 'f'[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "invoiced" boolean DEFAULT 'f'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "certificates" boolean DEFAULT 'f'[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "deliveries" ADD "fac" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181211212508"]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(220963415657341770)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (128.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ccc_class_planner_test"[0m
+  [1m[35m (242.7ms)[0m  [1m[35mCREATE DATABASE "ccc_class_planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "courses" ("id" bigserial primary key, "title" character varying, "description" text, "course_number" character varying, "hours" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "deliveries" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "deliveries" ("id" bigserial primary key, "course_number" character varying, "title" character varying, "nwcg_equiv" character varying, "hours" character varying, "course_id" integer, "credits" integer, "fees" character varying, "seat_load" integer, "start_date" date, "end_date" date, "times" character varying, "address" text, "requestor" character varying, "poc" character varying, "notes" text, "city" character varying, "state" character varying, "zip" character varying, "booked" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "flyer_sent" boolean DEFAULT 'f', "audio_visual" boolean DEFAULT 'f', "term_master" boolean DEFAULT 'f', "reg_form" boolean DEFAULT 'f', "roster" boolean DEFAULT 'f', "welcome_letter" boolean DEFAULT 'f', "agenda" boolean DEFAULT 'f', "materials" boolean DEFAULT 'f', "ta" boolean DEFAULT 'f', "invoiced" boolean DEFAULT 'f', "certificates" boolean DEFAULT 'f', "fac" boolean DEFAULT 'f')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "failed_attempts" integer DEFAULT 0 NOT NULL, "unlock_token" character varying, "locked_at" timestamp, "role" integer, "first_name" character varying, "last_name" character varying, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_slug" ON "users"  ("slug")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181211212508)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181211201922),
+(20181207191626),
+(20181211201547),
+(20170816134443),
+(20181208051451),
+(20170815132601);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-11 21:45:53.743216"], ["updated_at", "2018-12-11 21:45:53.743216"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-11 21:45:53.746837"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m

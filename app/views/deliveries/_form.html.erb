@@ -88,15 +88,42 @@
       </div>
       <div class="form-group">
 
-        <%= f.check_box :booked %>
-        <%= f.label :booked, "Scheduled", id: :delivery_booked, class: "md-margin-right" %>
-        <%= f.check_box :audio_visual %>
-        <%= f.label :audio_visual, "Has audio/visual", id: :audio_visual_booked, class: "md-margin-right" %>
-        <%= f.check_box :flyer_sent %>
-        <%= f.label :flyer_sent, "Flyer Sent", id: :flyer_sent_booked, class: "md-margin-right" %>
-       
-      </div>
+        <span class='form-group md-margin-right'><%= f.check_box :booked %>
+                <%= f.label :booked, "Scheduled", id: :delivery_booked %></span>
 
+        <span class='form-group md-margin-right'><%= f.check_box :audio_visual %>
+                <%= f.label :audio_visual, "Has audio/visual", id: :audio_visual_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :flyer_sent %>
+                <%= f.label :flyer_sent, "Flyer Sent", id: :flyer_sent_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :reg_form %>
+                <%= f.label :reg_form, "Reg form", id: :reg_form_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :roster %>
+                <%= f.label :roster, "Roster", id: :roster_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :welcome_letter %>
+                <%= f.label :welcome_letter, "Welcome letter", id: :welcome_letter_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :agenda %>
+                <%= f.label :agenda, "Agenda", id: :agenda_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :materials %>
+                <%= f.label :materials, "Materials", id: :materials_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :certificates %>
+                <%= f.label :certificates, "Certificates", id: :certificates_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :ta %>
+                <%= f.label :ta, "TA", id: :ta_booked %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :invoiced %>
+                <%= f.label :invoiced, "Invoiced", id: :invoiced_booked %></span>
+
+       <span class='form-group md-margin-right'> <%= f.check_box :fac %>
+                     <%= f.label :fac, "FAC", id: :fac_booked %></span>      
+      </div>
 
       <div class="form-group">
         <%= f.label :notes %>

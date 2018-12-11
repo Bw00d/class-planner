@@ -14,6 +14,17 @@ RSpec.describe Delivery, type: :model do
   it { should respond_to :poc }
   it { should respond_to :notes }
   it { should respond_to :booked }
+  it { should respond_to :reg_form }
+  it { should respond_to :roster }
+  it { should respond_to :welcome_letter }
+  it { should respond_to :agenda }
+  it { should respond_to :materials }
+  it { should respond_to :ta }
+  it { should respond_to :invoiced }
+  it { should respond_to :certificates }
+  it { should respond_to :fac }
+  it { should respond_to :audio_visual }
+
 
   let(:valid_attributes) { FactoryBot.attributes_for(:delivery) }
 

@@ -73,6 +73,8 @@ class DeliveriesController < ApplicationController
       params.require(:delivery).permit(:course_number, :course_id, :credits, :fees,
                                        :seat_load, :start_date, :end_date, :times,
                                        :city, :state, :requestor, :poc, :notes,
-                                       :zip, :booked, :address, :flyer_sent, :audio_visual)
+                                       :zip, :booked, :address, :flyer_sent, :audio_visual,
+                                       :reg_form, :roster, :welcome_letter, :agenda,
+                                       :materials, :ta, :invoiced, :certificates, :fac)
     end
 end
