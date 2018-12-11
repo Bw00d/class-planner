@@ -57,6 +57,14 @@
 </p>
 
 <p>
+  <%= check_box_tag 'Scheduled', @delivery.booked, @delivery.booked, disabled: true %>
+  <%= label_tag 'Scheduled' %>
+  <span class="md-margin-left"><%= check_box_tag 'Flyer sent', @delivery.flyer_sent, @delivery.flyer_sent, disabled: true %>
+    <%= label_tag 'Flyer sent' %></span>
+
+</p>
+
+<p>
   <strong>Notes:</strong>
   <%= simple_format(@delivery.notes) %>
 </p>
