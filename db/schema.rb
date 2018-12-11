@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181208051451) do
+ActiveRecord::Schema.define(version: 20181211201922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20181208051451) do
     t.string "hours"
     t.integer "course_id"
     t.integer "credits"
-    t.integer "fees"
+    t.string "fees"
     t.integer "seat_load"
     t.date "start_date"
     t.date "end_date"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20181208051451) do
     t.boolean "booked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "flyer_sent", default: false
+    t.boolean "audio_visual", default: false
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
