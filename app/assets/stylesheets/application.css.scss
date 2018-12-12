@@ -19,5 +19,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'font_awesome5';
+.fontawesome-i2svg-pending body {
+  display: none;
+}
 
 // Put "global" SCSS code in global.scss, not here.

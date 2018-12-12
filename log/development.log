@@ -18835,3 +18835,590 @@ Processing by Commontator::ThreadsController#show as JS
 Completed 200 OK in 65ms (Views: 47.9ms | ActiveRecord: 4.9ms)
 
 
+Started GET "/deliveries/1" for 127.0.0.1 at 2018-12-11 16:45:44 -0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (1.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 1], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.1ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 2], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 2]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (403.4ms)
+  Rendered deliveries/show.html.erb within layouts/admin (456.8ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__3836013061587300941_70179661173880 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb__3836013061587300941_70179661173880 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (2012.1ms)
+Completed 500 Internal Server Error in 2566ms (ActiveRecord: 45.7ms)
+
+
+
+LoadError - cannot load such file -- coffee_script:
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `block in require'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:258:in `load_dependency'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+  sprockets (3.7.2) lib/sprockets/autoload/coffee_script.rb:1:in `<top (required)>'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `block in require'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:258:in `load_dependency'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+  sprockets (3.7.2) lib/sprockets/coffee_script_processor.rb:15:in `cache_key'
+  sprockets (3.7.2) lib/sprockets/coffee_script_processor.rb:20:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.7.2) lib/sprockets/utils.rb:200:in `dfs'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/base.rb:66:in `find_asset'
+  sprockets (3.7.2) lib/sprockets/base.rb:73:in `find_all_linked_assets'
+  sprockets (3.7.2) lib/sprockets/manifest.rb:142:in `block in find'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:209:in `stat_directory'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:227:in `stat_tree'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:105:in `block in logical_paths'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:104:in `logical_paths'
+  sprockets (3.7.2) lib/sprockets/manifest.rb:140:in `find'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:50:in `precompiled_assets'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:35:in `asset_precompiled?'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:251:in `block (3 levels) in <class:Railtie>'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:359:in `precompiled?'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:363:in `raise_unless_precompiled_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:348:in `find_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:229:in `block in lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:242:in `block in resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:241:in `resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:228:in `lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:170:in `block in stylesheet_link_tag'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:169:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3836013061587300941_70179661173880'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb___3624179697732040230_70179677854080'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.6.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.6.1) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/bwood/.rvm/rubies/ruby-2.4.5/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+  bullet (5.6.1) lib/bullet/rack.rb:12:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.6) lib/rack/etag.rb:25:in `call'
+  rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.6) lib/rack/head.rb:12:in `call'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiler.rb:282:in `call'
+  railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/329027f36b66f4d3/variables" for 127.0.0.1 at 2018-12-11 16:45:47 -0800
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-11 16:45:54 -0800
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (1.3ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" ORDER BY start_date ASC[0m
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (6.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (99.5ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 3.3ms)
+
+
+
+LoadError - cannot load such file -- coffee_script:
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `block in require'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:258:in `load_dependency'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+  sprockets (3.7.2) lib/sprockets/autoload/coffee_script.rb:1:in `<top (required)>'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `block in require'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:258:in `load_dependency'
+  activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+  sprockets (3.7.2) lib/sprockets/coffee_script_processor.rb:15:in `cache_key'
+  sprockets (3.7.2) lib/sprockets/coffee_script_processor.rb:20:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.7.2) lib/sprockets/utils.rb:200:in `dfs'
+  sprockets (3.7.2) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.7.2) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.7.2) lib/sprockets/loader.rb:134:in `load_from_unloaded'
+  sprockets (3.7.2) lib/sprockets/loader.rb:60:in `block in load'
+  sprockets (3.7.2) lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+  sprockets (3.7.2) lib/sprockets/loader.rb:44:in `load'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.7.2) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.7.2) lib/sprockets/base.rb:66:in `find_asset'
+  sprockets (3.7.2) lib/sprockets/base.rb:73:in `find_all_linked_assets'
+  sprockets (3.7.2) lib/sprockets/manifest.rb:142:in `block in find'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:209:in `stat_directory'
+  sprockets (3.7.2) lib/sprockets/path_utils.rb:227:in `stat_tree'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:105:in `block in logical_paths'
+  sprockets (3.7.2) lib/sprockets/legacy.rb:104:in `logical_paths'
+  sprockets (3.7.2) lib/sprockets/manifest.rb:140:in `find'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:50:in `precompiled_assets'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:35:in `asset_precompiled?'
+  sprockets-rails (3.2.1) lib/sprockets/railtie.rb:251:in `block (3 levels) in <class:Railtie>'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:359:in `precompiled?'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:363:in `raise_unless_precompiled_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:348:in `find_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:229:in `block in lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:242:in `block in resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:241:in `resolve_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:228:in `lookup_debug_asset'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:170:in `block in stylesheet_link_tag'
+  sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:169:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3836013061587300941_70179665446100'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb___3624179697732040230_70179622733380'
+  actionview (5.1.6.1) lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:168:in `instrument'
+  actionview (5.1.6.1) lib/action_view/template.rb:352:in `instrument_render_template'
+  actionview (5.1.6.1) lib/action_view/template.rb:155:in `render'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.1.6.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.6.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.6.1) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.6.1) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/bwood/.rvm/rubies/ruby-2.4.5/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.6.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.6.1) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+  actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiling_methods.rb:102:in `block in profile_method'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+  actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+  bullet (5.6.1) lib/bullet/rack.rb:12:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.6) lib/rack/etag.rb:25:in `call'
+  rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.6) lib/rack/head.rb:12:in `call'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+  rack-mini-profiler (0.10.5) lib/mini_profiler/profiler.rb:282:in `call'
+  railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/dba5c843f3f5bd4c/variables" for 127.0.0.1 at 2018-12-11 16:46:30 -0800
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-11 16:47:31 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (2.7ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" ORDER BY start_date ASC[0m
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (59.7ms)
+  Rendered layouts/_base_menu_items.html.erb (0.4ms)
+  Rendering layouts/application.html.erb
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb___1874617244307492086_70215479102240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss to /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.scss. (called from _app_views_layouts_application_html_erb___1874617244307492086_70215479102240 at /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/layouts/application.html.erb:9)
+  Rendered layouts/application.html.erb (2771.2ms)
+Completed 200 OK in 3288ms (Views: 3216.7ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/deliveries/new" for 127.0.0.1 at 2018-12-11 16:47:37 -0800
+Processing by DeliveriesController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/new.html.erb within layouts/admin
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered deliveries/_form.html.erb (18.2ms)
+  Rendered deliveries/new.html.erb within layouts/admin (20.8ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (192.9ms)
+Completed 200 OK in 228ms (Views: 220.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-11 16:47:39 -0800
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (1.0ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" ORDER BY start_date ASC[0m
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (5.6ms)
+  Rendered layouts/_base_menu_items.html.erb (0.5ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (193.6ms)
+Completed 200 OK in 215ms (Views: 208.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/deliveries/2" for 127.0.0.1 at 2018-12-11 16:47:41 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.7ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.9ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 2], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 1], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 1]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (29.7ms)
+  Rendered deliveries/show.html.erb within layouts/admin (64.7ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (182.5ms)
+Completed 200 OK in 262ms (Views: 235.3ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/commontator/threads/1" for 127.0.0.1 at 2018-12-11 16:47:44 -0800
+Processing by Commontator::ThreadsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.6ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.7ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 2], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mCACHE Delivery Load (0.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (0.9ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 1], ["LIMIT", 1]]
+  Rendering /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/show.js.erb
+  [1m[36mCommontator::Comment Load (1.5ms)[0m  [1m[34mSELECT "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY created_at ASC[0m  [["thread_id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mCommontator::Comment Load (1.4ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_actions.html.erb (4.3ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_votes.html.erb (1.3ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_body.html.erb (1.3ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_show.html.erb (22.5ms)
+  [1m[36mCACHE Commontator::Comment Load (0.0ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_actions.html.erb (1.7ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_votes.html.erb (0.1ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_body.html.erb (0.5ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_show.html.erb (15.2ms)
+  [1m[36mCACHE Commontator::Comment Load (0.0ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_actions.html.erb (2.1ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_votes.html.erb (0.1ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_body.html.erb (0.6ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_show.html.erb (16.0ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_list.html.erb (89.9ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/_reply.html.erb (1.3ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/_hide_show_links.js.erb (0.4ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/_show.html.erb (109.8ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/_show.js.erb (114.1ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/threads/show.js.erb (119.2ms)
+Completed 200 OK in 156ms (Views: 131.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/commontator/threads/1/comments/new" for 127.0.0.1 at 2018-12-11 16:47:47 -0800
+Processing by Commontator::CommentsController#new as JS
+  Parameters: {"thread_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.6ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.6ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/new.js.erb
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/_form.html.erb (1.9ms)
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/new.js.erb (7.0ms)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/commontator/threads/1/comments" for 127.0.0.1 at 2018-12-11 16:47:50 -0800
+Processing by Commontator::CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "per_page"=>"", "comment"=>{"body"=>""}, "cancel"=>"Cancel", "thread_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.6ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.6ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/cancel.js.erb
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/comments/cancel.js.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 21.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/deliveries/2" for 127.0.0.1 at 2018-12-11 16:47:51 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.6ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.8ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 2], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.1ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 1]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (8.6ms)
+  Rendered deliveries/show.html.erb within layouts/admin (17.4ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (180.4ms)
+Completed 200 OK in 210ms (Views: 199.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-11 16:47:59 -0800
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (1.2ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" ORDER BY start_date ASC[0m
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (6.6ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (175.6ms)
+Completed 200 OK in 199ms (Views: 190.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/deliveries/1" for 127.0.0.1 at 2018-12-11 16:48:01 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.6ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.8ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 1], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.9ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.9ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 2]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (9.1ms)
+  Rendered deliveries/show.html.erb within layouts/admin (17.9ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (177.9ms)
+Completed 200 OK in 209ms (Views: 197.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/deliveries/1" for 127.0.0.1 at 2018-12-11 16:48:05 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.7ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 1], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.8ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.0ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 2]]
+  Rendered /Users/bwood/.rvm/gems/ruby-2.4.5/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (7.0ms)
+  Rendered deliveries/show.html.erb within layouts/admin (15.5ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (173.9ms)
+Completed 200 OK in 203ms (Views: 191.9ms | ActiveRecord: 5.7ms)
+
+
