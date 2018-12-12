@@ -97,10 +97,13 @@
 
   </p>
 
-  <p>
+ <!--  <p>
     <strong>Notes:</strong>
     <%= simple_format(@delivery.notes) %>
-  </p>
+  </p> -->
 
   <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+  </br>
+  <div><%= commontator_thread(@delivery) %></div>
 </div>
+

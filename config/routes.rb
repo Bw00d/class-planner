@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :deliveries
   # A non-resourceful route was used to place the contact form at /contact
   get 'contact' => 'contact_forms#new', as: 'contact'
+
+  # for commontator
+  mount Commontator::Engine => '/commontator'
 end

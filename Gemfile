@@ -66,6 +66,7 @@ gem 'font_awesome5_rails'
 gem 'bootstrap-datepicker-rails'
 gem 'american_date'
 gem 'best_in_place', '~> 3.0.1'
+gem 'commontator', '~> 5.1.0'
 
 group :test do
   gem 'database_cleaner'

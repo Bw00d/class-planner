@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // Shades of gray
+$gray-light:           lighten(#000, 75%);
 $gray-lighter:           lighten(#000, 93.5%);
 $gray-lightest:          lighten(#000, 98%);
 #deliveries {
@@ -19,4 +20,27 @@ $gray-lightest:          lighten(#000, 98%);
 table.delivery-table tr:hover td {
   background-color: $gray-lighter;
   cursor: pointer;
+}
+.comment_avatar {
+  -moz-border-radius: 4em/4em;
+    -webkit-border-radius: 4em 4em;
+    border-radius: 4em/4em; 
+    width:4em;
+    height:4em; 
+    margin-bottom: 0;
+
+    overflow: hidden;  
+    img {
+      width: 100%;
+      height: auto;
+      min-height: 4em;
+      min-width: 4em;
+    }
+}
+.comment_timestamp {
+  color: $gray-light;
+  margin-top: -10px;
+}
+.comment {
+  border: none;
 }

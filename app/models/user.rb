@@ -4,6 +4,8 @@ class User < ApplicationRecord
   include FriendlyId
   friendly_id :full_name, use: :slugged
 
+  acts_as_commontator
+
   # Roles used by the authorization setup
   enum role: { user: 0, admin: 1 }
 
