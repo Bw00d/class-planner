@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // Shades of gray
+$gray:           lighten(#000, 25%);
 $gray-light:           lighten(#000, 75%);
 $gray-lighter:           lighten(#000, 93.5%);
 $gray-lightest:          lighten(#000, 98%);
@@ -43,4 +44,30 @@ table.delivery-table tr:hover td {
 }
 .comment {
   border: none;
+}
+.thread_new_comment_link a, .thread_hide a {
+  background-color: $gray-lighter !important;
+  /*color: #444;*/
+  -moz-border-radius: .25em/.25em;
+    -webkit-border-radius: .25em .25em;
+    border-radius: .25em/.25em; 
+    padding: 5px 10px;
+}
+.comment_form_actions {
+  input {
+    background-color: $gray-lighter !important;
+    -moz-border-radius: .25em/.25em;
+    -webkit-border-radius: .25em .25em;
+    border-radius: .25em/.25em; 
+    border: none;
+  }
+}
+.comment_form_field {
+  textarea {
+    height: 5em !important;
+    border-color: $gray-light !important; 
+    -moz-border-radius: 4px/4px;
+    -webkit-border-radius: 4px 4px;
+    border-radius: 4px/4px;
+  }
 }
