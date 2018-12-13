@@ -8987,6 +8987,11 @@ button.close {
 .fa5-text {
   padding-left: 5px;
 }
+
+/* line 22, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/application.css.scss */
+.fontawesome-i2svg-pending body {
+  display: none;
+}
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -11781,23 +11786,23 @@ http://www.strangerstudios.com/sandbox/pagination/diggstyle.php */
   left: -2px !important;
   top: -2px !important;
 }
-/* line 10, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 11, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 #deliveries li {
   display: inline;
 }
 
-/* line 15, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 16, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 #delivery div {
   line-height: 2em;
 }
 
-/* line 20, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 21, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 table.delivery-table tr:hover td {
   background-color: #eeeeee;
   cursor: pointer;
 }
 
-/* line 24, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 25, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_avatar {
   -moz-border-radius: 4em/4em;
   -webkit-border-radius: 4em 4em;
@@ -11807,7 +11812,7 @@ table.delivery-table tr:hover td {
   margin-bottom: 0;
   overflow: hidden;
 }
-/* line 33, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 34, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_avatar img {
   width: 100%;
   height: auto;
@@ -11815,15 +11820,43 @@ table.delivery-table tr:hover td {
   min-width: 4em;
 }
 
-/* line 40, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 41, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_timestamp {
   color: #bfbfbf;
   margin-top: -10px;
 }
 
-/* line 44, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 45, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment {
   border: none;
+}
+
+/* line 48, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.thread_new_comment_link a, .thread_hide a {
+  background-color: #eeeeee !important;
+  /*color: #444;*/
+  -moz-border-radius: .25em/.25em;
+  -webkit-border-radius: .25em .25em;
+  border-radius: .25em/.25em;
+  padding: 5px 10px;
+}
+
+/* line 57, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.comment_form_actions input {
+  background-color: #eeeeee !important;
+  -moz-border-radius: .25em/.25em;
+  -webkit-border-radius: .25em .25em;
+  border-radius: .25em/.25em;
+  border: none;
+}
+
+/* line 66, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.comment_form_field textarea {
+  height: 5em !important;
+  border-color: #bfbfbf !important;
+  -moz-border-radius: 4px/4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px/4px;
 }
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
@@ -12422,4 +12455,20 @@ dt, dd {
   width: 35px;
   height: 35px;
   color: black;
+}
+
+/* line 195, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.no-new-line {
+  display: inline-block;
+}
+/* line 197, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.no-new-line p {
+  margin: 0 !important;
+  line-height: 1.25em;
+}
+
+/* line 202, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.left-mar {
+  display: absolute;
+  left: 50px;
 }
