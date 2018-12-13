@@ -19868,3 +19868,33 @@ Processing by DeliveriesController#edit as HTML
 Completed 200 OK in 194ms (Views: 186.9ms | ActiveRecord: 2.2ms)
 
 
+Started DELETE "/deliveries/1" for 127.0.0.1 at 2018-12-13 11:32:18 -0800
+Processing by DeliveriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qcqFrEme0VoWEHif2AKoigDkdaGiT7P4bLsHU4hppzeeYU0bvyFDvuED8/51CgJr2b8d+DJAPMigcwpEdAp0+w==", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.8ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 1], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mCommontator::Comment Load (0.8ms)[0m  [1m[34mSELECT "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 2]]
+  [1m[36mCommontator::Subscription Load (0.8ms)[0m  [1m[34mSELECT "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."thread_id" = $1[0m  [["thread_id", 2]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "commontator_threads" WHERE "commontator_threads"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "deliveries" WHERE "deliveries"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/deliveries
+Completed 302 Found in 23ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-13 11:32:18 -0800
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (0.9ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" ORDER BY start_date ASC[0m
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (3.8ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (174.0ms)
+Completed 200 OK in 189ms (Views: 183.0ms | ActiveRecord: 2.5ms)
+
+
