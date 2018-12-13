@@ -19,7 +19,7 @@
       </thead>
       <tbody>
           
-          <% @deliveries.each do |delivery| %>
+          <% @deliveries.scheduled.each do |delivery| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= delivery.course_number %></td>
             <td><%= delivery.course.title %></td>
@@ -31,6 +31,33 @@
       <% end %>
       </tbody>
     </table>
+    <% if !@deliveries.unscheduled.empty? %>
+    <table class="table delivery-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Title</th>
+          <th>NWCG</th>
+          <th>Dates</th>
+          <th>Association</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>UNSCHEDULED</tr>
+          <% @deliveries.unscheduled.each do |delivery| %>
+        <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
+            <td><%= delivery.course_number %></td>
+            <td><%= delivery.course.title %></td>
+            <td><%= delivery.course.course_number %></td>
+            <td><%= delivery.start_date.strftime("%b %e") %> - <%= delivery.end_date.strftime("%b %e, %Y") %></td>
+            <td><%= delivery.requestor %></td>
+            <td><%= display_location(delivery) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <% end %>
     </div>
      
   

@@ -2,6 +2,9 @@ class Delivery < ApplicationRecord
 
   acts_as_commontable dependent: :destroy
 
+  scope :scheduled, -> { where(booked: true) }
+  scope :unscheduled, -> { where(booked: false) }
+
   def course
     Course.find(self.course_id)
   end
