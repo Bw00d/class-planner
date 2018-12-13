@@ -48,7 +48,7 @@
       </thead>
       <tbody>
           <tr>UNSCHEDULED</tr>
-          <% @deliveries.unscheduled.each do |delivery, n| %>
+          <% @deliveries.unscheduled.each_with_index do |delivery, n| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= n+1 %></td>
             <td><%= delivery.course_number %></td>
