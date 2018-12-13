@@ -9,6 +9,7 @@
     <table class="table delivery-table">
       <thead>
         <tr>
+          <th>#</th>
           <th>Course</th>
           <th>Title</th>
           <th>NWCG</th>
@@ -19,8 +20,9 @@
       </thead>
       <tbody>
           
-          <% @deliveries.scheduled.each do |delivery| %>
+          <% @deliveries.scheduled.each_with_index do |delivery, n| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
+          <td><%= n+1 %></td>
             <td><%= delivery.course_number %></td>
             <td><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>

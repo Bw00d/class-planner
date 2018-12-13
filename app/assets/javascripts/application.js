@@ -24,4 +24,5 @@
 //= require font_awesome5
 //= require bootstrap-datepicker
 //= require best_in_place
+//= require jquery.validate
 //= require_tree .

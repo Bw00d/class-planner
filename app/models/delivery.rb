@@ -2,6 +2,8 @@ class Delivery < ApplicationRecord
 
   acts_as_commontable dependent: :destroy
 
+  validates :course_id, presence: true
+
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
 
