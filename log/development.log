@@ -20992,3 +20992,21 @@ Started POST "/__better_errors/43cce09029102dd0/variables" for 127.0.0.1 at 2018
   [1m[36mCACHE Delivery Load (0.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" ORDER BY start_date ASC LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mCACHE Delivery Load (0.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" ORDER BY start_date ASC LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mCACHE Delivery Load (0.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" ORDER BY start_date ASC LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/deliveries" for 127.0.0.1 at 2018-12-13 12:40:04 -0800
+Processing by DeliveriesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering deliveries/index.html.erb within layouts/admin
+  [1m[36mDelivery Load (1.0ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" WHERE "deliveries"."booked" = $1 ORDER BY start_date ASC[0m  [["booked", "t"]]
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "deliveries" WHERE "deliveries"."booked" = $1 LIMIT $2[0m  [["booked", "f"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.9ms)[0m  [1m[34mSELECT "deliveries".* FROM "deliveries" WHERE "deliveries"."booked" = $1 ORDER BY start_date ASC[0m  [["booked", "f"]]
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered deliveries/index.html.erb within layouts/admin (11.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (191.4ms)
+Completed 200 OK in 217ms (Views: 204.8ms | ActiveRecord: 6.6ms)
+
+
