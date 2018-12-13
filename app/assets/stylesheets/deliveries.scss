@@ -71,3 +71,24 @@ table.delivery-table tr:hover td {
     border-radius: 4px/4px;
   }
 }
+.course-boxes {
+  label {
+    margin-right: 15px;
+  }
+  input {
+    margin-right: 3px;
+  }
+}
+.course-button {
+    background: #D2D2D2;
+    -moz-border-radius: 40px/40px;
+    -webkit-border-radius: 40px 40px;
+    border-radius: 40px/40px;
+    padding: 5px 15px; 
+    float: left;
+    margin-right: 10px;
+    a {
+        color: black;
+    }
+    margin-bottom: 10px;
+}

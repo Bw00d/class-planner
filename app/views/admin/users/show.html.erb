@@ -1,18 +1,41 @@
-<div class="page-header">
-  <h1><%= t('.page_title') %></h1>
-</div>
+<div class="row">
+  <div class="col-md-8 center-block">
+    <div class="page-header">
+      <h1><%= t('.page_title') %></h1>
+    </div>
+  
+    <dl class="dl-horizontal">
+      <div class="no-link-underline float-right">
+        <%= render partial: 'actions', locals: {user: @user} %>
+      </div>
+  
+      <dt><%= t('.email') %></dt>
+      <dd><%= mail_to @user.email %></dd>
+  
+      <dt><%= t('.role') %></dt>
+      <dd><%= @user.role %></dd>
+  
+      <dt><%= t('.full_name') %></dt>
+      <dd><%= @user.full_name %></dd>
+      <dt>Lead Courses</dl>
+      <% @user.lead_quals.each do |c| %>
+        <% if c.course_id %>
+        <dd><%= c.find_course.course_number %></dt>
+          <% end %>
+        <% end %>
 
-<dl class="dl-horizontal">
-  <div class="no-link-underline float-right">
-    <%= render partial: 'actions', locals: {user: @user} %>
+    </dl>
+
+    <div class="form-group">
+    <div class="col-sm-8 center-block course-boxes">
+      <h3>Lead Instructor Qualifictions</h3>
+    </br>
+      <%= form_for @lead_quals do |f| %>
+        <%= f.collection_check_boxes :course_id, Course.all, :id, :course_number %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.submit %>
+      <% end %>
+    </div>
   </div>
-
-  <dt><%= t('.email') %></dt>
-  <dd><%= mail_to @user.email %></dd>
-
-  <dt><%= t('.role') %></dt>
-  <dd><%= @user.role %></dd>
-
-  <dt><%= t('.full_name') %></dt>
-  <dd><%= @user.full_name %></dd>
-</dl>
+  </div>
+</div>
