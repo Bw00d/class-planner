@@ -5,8 +5,13 @@
     </div>
     </br>
     <h3 class="centered">Edit Delivery</h3>
-<%= render 'form', delivery: @delivery %>
-
+    <%= render 'form', delivery: @delivery %>
+    <div class="row">
+      <div>
+        <br>
+        <%= link_to 'DELETE THIS DELIVERY', @delivery, method: :delete, class: 'btn btn-danger float-right' %>
+      </div>
+    </div>
   </div>
 </div>
 
