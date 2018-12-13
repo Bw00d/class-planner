@@ -26,7 +26,7 @@
             <td><%= delivery.course_number %></td>
             <td><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
-            <td><%= delivery.start_date.strftime("%b %e") %> - <%= delivery.end_date.strftime("%b %e, %Y") %></td>
+            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
         </tr>
@@ -52,7 +52,7 @@
             <td><%= delivery.course_number %></td>
             <td><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
-            <td><%= delivery.start_date.strftime("%b %e") %> - <%= delivery.end_date.strftime("%b %e, %Y") %></td>
+            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
         </tr>
