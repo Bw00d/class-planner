@@ -191,3 +191,15 @@
   height: 35px;
   color: black;
 }
+
+.no-new-line {
+  display: inline-block;
+  p {
+    margin: 0 !important;
+    line-height: 1.25em;
+  }
+}
+.left-mar {
+  display: absolute;
+  left: 50px;
+}

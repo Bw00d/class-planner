@@ -19699,3 +19699,61 @@ Processing by DeliveriesController#edit as HTML
 Completed 200 OK in 224ms (Views: 214.2ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/deliveries/2" for 127.0.0.1 at 2018-12-13 10:54:08 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.2ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (1.2ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 2], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (1.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 1]]
+  Rendered commontator/shared/_thread.html.erb (422.1ms)
+  Rendered deliveries/show.html.erb within layouts/admin (480.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.2ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (859.1ms)
+Completed 200 OK in 1450ms (Views: 1321.2ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/commontator/threads/1" for 127.0.0.1 at 2018-12-13 10:54:11 -0800
+Processing by Commontator::ThreadsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.6ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.7ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.8ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 2], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mCACHE Delivery Load (0.0ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.0ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 1], ["LIMIT", 1]]
+  Rendering commontator/threads/show.js.erb
+  [1m[36mCommontator::Comment Load (1.5ms)[0m  [1m[34mSELECT "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY created_at ASC[0m  [["thread_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[36mCommontator::Comment Load (1.4ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered commontator/comments/_actions.html.erb (4.8ms)
+  Rendered commontator/comments/_votes.html.erb (1.2ms)
+  Rendered commontator/comments/_body.html.erb (0.9ms)
+  Rendered commontator/comments/_show.html.erb (16.1ms)
+  [1m[36mCACHE Commontator::Comment Load (0.0ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered commontator/comments/_actions.html.erb (1.6ms)
+  Rendered commontator/comments/_votes.html.erb (0.1ms)
+  Rendered commontator/comments/_body.html.erb (0.5ms)
+  Rendered commontator/comments/_show.html.erb (9.3ms)
+  [1m[36mCACHE Commontator::Comment Load (0.0ms)[0m  [1m[34mSELECT  "commontator_comments".* FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1 ORDER BY "commontator_comments"."id" DESC LIMIT $2[0m  [["thread_id", 1], ["LIMIT", 1]]
+  Rendered commontator/comments/_actions.html.erb (1.5ms)
+  Rendered commontator/comments/_votes.html.erb (0.1ms)
+  Rendered commontator/comments/_body.html.erb (0.4ms)
+  Rendered commontator/comments/_show.html.erb (9.1ms)
+  Rendered commontator/comments/_list.html.erb (63.6ms)
+  Rendered commontator/threads/_reply.html.erb (1.1ms)
+  Rendered commontator/threads/_hide_show_links.js.erb (0.3ms)
+  Rendered commontator/threads/_show.html.erb (76.5ms)
+  Rendered commontator/threads/_show.js.erb (79.0ms)
+  Rendered commontator/threads/show.js.erb (82.2ms)
+Completed 200 OK in 116ms (Views: 93.3ms | ActiveRecord: 12.1ms)
+
+

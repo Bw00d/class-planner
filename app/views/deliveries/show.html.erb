@@ -25,9 +25,9 @@
         <strong>Time:</strong>
         <%= @delivery.times %>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 no-new-line">
         <strong>Location:</strong>
-          <%= display_location(@delivery) %>
+        <%= simple_format(@delivery.display_address) %>
       </div>
     </div>
 
@@ -99,7 +99,7 @@
 
   <p>
     <strong>Notes:</strong>
-    <%= simple_format(@delivery.notes) %>
+    <%= easy_format(@delivery.notes) %>
   </p>
 
   <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>

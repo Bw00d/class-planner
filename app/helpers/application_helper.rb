@@ -48,12 +48,16 @@ module ApplicationHelper
   end
 
   def display_location(place)
-    if place.city.present? && place.state.present?
-      place.city + ', ' + place.state
+    if place.city.present? && place.state.present? 
+      place.city + ', ' + place.state 
     elsif place.city.present? && !place.state.present?
       place.city
     elsif !place.city.present? && place.state.present?
       place.state
     end
+  end
+
+  def easy_format s
+    sanitize(s, tags: []).gsub(/\n/, '<br>').html_safe
   end
 end
