@@ -26,7 +26,7 @@ module Admin
     # GET /admin/users/1
     def show
       authorize @user
-      @lead_quals = @user.lead_quals.build
+      @lead_courses = LeadQual.where(user_id: @user.id)
     end
 
     # GET /admin/users/new
