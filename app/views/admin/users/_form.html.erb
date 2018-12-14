@@ -10,6 +10,35 @@
       <%= f.text_field :email, class: "form-control" %>
     </div>
   </div>
+
+  <div class="form-group">
+    <div class="col-sm-8 center-block">
+    <%= f.label :first_name, class: "control-label" %>
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-8 center-block">
+    <%= f.label :last_name, class: "control-label" %>
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-8 center-block">
+    <%= f.label :cell_phone, class: "control-label" %>
+      <%= f.text_field :cell_phone, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-8 center-block">
+    <%= f.label :work_phone, class: "control-label" %>
+      <%= f.text_field :work_phone, class: "form-control" %>
+    </div>
+  </div>
+
   <div class="form-group">
     <div class="col-sm-8 center-block">
     <%= f.label :password, class: "control-label" %>
@@ -26,22 +55,18 @@
                            class: "form-control" %>
     </div>
   </div>
+
   <div class="form-group">
     <div class="col-sm-8 center-block">
     <%= f.label :role, class: "control-label" %>
       <%= f.select :role, User.roles.keys, {}, {class: "form-control" } %>
     </div>
   </div>
+
   <div class="form-group">
     <div class="col-sm-8 center-block">
-    <%= f.label :first_name, class: "control-label" %>
-      <%= f.text_field :first_name, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-8 center-block">
-    <%= f.label :last_name, class: "control-label" %>
-      <%= f.text_field :last_name, class: "form-control" %>
+    <span id="test" class='form-group md-margin-right'><%= f.check_box :instructor %>
+                <%= f.label :instructor, "Instructor?" %></span>
     </div>
   </div>
   

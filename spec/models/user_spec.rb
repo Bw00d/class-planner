@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it { should respond_to :cell_phone }
+  it { should respond_to :work_phone }
+  it { should respond_to :instructor }
   subject { User }
   let(:user) { FactoryBot.build(:user) }
 
