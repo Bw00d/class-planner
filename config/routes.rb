@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :contact_forms, only: [:create]
   resources :courses
   resources :deliveries
+  resources :lead_quals, only: [:create, :update, :destroy]
   # A non-resourceful route was used to place the contact form at /contact
   get 'contact' => 'contact_forms#new', as: 'contact'
 

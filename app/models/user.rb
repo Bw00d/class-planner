@@ -6,6 +6,12 @@ class User < ApplicationRecord
 
   acts_as_commontator
 
+    has_many :lead_quals
+    has_many :unit_quals
+    accepts_nested_attributes_for :lead_quals, allow_destroy: true
+    # has_many :courses, through: :unit_quals
+    # has_many :unit_quals
+
   # Roles used by the authorization setup
   enum role: { user: 0, admin: 1 }
 

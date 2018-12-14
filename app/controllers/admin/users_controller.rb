@@ -26,11 +26,13 @@ module Admin
     # GET /admin/users/1
     def show
       authorize @user
+      @lead_courses = LeadQual.where(user_id: @user.id)
     end
 
     # GET /admin/users/new
     def new
       @user = User.new
+      @lead_quals = @user.lead_quals.build
       authorize @user
     end
 
@@ -54,7 +56,6 @@ module Admin
     # PATCH/PUT /admin/users/1
     def update
       authorize @user
-
       # Allow updating the user without changing its password (password field
       # will be blank). Remove the password key of the params hash if it's blank
       # (avoid validation error).
@@ -91,7 +92,9 @@ module Admin
     # Strong parameters
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation,
-                                   :role, :first_name, :last_name)
+                                   :role, :first_name, :last_name, :course_ids,
+                                   :lead_qual_attributes => [:user_id, :course_id],
+                                   :unit_quals => [:user_id, :course_id])
     end
   end
 end
