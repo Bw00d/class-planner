@@ -29,5 +29,10 @@ class Delivery < ApplicationRecord
     end
   end
 
+  def display_course(id)
+    course = Course.find(id)
+    print "#{course.course_number } - #{course.title},#{course.id}"
+  end
+
 end
 

@@ -44,10 +44,10 @@ class DeliveriesController < ApplicationController
     respond_to do |format|
       if @delivery.update(delivery_params)
         format.html { redirect_to @delivery, notice: 'Delivery was successfully updated.' }
-        format.json { render :show, status: :ok, location: @delivery }
+        format.json { respond_with_bip(@delivery) }
       else
         format.html { render :edit }
-        format.json { render json: @delivery.errors, status: :unprocessable_entity }
+        ormat.json { respond_with_bip(@delivery) }
       end
     end
   end
