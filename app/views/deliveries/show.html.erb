@@ -100,8 +100,9 @@
     <strong>Notes:</strong>
     <%= easy_format(@delivery.notes) %>
   </p>
-
-  <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+  <% if current_user.admin? %>
+    <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+  <% end %>
   </br>
   <div><%= commontator_thread(@delivery) %></div>
 </div>
