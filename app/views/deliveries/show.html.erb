@@ -58,39 +58,39 @@
     </div>
   </br>
     <div>
-      <span class="md-margin-right"><%#= check_box_tag 'Scheduled', @delivery.booked, @delivery.booked, disabled: true %>
-        <%= best_in_place @delivery, :booked, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-          <%= label_tag 'Scheduled' %></span>
+      <span class="check-icon md-margin-right"><%#= check_box_tag 'Scheduled', @delivery.booked, @delivery.booked, disabled: true %>
+        <%= label_tag 'Scheduled' %><%= best_in_place @delivery, :booked, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+          </span>
           
-        <span class="md-margin-right"><%= best_in_place @delivery, :audio_visual, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-          <%= label_tag 'Has audio/visual' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Has audio/visual' %><%= best_in_place @delivery, :audio_visual, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+          </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :flyer_sent, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-          <%= label_tag 'Flyer sent' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Flyer sent' %><%= best_in_place @delivery, :flyer_sent, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+          </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :reg_form, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-        <%= label_tag 'Reg form' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Reg Form' %><%= best_in_place @delivery, :reg_form, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+        </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :roster, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
+        <span class="check-icon md-margin-right"><%= label_tag 'Reg form' %><%= best_in_place @delivery, :roster, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
         <%= label_tag 'Roster' %></span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :welcome_letter, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-        <%= label_tag 'Welcome Letter' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Welcome Letter' %><%= best_in_place @delivery, :welcome_letter, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+        </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :agenda, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-        <%= label_tag 'Agenda' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Agenda' %>  <%= best_in_place @delivery, :agenda, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+        </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :materials, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-        <%= label_tag 'Materials' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Materials' %>  <%= best_in_place @delivery, :materials, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+        </span>
     
-        <span class="md-margin-right"><%= best_in_place @delivery, :certificates, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>
-        <%= label_tag 'Certificates' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Certificates' %>  <%= best_in_place @delivery, :certificates, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+        </span>
   
-        <span class="md-margin-right"><%= best_in_place @delivery, :ta, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>  <%= label_tag 'TA' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'TA' %>  <%= best_in_place @delivery, :ta, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>  </span>
   
-        <span class="md-margin-right"><%= best_in_place @delivery, :invoiced, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>  <%= label_tag 'Invoiced' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'Invoiced' %>  <%= best_in_place @delivery, :invoiced, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>  </span>
   
-        <span class="md-margin-right"><%= best_in_place @delivery, :fac, as: :checkbox, collection: {false: fa_icon('square'), true: fa_icon('check-square')} %>  <%= label_tag 'FAC' %></span>
+        <span class="check-icon md-margin-right"><%= label_tag 'FAC' %>  <%= best_in_place @delivery, :fac, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %></span>
       </div>
 
   </p>
