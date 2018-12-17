@@ -19,9 +19,7 @@
       </div>
 
       <div class="form-group">
-        <% courses_array = Course.all.map { |course| [course.course_number + " - " + course.title, course.id] } %>
-        <%= f.select(:course_id, [options_for_select(courses_array)], { prompt: "CHOOSE COURSE" }, required: true,  )%>
-        
+        <%= f.select :course_id, options_for_select(Course.all.collect { | course | ["#{course.course_number} - #{(course.title)}", course.id] }, @delivery.course_id), {placeholder: "CHOOSE COURSE"}, {} %>
       </div>
 
       <div class="form-group">

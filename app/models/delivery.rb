@@ -3,6 +3,7 @@ class Delivery < ApplicationRecord
   acts_as_commontable dependent: :destroy
 
   validates :course_id, presence: true
+  has_one :course
 
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
@@ -31,7 +32,7 @@ class Delivery < ApplicationRecord
 
   def display_course(id)
     course = Course.find(id)
-    print "#{course.course_number } - #{course.title},#{course.id}"
+    return "#{course.course_number } - #{course.title},#{course.id}"
   end
 
 end
