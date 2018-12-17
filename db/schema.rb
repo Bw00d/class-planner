@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181214065847) do
+ActiveRecord::Schema.define(version: 20181214082148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20181214065847) do
     t.boolean "invoiced", default: false
     t.boolean "certificates", default: false
     t.boolean "fac", default: false
+    t.integer "lead_instructor"
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
@@ -116,6 +117,11 @@ ActiveRecord::Schema.define(version: 20181214065847) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "course_id"
+  end
+
+  create_table "unit_instructors", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "delivery_id"
   end
 
   create_table "unit_quals", force: :cascade do |t|
