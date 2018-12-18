@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCC Fire | New Delivery</title>
+  <meta name="description" content="CCC Fire">
+  
+  <link rel="stylesheet" media="all" href="/assets/application-ea32fb496a741dbb64379f18df34f681a402cb8ceffedf0e885d7a2ef0e2dba9.css" data-turbolinks-track="reload" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="/assets/application-2076b0f8cd1c22508588dffe9c5a3d1642d39de746205fd03a3753e5b2195390.js" data-turbolinks-track="reload"></script>
+</head>
+
+<body class="deliveries-controller new-action admin-layout">
+  <header>
+    <nav class="navbar-default navbar-fixed-top navbar-custom">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img id="main-logo" class="navbar-logo" alt="CCC Fire logo" src="/assets/logo-d87b28ed13a2649213c8bf12087be477df729296571c00572b22fde925ff1a06.png" />
+            <a class="navbar-brand" href="/">CCC FIRE</a>
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="/admin/users">Users</a></li>
+
+  
+
+            <!-- <li></li> -->
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="/deliveries">Deliveries</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Karina Beatty</b> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/users/edit">Edit profile</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#"><a rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a></a></li>
+                  </ul>
+                </li>
+          </ul>
+
+        </div><!-- navbar-collapse -->
+      </div><!-- container-fluid -->
+    </nav>
+  </header>
+
+
+  <main role="main">
+    <div class="container-fluid">
+      <div id="flash-messages" class="row">
+      </div><!-- flash-messages -->
+
+      
+ <div class="row">
+  <div class="col-lg-8 center-block">
+    <div class="row">
+      <a class="btn btn-info" href="/deliveries">ALL DELIVERIES</a>
+    </div>
+    </br>
+    <h3 class="centered">New Delivery</h3>
+
+    <div class="row">
+  <div class="sm-8-col">
+    <form action="/deliveries" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+
+      <div class="form-group">
+        <label for="delivery_course_number">Course number</label>
+        <input id="delivery_course_number" class="form-control" placeholder="COURSE NUMBER(EX. FRP-190)" type="text" name="delivery[course_number]" />
+      </div>
+
+      <div class="form-group">
+        <select name="delivery[course_id]"><option value="">CHOOSE COURSE</option>
+</select>
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_Association">Association</label>
+        <input id="delivery_requestor" class="form-control" placeholder="REQUEST ASSOCIATION" type="text" name="delivery[requestor]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_start_date">Start date</label>
+        <input id="delivery_start_date" data-provide="datepicker" class="form-control" placeholder="START DATE" type="text" name="delivery[start_date]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_end_date">End date</label>
+        <input id="delivery_end_date" data-provide="datepicker" class="form-control" placeholder="END DATE" type="text" name="delivery[end_date]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_times">Times</label>
+        <input id="delivery_times" class="form-control" placeholder="TIMES" type="text" name="delivery[times]" />
+      </div>
+
+
+      <div class="form-group">
+        <label for="delivery_address">Address</label>
+        <textarea id="delivery_address" class="form-control" placeholder="ADDRESS" name="delivery[address]">
+</textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_city">City</label>
+        <input id="delivery_city" class="form-control" placeholder="CITY" type="text" name="delivery[city]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_state">State</label>
+        <input id="delivery_state" class="form-control" placeholder="STATE" type="text" name="delivery[state]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_Zipcode">Zipcode</label>
+        <input id="delivery_zip" class="form-control" placeholder="ZIPCODE" type="text" name="delivery[zip]" />
+      </div>
+
+
+      <div class="form-group">
+        <label for="delivery_Point of Contact">Point of contact</label>
+        <textarea id="delivery_poc" class="form-control" placeholder="POINT OF CONTACT" name="delivery[poc]">
+</textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_credits">Credits</label>
+        <input id="delivery_credits" class="form-control" placeholder="CREDITS" type="text" name="delivery[credits]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_fees">Fees</label>
+        <input id="delivery_fees" class="form-control" placeholder="FEES" type="text" name="delivery[fees]" />
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_seat_load">Seat load</label>
+        <input id="delivery_seat_load" class="form-control" placeholder="SEAT LOAD" type="text" name="delivery[seat_load]" />
+      </div>
+
+      <div class="form-group">
+        <label id="delivery_lead_instructor" for="delivery_lead_instructor">Lead Instructor</label><br>
+        <select name="delivery[lead_instructor]"></select>
+      </div>
+      <div class="form-group">
+
+        <span class='form-group md-margin-right'><input name="delivery[booked]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[booked]" />
+                <label id="delivery_booked" for="delivery_booked">Scheduled</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[audio_visual]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[audio_visual]" />
+                <label id="audio_visual_booked" for="delivery_audio_visual">Has audio/visual</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[flyer_sent]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[flyer_sent]" />
+                <label id="flyer_sent_booked" for="delivery_flyer_sent">Flyer Sent</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[reg_form]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[reg_form]" />
+                <label id="reg_form_booked" for="delivery_reg_form">Reg form</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[roster]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[roster]" />
+                <label id="roster_booked" for="delivery_roster">Roster</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[welcome_letter]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[welcome_letter]" />
+                <label id="welcome_letter_booked" for="delivery_welcome_letter">Welcome letter</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[agenda]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[agenda]" />
+                <label id="agenda_booked" for="delivery_agenda">Agenda</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[materials]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[materials]" />
+                <label id="materials_booked" for="delivery_materials">Materials</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[certificates]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[certificates]" />
+                <label id="certificates_booked" for="delivery_certificates">Certificates</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[ta]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[ta]" />
+                <label id="ta_booked" for="delivery_ta">TA</label></span>
+
+        <span class='form-group md-margin-right'><input name="delivery[invoiced]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[invoiced]" />
+                <label id="invoiced_booked" for="delivery_invoiced">Invoiced</label></span>
+
+       <span class='form-group md-margin-right'> <input name="delivery[fac]" type="hidden" value="0" /><input type="checkbox" value="1" name="delivery[fac]" />
+                     <label id="fac_booked" for="delivery_fac">FAC</label></span>      
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_notes">Notes</label>
+        <textarea id="delivery_notes" class="form-control" placeholder="NOTES" name="delivery[notes]">
+</textarea>
+      </div>
+
+      <div class="actions">
+        <input type="submit" name="commit" value="SUBMIT" class="btn btn-success" data-disable-with="SUBMIT" />
+      </div>
+</form>  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+    </div><!-- container-fluid -->
+  </main>
+
+  <footer>
+    <div class="container-fluid footer text-center">
+      <div class="row">
+        <footer class="footer">
+          <div class="container">
+            <!-- <p class="text-muted">&copy; CCC Fire</p> -->
+          </div>
+        </footer>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
