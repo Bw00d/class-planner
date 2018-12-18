@@ -84,6 +84,11 @@
         <%= f.label :seat_load %>
         <%= f.text_field :seat_load, id: :delivery_seat_load, class: "form-control", placeholder: "SEAT LOAD" %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :lead_instructor, "Lead Instructor" %><br>
+        <%= f.select :lead_instructor, options_for_select(User.instructors.all.collect { | instructor | [instructor.full_name, instructor.id] }, @delivery.lead_instructor), {placeholder: "CHOOSE INSRTUCTOR"}, {} %>
+      </div>
       <div class="form-group">
 
         <span class='form-group md-margin-right'><%= f.check_box :booked %>

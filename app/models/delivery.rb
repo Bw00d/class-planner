@@ -30,6 +30,12 @@ class Delivery < ApplicationRecord
     end
   end
 
+  def display_lead_instructor
+    if self.lead_instructor
+      User.find(self.lead_instructor).full_name
+    end
+    end
+
   def display_course(id)
     course = Course.find(id)
     return "#{course.course_number } - #{course.title},#{course.id}"

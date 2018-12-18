@@ -31,6 +31,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :lockable, :registerable,
          :recoverable, :rememberable, :timeoutable, :trackable, :validatable
 
+
+  scope :instructors, -> { where(instructor: true) }
+  
   # Allow a single Ransack search field to search the virtual attr 'full_name'
   # If first_name is 'John' and last_name is 'Doe', this will enable us to
   # search for 'John', 'Doe' or 'John Doe' using the 'cont' predicate.

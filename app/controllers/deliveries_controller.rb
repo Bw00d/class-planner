@@ -75,6 +75,7 @@ class DeliveriesController < ApplicationController
                                        :city, :state, :requestor, :poc, :notes,
                                        :zip, :booked, :address, :flyer_sent, :audio_visual,
                                        :reg_form, :roster, :welcome_letter, :agenda,
-                                       :materials, :ta, :invoiced, :certificates, :fac)
+                                       :materials, :ta, :invoiced, :certificates, :fac,
+                                       :lead_instructor)
     end
 end
