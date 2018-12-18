@@ -200,6 +200,11 @@ dt, dd {
   z-index: 1001 !important;
 }
 
+/* line 315, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+select {
+  height: 30px;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -11858,6 +11863,37 @@ table.delivery-table tr:hover td {
   -webkit-border-radius: 4px 4px;
   border-radius: 4px/4px;
 }
+
+/* line 75, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.course-boxes label {
+  margin-right: 15px;
+}
+/* line 78, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.course-boxes input {
+  margin-right: 3px;
+}
+
+/* line 82, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.course-button {
+  background: #D2D2D2;
+  -moz-border-radius: 40px/40px;
+  -webkit-border-radius: 40px 40px;
+  border-radius: 40px/40px;
+  padding: 5px 15px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+/* line 90, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.course-button a {
+  color: black;
+}
+
+/* line 96, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.check-icon img {
+  height: 1em;
+  width: 1em;
+}
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
   margin-top: 0px !important;
@@ -12048,6 +12084,25 @@ dt, dd {
 .datepicker {
   z-index: 1001 !important;
 }
+
+/* line 315, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+select {
+  height: 30px;
+}
+/* line 1, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/users.css.scss */
+#show-user {
+  line-height: 2em;
+}
+/* line 3, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/users.css.scss */
+#show-user strong {
+  margin-right: 10px;
+}
+
+/* line 7, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/users.css.scss */
+.qual-buttons {
+  padding-top: 5px;
+  overflow: hidden;
+}
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
   margin-top: 0px !important;
@@ -12237,6 +12292,11 @@ dt, dd {
 /* line 310, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .datepicker {
   z-index: 1001 !important;
+}
+
+/* line 315, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+select {
+  height: 30px;
 }
 
 /* line 5, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
@@ -12455,4 +12515,34 @@ dt, dd {
   width: 35px;
   height: 35px;
   color: black;
+}
+
+/* line 196, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.no-new-line {
+  display: inline-block;
+}
+/* line 198, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.no-new-line p {
+  margin: 0 !important;
+  line-height: 1.25em;
+}
+
+/* line 203, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.left-mar {
+  display: absolute;
+  left: 50px;
+}
+
+/* line 207, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
+.course-button {
+  background: #D2D2D2;
+  -moz-border-radius: 40px/40px;
+  -webkit-border-radius: 40px 40px;
+  border-radius: 40px/40px;
+  padding: 5px 15px;
+  float: left;
+  margin-right: 10px;
+  color: black;
+  margin-bottom: 10px;
+  list-style: none;
 }
