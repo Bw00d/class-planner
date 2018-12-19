@@ -34,7 +34,7 @@ class Delivery < ApplicationRecord
     if self.lead_instructor
       User.find(self.lead_instructor)
     end
-    end
+  end
 
   def display_course(id)
     course = Course.find(id)
