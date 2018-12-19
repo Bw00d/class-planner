@@ -17,6 +17,7 @@
           <th>Association</th>
           <th>Location</th>
           <th>Flyer</th>
+          <th>Sent</th>
           <th>Reg Form</th>
         </tr>
       </thead>
@@ -32,6 +33,7 @@
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
             <td><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
+            <td><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
             <td><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
         </tr>
       <% end %>
