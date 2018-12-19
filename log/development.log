@@ -39140,3 +39140,24 @@ Processing by DeliveriesController#show as HTML
 Completed 200 OK in 371ms (Views: 345.8ms | ActiveRecord: 20.2ms)
 
 
+Started GET "/deliveries/5" for 127.0.0.1 at 2018-12-19 15:42:15 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (5.7ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (1.0ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 5], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.9ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 5], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 5]]
+  Rendered commontator/shared/_thread.html.erb (7.6ms)
+  Rendered deliveries/show.html.erb within layouts/admin (26.1ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (220.1ms)
+Completed 200 OK in 266ms (Views: 249.0ms | ActiveRecord: 11.9ms)
+
+

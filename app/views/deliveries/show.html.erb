@@ -58,7 +58,7 @@
       </div>
       <div class="col-sm-4">
         <strong>Lead Instructor:</strong>
-        <%= @delivery.display_lead_instructor.full_name %>
+        <% if @delivery.lead_instructor %><%= @delivery.display_lead_instructor.full_name %><% end %>
       </div>
     </div>
   </br>
