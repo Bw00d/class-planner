@@ -4,10 +4,10 @@
       <h2 class="welcome-message"><strong>Welcome <%= current_user.first_name %></strong></h2>
       <p>All the DPSST deliveries for this winter and spring have been loaded. Not all of them have been scheduled but you can checkout the details we have so far</p>
       <% if current_user.instructor? %>
-        <% if !current_user.deliveries.nil? %>
+        <% if !current_user.deliveries.empty? %>
           <h3><strong>Your Deliveries</strong></h3>
           <ul>
-          <% current_user.deliveries.each do |d| %>
+          <% @deliveries.each do |d| %>
           <%= link_to delivery_path(d) do %>
             <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %></li>
             <% end %>
