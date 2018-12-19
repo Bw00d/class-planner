@@ -19,6 +19,7 @@
           <th>Flyer</th>
           <th>Sent</th>
           <th>Reg Form</th>
+          <th>Lead</th>
         </tr>
       </thead>
       <tbody>
@@ -35,6 +36,7 @@
             <td><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
             <td><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
             <td><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
+            <td><%= delivery.display_lead_instructor.last_name %> </td>
         </tr>
       <% end %>
       </tbody>

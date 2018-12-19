@@ -32,7 +32,7 @@ class Delivery < ApplicationRecord
 
   def display_lead_instructor
     if self.lead_instructor
-      User.find(self.lead_instructor).full_name
+      User.find(self.lead_instructor)
     end
     end
 
