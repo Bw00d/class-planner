@@ -31,7 +31,7 @@
             <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
-            <td><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
+            <td><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
             <td><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
         </tr>
       <% end %>

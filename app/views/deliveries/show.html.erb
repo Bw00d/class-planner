@@ -70,6 +70,9 @@
         <span class="check-icon md-margin-right"><%= label_tag 'Has audio/visual' %><%= best_in_place @delivery, :audio_visual, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
           </span>
     
+        <span class="check-icon md-margin-right"><%= label_tag 'Flyer made' %><%= best_in_place @delivery, :flyer_made, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
+          </span>
+
         <span class="check-icon md-margin-right"><%= label_tag 'Flyer sent' %><%= best_in_place @delivery, :flyer_sent, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %>
           </span>
     

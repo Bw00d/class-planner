@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :delivery do
     course_number { "S-000" }
-    course_id { "" }
+    course_id { "1" }
     credits { "" }
     fees { 1 }
     seat_load { 1 }
@@ -13,5 +13,7 @@ FactoryBot.define do
     poc { "MyString" }
     notes { "MyText" }
     booked { false }
+    flyer_made { false }
+    flyer_sent { false }
   end
 end

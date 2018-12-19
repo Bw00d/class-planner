@@ -76,6 +76,6 @@ class DeliveriesController < ApplicationController
                                        :zip, :booked, :address, :flyer_sent, :audio_visual,
                                        :reg_form, :roster, :welcome_letter, :agenda,
                                        :materials, :ta, :invoiced, :certificates, :fac,
-                                       :lead_instructor)
+                                       :lead_instructor, :flyer_made)
     end
 end

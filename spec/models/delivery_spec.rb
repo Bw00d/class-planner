@@ -14,6 +14,8 @@ RSpec.describe Delivery, type: :model do
   it { should respond_to :poc }
   it { should respond_to :notes }
   it { should respond_to :booked }
+  it { should respond_to :flyer_made }
+  it { should respond_to :flyer_sent }
   it { should respond_to :reg_form }
   it { should respond_to :roster }
   it { should respond_to :welcome_letter }
