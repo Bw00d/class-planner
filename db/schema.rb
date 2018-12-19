@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20181219185949) do
     t.boolean "certificates", default: false
     t.boolean "fac", default: false
     t.integer "lead_instructor"
-    t.boolean "flyer_made"
+    t.boolean "flyer_made", default: false
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
