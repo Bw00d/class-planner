@@ -54,6 +54,10 @@ class User < ApplicationRecord
     [first_name, last_name].join(' ')
   end
 
+  def deliveries
+    Delivery.where(lead_instructor: self.id)
+  end
+
   private
 
   def set_default_role

@@ -1,21 +1,32 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 center-block">
-      <h3><strong>Summary</strong></h3>
-        <p>The app is funtional and you can add Courses and Deliveries. Right now it is designed to the format of the upcoming DPSST deliveries but it can be configured to work with all CCC delivered classes.</p>
-        <p>Admins can add new users and give them the role of 'admin' or 'user'. Any user can update a delivery.</p>
-        <h3><strong>Todo</strong></h3>
-        <ul>
-          <li>Add instructor role to user.</li>
-          <li>Add contact info to instructor</li>
-          <li>Add lead and unit quals to instructor so only qualifed users show when assigning instructor to delivery.</li>
-          <li>Add file upload so that each delivery can store files such as fliers and welcome letters.</li>
-          <li>Restrict authorization so only admin can create or modify a Course.</li>
-          <li>Add some compelling content to home page instead of this list :)</li>
-        </ul>
-        <h3><strong>Issues</strong></h3>
-        <p>If you have any suggestions or find any bugs shoot me an email at bwoodreid@gmail.com.</p>
-      </div>
+      <h2 class="welcome-message"><strong>Welcome <%= current_user.first_name %></strong></h2>
+      <p>All the DPSST deliveries for this winter and spring have been loaded. Not all of them have been scheduled but you can checkout the details we have so far</p>
+      <% if current_user.instructor? %>
+        <% if !current_user.deliveries.nil? %>
+          <h3><strong>Your Deliveries</strong></h3>
+          <ul>
+          <% current_user.deliveries.each do |d| %>
+          <%= link_to delivery_path(d) do %>
+            <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %></li>
+            <% end %>
+          <% end %>
+          </ul>
+        <% end %>
+      <% end %>
+
+      <br>
+      <h3><strong>App Todo</strong></h3>
+      <ul>
+        <li>Add lead and unit quals to instructor so only qualifed users show when assigning instructor to delivery.</li>
+        <li>Add file upload so that each delivery can store files such as fliers and welcome letters.</li>
+        <li>Restrict authorization so only admin can create or modify a Course.</li>
+        <li>Add some compelling content to home page instead of this list :)</li>
+      </ul>
+      <h3><strong>Issues</strong></h3>
+      <p>If you have any suggestions or find any bugs shoot me an email at bwoodreid@gmail.com.</p>
+    </div>
 
   </div>
 </div>
