@@ -87,7 +87,7 @@
 
       <div class="form-group">
         <%= f.label :lead_instructor, "Lead Instructor",id: :delivery_lead_instructor %><br>
-        <%= f.select :lead_instructor, options_for_select(User.instructors.all.collect { | instructor | [instructor.full_name, instructor.id] }, @delivery.lead_instructor), {placeholder: "CHOOSE INSRTUCTOR"}, {} %>
+        <%= f.select :lead_instructor, options_for_select(User.instructors.all.collect { | instructor | [instructor.full_name, instructor.id] }, @delivery.lead_instructor), {prompt: "CHOOSE INSRTUCTOR"}, {} %>
       </div>
       <div class="form-group">
 
@@ -96,6 +96,9 @@
 
         <span class='form-group md-margin-right'><%= f.check_box :audio_visual %>
                 <%= f.label :audio_visual, "Has audio/visual", id: :delivery_audio_visual %></span>
+
+        <span class='form-group md-margin-right'><%= f.check_box :flyer_made %>
+                <%= f.label :flyer_made, "Flyer made", id: :delivery_flyer_made %></span>
 
         <span class='form-group md-margin-right'><%= f.check_box :flyer_sent %>
                 <%= f.label :flyer_sent, "Flyer Sent", id: :delivery_flyer_sent %></span>
