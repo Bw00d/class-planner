@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 center-block">
-      <h2 class="welcome-message"><strong>Welcome <%= current_user.first_name %></strong></h2>
+      <h1 class="welcome-message"><strong>Welcome <%= current_user.first_name %></strong></h1>
       <p>All the DPSST deliveries for this winter and spring have been loaded. Not all of them have been scheduled but you can checkout the details we have so far</p>
       <% if current_user.instructor? %>
         <% if !current_user.deliveries.empty? %>
