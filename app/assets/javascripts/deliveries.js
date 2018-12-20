@@ -16,7 +16,7 @@ $(document).ready(function(){
     $('#unit-instructor-form').show();
   });
 
-  $('li.unit-instuctor-name').click(function(){
+  $('li.unit-instructor-name').click(function(){
     $(this).find('.destroy-instructor').show();
   });
 });

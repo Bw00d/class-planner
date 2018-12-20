@@ -65,7 +65,7 @@
         <% if @delivery.unit_instructors %>
           <ul>
             <% @delivery.unit_instructors.each do |i| %>
-              <li class="unit-instuctor-name"><%= i.user.full_name %>  <%= link_to 'delete', i, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy-instructor btn btn-danger btn-xs' %></li>
+              <li class="unit-instructor-name"><%= i.user.full_name %>  <%= link_to 'delete', i, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy-instructor btn btn-danger btn-xs' %></li>
             <% end %>
           </ul>
         <% end %>
