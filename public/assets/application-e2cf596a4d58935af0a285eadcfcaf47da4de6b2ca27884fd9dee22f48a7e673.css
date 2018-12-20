@@ -11894,6 +11894,21 @@ table.delivery-table tr:hover td {
   height: 1em;
   width: 1em;
 }
+
+/* line 101, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+#unit-instructor-form {
+  display: none;
+}
+
+/* line 104, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+.destroy-instructor {
+  display: none;
+}
+
+/* line 107, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+li.unit-instructor-name:hover {
+  cursor: pointer;
+}
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
   margin-top: 0px !important;
@@ -12102,6 +12117,13 @@ select {
 .qual-buttons {
   padding-top: 5px;
   overflow: hidden;
+}
+
+/* line 11, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/users.css.scss */
+h1.welcome-message {
+  padding-top: 20px;
+  font-size: 2em;
+  color: #5fc0dd;
 }
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
