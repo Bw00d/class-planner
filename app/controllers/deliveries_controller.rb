@@ -11,6 +11,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries/1
   # GET /deliveries/1.json
   def show
+    @unit_instructor = UnitInstructor.new
   end
 
   # GET /deliveries/new

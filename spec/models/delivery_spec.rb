@@ -27,6 +27,8 @@ RSpec.describe Delivery, type: :model do
   it { should respond_to :fac }
   it { should respond_to :audio_visual }
 
+  it { should have_many :unit_instructors }
+
 
   let(:valid_attributes) { FactoryBot.attributes_for(:delivery) }
 

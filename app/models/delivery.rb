@@ -4,6 +4,7 @@ class Delivery < ApplicationRecord
 
   validates :course_id, presence: true
   has_one :course
+  has_many :unit_instructors
 
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
@@ -34,6 +35,10 @@ class Delivery < ApplicationRecord
     if self.lead_instructor
       User.find(self.lead_instructor)
     end
+  end
+
+  def unit_instructors
+    UnitInstructor.where(delivery_id: self.id)
   end
 
   def display_course(id)

@@ -60,6 +60,26 @@
         <strong>Lead Instructor:</strong>
         <% if @delivery.lead_instructor %><%= @delivery.display_lead_instructor.full_name %><% end %>
       </div>
+      <div class="col-sm-4">
+        <strong>Unit Instructors:</strong>
+        <% if @delivery.unit_instructors %>
+          <ul>
+            <% @delivery.unit_instructors.each do |i| %>
+              <li class="unit-instuctor-name"><%= i.user.full_name %>  <%= link_to 'delete', i, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy-instructor btn btn-danger btn-xs' %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <span id="unit-instructor-form">
+          <%= form_for @unit_instructor do |f| %>
+            <%= f.select :user_id, options_for_select(User.instructors.all.collect { | instructor | [instructor.full_name, instructor.id] }), {prompt: "CHOOSE INSRTUCTOR"}, {} %>
+            <%= f.hidden_field :delivery_id, value: @delivery.id %>
+            <%= f.submit "SUBMIT", id: "unit-instructor-submit", class: "btn btn-success btn-sm" %>
+          <% end %>
+        </span>
+        <span id="add-unit-instructor-button">
+          <%= link_to "ADD", 'javascript:;', class: "btn btn-info btn-xs" %>
+        </span>
+      </div>
     </div>
   </br>
     <div>
