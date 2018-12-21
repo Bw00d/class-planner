@@ -45204,3 +45204,38 @@ Call stack
   /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/deliveries/show.html.erb:67:in `_app_views_deliveries_show_html_erb___2860692449233876989_70099830079800'
 
 
+Started GET "/deliveries/6" for 127.0.0.1 at 2018-12-20 18:19:30 -0800
+Processing by DeliveriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.6ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering deliveries/show.html.erb within layouts/admin
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUnitInstructor Load (0.8ms)[0m  [1m[34mSELECT "unit_instructors".* FROM "unit_instructors" WHERE "unit_instructors"."delivery_id" = $1[0m  [["delivery_id", 6]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."instructor" = $1[0m  [["instructor", "t"]]
+  [1m[36mCommontator::Thread Load (0.8ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = $1 AND "commontator_threads"."commontable_type" = $2 LIMIT $3[0m  [["commontable_id", 6], ["commontable_type", "Delivery"], ["LIMIT", 1]]
+  [1m[36mDelivery Load (0.9ms)[0m  [1m[34mSELECT  "deliveries".* FROM "deliveries" WHERE "deliveries"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCommontator::Subscription Load (1.1ms)[0m  [1m[34mSELECT  "commontator_subscriptions".* FROM "commontator_subscriptions" WHERE "commontator_subscriptions"."subscriber_id" = $1 AND "commontator_subscriptions"."subscriber_type" = $2 AND "commontator_subscriptions"."thread_id" = $3 ORDER BY "commontator_subscriptions"."id" ASC LIMIT $4[0m  [["subscriber_id", 1], ["subscriber_type", "User"], ["thread_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = $1[0m  [["thread_id", 6]]
+  Rendered commontator/shared/_thread.html.erb (7.6ms)
+  Rendered deliveries/show.html.erb within layouts/admin (41.2ms)
+  Rendered layouts/_base_menu_items.html.erb (0.3ms)
+  Rendering layouts/application.html.erb
+  Rendered layouts/application.html.erb (556.5ms)
+Completed 200 OK in 616ms (Views: 600.7ms | ActiveRecord: 8.8ms)
+
+
+user: bwood
+GET /deliveries/6
+USE eager loading detected
+  UnitInstructor => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/deliveries/show.html.erb:68:in `block in _app_views_deliveries_show_html_erb___2860692449233876989_70099845010580'
+  /Users/bwood/code/rails/5.1/ccc-class-planner/app/views/deliveries/show.html.erb:67:in `_app_views_deliveries_show_html_erb___2860692449233876989_70099845010580'
+
+

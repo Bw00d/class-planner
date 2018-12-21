@@ -17,6 +17,6 @@ $(document).ready(function(){
   });
 
   $('li.unit-instructor-name').click(function(){
-    $(this).find('.destroy-instructor').show();
+    $(this).find('.destroy-instructor').toggle();
   });
 });
