@@ -28209,6 +28209,20 @@ $(document).ready(function(){
   $('.datepicker').datepicker();
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
+
+  $('#unit-instructor-submit').click(function(){
+    $('#add-unit-instructor-button').show();
+    $('#unit-instructor-form').hide();
+  });
+
+  $('#add-unit-instructor-button').click(function(){
+    $('#add-unit-instructor-button').hide();
+    $('#unit-instructor-form').show();
+  });
+
+  $('li.unit-instructor-name').click(function(){
+    $(this).find('.destroy-instructor').toggle();
+  });
 });
 $(document).on("turbolinks:load", () => FontAwesome.dom.i2svg());
 // This file contains JS code which is used across the entire Rails application.
@@ -28220,6 +28234,9 @@ $(document).on("turbolinks:load", function() {
     // Select2 dropdowns
     $('.select2-dropdown').select2();
 });
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+;
 /*
  Zen Utils is a small library consisting of utility functions (reusable code)
  written by Bruno Facca.
