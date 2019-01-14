@@ -6,7 +6,7 @@
       <% if current_user.instructor? %>
         <% if !current_user.deliveries.empty? %>
           <h3><strong>Your Deliveries</strong></h3>
-          <div>Lead Insturctor</div>
+          <div>Lead</div>
           <ul>
           <% @leads.each do |d| %>
           <%= link_to delivery_path(d) do %>
@@ -16,7 +16,7 @@
           </ul>
         <% end %>
         <% if !current_user.units.empty? %>
-        <div>Unit Insturctor</div>
+        <div>Unit</div>
           <ul>
           <% @units.each do |d| %>
           <%= link_to delivery_path(d) do %>
