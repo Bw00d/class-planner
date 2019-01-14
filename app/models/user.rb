@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
     has_many :lead_quals
     has_many :unit_quals
+    has_many :unit_instructors
     accepts_nested_attributes_for :lead_quals, allow_destroy: true
     # has_many :courses, through: :unit_quals
     # has_many :unit_quals
@@ -56,6 +57,16 @@ class User < ApplicationRecord
 
   def deliveries
     Delivery.where(lead_instructor: self.id)
+  end
+
+  def units
+    deliveries = []
+    self.unit_instructors.each do |i|
+      if i
+        deliveries << Delivery.find(i.delivery_id)
+      end
+    end
+    deliveries
   end
 
   private

@@ -4,7 +4,7 @@ class Delivery < ApplicationRecord
 
   validates :course_id, presence: true
   has_one :course
-  has_many :unit_instructors
+  has_many :unit_instructors, dependent: :destroy
 
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
