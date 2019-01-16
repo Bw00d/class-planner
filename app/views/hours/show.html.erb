@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @hour.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @hour.end %>
+</p>
+
+<p>
+  <strong>Break:</strong>
+  <%= @hour.break %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @hour.total %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= @hour.comment %>
+</p>
+
+<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Back', hours_path %>
