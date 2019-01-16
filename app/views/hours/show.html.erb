@@ -1,5 +1,8 @@
 <div class="col-sm-12 col-lg-10 center-block">
-
+  <p>
+    <%= link_to 'All Hours', hours_path, class: 'btn btn-success' %>
+  </p>
+  <br>
   <p>
     <strong>Date:</strong>
     <%= @hour.start.to_time.strftime('%m/%d/%y') %>
@@ -29,5 +32,4 @@
   </p>
 
   <%= link_to 'Edit', edit_hour_path(@hour) %> |
-  <%= link_to 'Back', hours_path %>
 </div>
