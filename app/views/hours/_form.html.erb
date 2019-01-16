@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :start %>
     <%= f.datetime_select :start, id: :hour_start, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :end %>
     <%= f.datetime_select :end, id: :hour_end, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :break %>
     <%= f.number_field :break, id: :hour_break, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :comment %>
     <%= f.text_area :comment, id: :hour_comment, class: "form-control" %>
   </div>
