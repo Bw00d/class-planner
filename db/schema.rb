@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 20190116182109) do
   create_table "hours", force: :cascade do |t|
     t.datetime "start"
     t.datetime "end"
-    t.integer "break", default: 0
+    t.decimal "break", precision: 3, scale: 2, default: "0.0"
     t.text "comment"
     t.integer "user_id"
     t.datetime "created_at", null: false
