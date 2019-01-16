@@ -6,7 +6,7 @@ class HoursController < ApplicationController
   # GET /hours
   # GET /hours.json
   def index
-    @hours = Hour.all
+    @hours = current_user.hours
   end
 
   # GET /hours/1
@@ -26,7 +26,7 @@ class HoursController < ApplicationController
   # POST /hours
   # POST /hours.json
   def create
-    @hour = Hour.new(hour_params)
+    @hour = current_user.hours.build(hour_params)
 
     respond_to do |format|
       if @hour.save
@@ -71,6 +71,6 @@ class HoursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hour_params
-      params.require(:hour).permit(:start, :end, :break, :comment)
+      params.require(:hour).permit(:start, :end, :break, :comment, :user_id)
     end
 end
