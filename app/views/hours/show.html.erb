@@ -31,5 +31,5 @@
     <%= @hour.comment %>
   </p>
 
-  <%= link_to 'Edit', edit_hour_path(@hour) %> |
+  <%= link_to (fa_icon('pencil-alt')), edit_hour_path(@hour), class: 'btn btn-info edit-button' %>
 </div>

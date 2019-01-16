@@ -21,9 +21,9 @@
           <td><%= hour.end.to_time.strftime('%H:%M %p') %></td>
           <td><%= hour.break %></td>
           <td><%= hour.total %></td>
-          <td><%= link_to 'Show', hour %></td>
-          <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
-          <td><%= link_to 'Destroy', hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to (fa_icon('eye')), hour %></td>
+          <td><%= link_to (fa_icon('pencil-alt')), edit_hour_path(hour) %></td>
+          <td><%= link_to (fa_icon('times')), hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
