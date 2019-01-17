@@ -29,7 +29,4 @@
 //= require fullcalendar
 //= require_tree .
 
-$('#calendar').fullCalendar({
-  height: 650,
-  contentHeight: 600
-});
+

@@ -21,9 +21,4 @@ $(document).on("turbolinks:load", function() {
     $(this).find('.destroy-instructor').toggle();
   });
 
-  $('#show-calendar').click(function() {
-    $('#deliveries').hide();
-    // $('#calendar').show();
-
-  });
 });
