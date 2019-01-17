@@ -28,7 +28,7 @@ controller and action allows the implementation of page-specific CSS and JS %>
           </button>
           <a class="navbar-brand" href="#">
             <%= image_tag 'logo.png', id: 'main-logo', class: 'navbar-logo', alt: 'CCC Fire logo' %>
-            <%= link_to 'CCC FIRE', root_path, class: 'navbar-brand' %>
+            <%= link_to 'CCC FIRE', root_path, class: 'navbar-brand hidden-xs hidden-sm' %>
           </a>
         </div>
 
@@ -74,7 +74,7 @@ controller and action allows the implementation of page-specific CSS and JS %>
 
 
   <main role="main">
-    <div class="container-fluid">
+    <div class="container-fluid no-padding">
       <div id="flash-messages" class="row">
         <%# Rails flash messages styled for Bootstrap 3.0 %>
         <% flash.each do |type, message| %>

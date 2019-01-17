@@ -50,8 +50,8 @@ $gray-lightest:          lighten(#000, 98%);
 // Body
 $body-bg:               white;
 body {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 // Alerts and form feedback states
@@ -195,6 +195,9 @@ body {
 }
 #main-logo {
   margin-right: -20px !important;
+}
+main {
+  padding: 0 !important;
 }
 
 // Pagination
