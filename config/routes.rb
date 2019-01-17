@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :lead_quals, only: [:create, :update, :destroy]
   # A non-resourceful route was used to place the contact form at /contact
   get 'contact' => 'contact_forms#new', as: 'contact'
+  get 'calendar' => 'deliveries#calendar', as: 'calendar'
 
   # for commontator
   mount Commontator::Engine => '/commontator'

@@ -22,10 +22,4 @@ $(document).on("turbolinks:load", function() {
 
   });
 
-  $('#show-calendar').click(function() {
-    $('#deliveries').toggleClass('hide');
-    // $('#calendar').show();
-
-  });
-
 });

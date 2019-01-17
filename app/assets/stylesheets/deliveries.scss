@@ -17,6 +17,7 @@ $gray-lightest:          lighten(#000, 98%);
   div {
     line-height: 2em;
   }
+
 }
 
 table.delivery-table tr:hover td {
@@ -109,18 +110,3 @@ li.unit-instructor-name:hover {
    cursor: pointer;
  }
 
- #show-calendar {
-  z-index: 3;
- }
- div#calendar-link {
-  padding: 0;
-  width: 100%;
-  position: fixed;
-  top: 75px;
-  background-color: white;
-  overflow: hidden;
-  z-index: 3;
- }
- #calendar {
-  margin-top: 20px;
- }

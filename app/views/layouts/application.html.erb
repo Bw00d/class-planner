@@ -46,6 +46,7 @@ controller and action allows the implementation of page-specific CSS and JS %>
             <%# Devise %>
             <% if user_signed_in? %>
 
+                <li><%= link_to t('navigation.calendar'), calendar_path %></li>
                 <li><%= link_to t('navigation.deliveries'), deliveries_path %></li>
                 <li><%= link_to t('navigation.courses'), courses_path %></li>
                 <li class="dropdown">
