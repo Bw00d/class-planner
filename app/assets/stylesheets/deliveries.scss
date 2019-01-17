@@ -112,3 +112,15 @@ li.unit-instructor-name:hover {
  #show-calendar {
   z-index: 3;
  }
+ div#calendar-link {
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 75px;
+  background-color: white;
+  overflow: hidden;
+  z-index: 3;
+ }
+ #calendar {
+  margin-top: 20px;
+ }
