@@ -25,8 +25,8 @@
 
 /* line 52, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 body {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* line 93, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
@@ -113,7 +113,7 @@ body {
 
 /* line 199, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 main {
-  padding: 5px !important;
+  padding: 2% !important;
 }
 
 /* line 228, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
@@ -13105,13 +13105,13 @@ be a descendant of the grid when it is being dragged.
   line-height: 2em;
 }
 
-/* line 22, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 23, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 table.delivery-table tr:hover td {
   background-color: #eeeeee;
   cursor: pointer;
 }
 
-/* line 26, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 27, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_avatar {
   -moz-border-radius: 4em/4em;
   -webkit-border-radius: 4em 4em;
@@ -13121,7 +13121,7 @@ table.delivery-table tr:hover td {
   margin-bottom: 0;
   overflow: hidden;
 }
-/* line 35, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 36, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_avatar img {
   width: 100%;
   height: auto;
@@ -13129,18 +13129,18 @@ table.delivery-table tr:hover td {
   min-width: 4em;
 }
 
-/* line 42, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 43, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_timestamp {
   color: #bfbfbf;
   margin-top: -10px;
 }
 
-/* line 46, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 47, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment {
   border: none;
 }
 
-/* line 49, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 50, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .thread_new_comment_link a, .thread_hide a {
   background-color: #eeeeee !important;
   /*color: #444;*/
@@ -13150,7 +13150,7 @@ table.delivery-table tr:hover td {
   padding: 5px 10px;
 }
 
-/* line 58, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 59, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_form_actions input {
   background-color: #eeeeee !important;
   -moz-border-radius: .25em/.25em;
@@ -13159,7 +13159,7 @@ table.delivery-table tr:hover td {
   border: none;
 }
 
-/* line 67, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 68, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .comment_form_field textarea {
   height: 5em !important;
   border-color: #bfbfbf !important;
@@ -13168,16 +13168,16 @@ table.delivery-table tr:hover td {
   border-radius: 4px/4px;
 }
 
-/* line 76, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 77, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .course-boxes label {
   margin-right: 15px;
 }
-/* line 79, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 80, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .course-boxes input {
   margin-right: 3px;
 }
 
-/* line 83, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 84, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .course-button {
   background: #D2D2D2;
   -moz-border-radius: 40px/40px;
@@ -13188,35 +13188,30 @@ table.delivery-table tr:hover td {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-/* line 91, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 92, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .course-button a {
   color: black;
 }
 
-/* line 97, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 98, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .check-icon img {
   height: 1em;
   width: 1em;
 }
 
-/* line 102, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 103, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 #unit-instructor-form {
   display: none;
 }
 
-/* line 105, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 106, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 .destroy-instructor {
   display: none;
 }
 
-/* line 108, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+/* line 109, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 li.unit-instructor-name:hover {
   cursor: pointer;
-}
-
-/* line 112, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
-#show-calendar {
-  z-index: 3;
 }
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
@@ -13233,8 +13228,8 @@ li.unit-instructor-name:hover {
 
 /* line 52, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 body {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* line 93, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
@@ -13321,7 +13316,7 @@ body {
 
 /* line 199, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 main {
-  padding: 5px !important;
+  padding: 2% !important;
 }
 
 /* line 228, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
@@ -13461,8 +13456,8 @@ h1.welcome-message {
 
 /* line 52, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 body {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* line 93, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
@@ -13549,7 +13544,7 @@ body {
 
 /* line 199, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 main {
-  padding: 5px !important;
+  padding: 2% !important;
 }
 
 /* line 228, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
