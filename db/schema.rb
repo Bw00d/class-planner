@@ -130,6 +130,11 @@ ActiveRecord::Schema.define(version: 20190116182109) do
     t.integer "course_id"
   end
 
+  create_table "unit_instructors", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "delivery_id"
+  end
+
   create_table "unit_quals", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
