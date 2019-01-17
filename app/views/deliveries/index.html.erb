@@ -10,22 +10,22 @@
 <div class="row">
   <div id='deliveries' class="col-lg-10 col-sm-12 col-md-10 center-block">
     <h4>Deliveries</h4>
-    <div class="table-responsive">
+    <div class="table-responsive-sm">
       
     <table class="table delivery-table">
       <thead>
         <tr>
           <th>#</th>
-          <th>Course</th>
-          <th>Title</th>
+          <th class="hidden-xs hidden-sm">Course</th>
+          <th class="hidden-xs hidden-sm">Title</th>
           <th>NWCG</th>
           <th>Dates</th>
           <th>Association</th>
           <th>Location</th>
-          <th>Flyer</th>
-          <th>Sent</th>
-          <th>Reg Form</th>
-          <th>Lead</th>
+          <th class="hidden-xs hidden-sm">Flyer</th>
+          <th class="hidden-xs hidden-sm">Sent</th>
+          <th class="hidden-xs hidden-sm">Reg Form</th>
+          <th class="hidden-xs hidden-sm">Lead</th>
         </tr>
       </thead>
       <tbody>
@@ -33,16 +33,16 @@
           <% @deliveries.scheduled.each_with_index do |delivery, n| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= n+1 %></td>
-            <td><%= delivery.course_number %></td>
-            <td><%= delivery.course.title %></td>
+            <td class="hidden-xs hidden-sm"><%= delivery.course_number %></td>
+            <td class="hidden-xs hidden-sm"><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
             <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
-            <td><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
-            <td><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
-            <td><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
-            <td><% if delivery.lead_instructor %><%= delivery.display_lead_instructor.last_name %><% end %> </td>
+            <td class="hidden-xs hidden-sm"><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
+            <td class="hidden-xs hidden-sm"><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
+            <td class="hidden-xs hidden-sm" ><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
+            <td class="hidden-xs hidden-sm" ><% if delivery.lead_instructor %><%= delivery.display_lead_instructor.last_name %><% end %> </td>
         </tr>
       <% end %>
       </tbody>
@@ -52,8 +52,8 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Course</th>
-          <th>Title</th>
+          <th class="hidden-xs hidden-sm">Course</th>
+          <th class="hidden-xs hidden-sm">Title</th>
           <th>NWCG</th>
           <th>Dates</th>
           <th>Association</th>
@@ -65,8 +65,8 @@
           <% @deliveries.unscheduled.each_with_index do |delivery, n| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= n+1 %></td>
-            <td><%= delivery.course_number %></td>
-            <td><%= delivery.course.title %></td>
+            <td class="hidden-xs hidden-sm"><%= delivery.course_number %></td>
+            <td class="hidden-xs hidden-sm"><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
             <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
