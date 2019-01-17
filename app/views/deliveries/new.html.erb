@@ -1,13 +1,12 @@
 <%= content_for :title, "New Delivery" %>
- <div class="row">
-  <div class="col-lg-8 center-block">
-    <div class="row">
-      <%= link_to 'ALL DELIVERIES', deliveries_path, class: 'btn btn-info' %>
-    </div>
-    </br>
-    <h3 class="centered">New Delivery</h3>
 
-    <%= render 'form', delivery: @delivery %>
-
+<div class="col-lg-8 col-md-8 col-sm-12 center-block">
+  <div class="row">
+    <%= link_to 'ALL DELIVERIES', deliveries_path, class: 'btn btn-info' %>
   </div>
+  </br>
+  <h3 class="centered">New Delivery</h3>
+
+  <%= render 'form', delivery: @delivery %>
+
 </div>

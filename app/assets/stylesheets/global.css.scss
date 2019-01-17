@@ -50,8 +50,8 @@ $gray-lightest:          lighten(#000, 98%);
 // Body
 $body-bg:               white;
 body {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 // Alerts and form feedback states
