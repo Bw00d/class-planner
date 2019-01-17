@@ -25,4 +25,11 @@
 //= require bootstrap-datepicker
 //= require best_in_place
 //= require jquery.validate
+//= require moment 
+//= require fullcalendar
 //= require_tree .
+
+$('#calendar').fullCalendar({
+  height: 650,
+  contentHeight: 600
+});

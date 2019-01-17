@@ -68,6 +68,8 @@ gem 'american_date'
 gem 'best_in_place', '~> 3.0.1'
 gem 'commontator', '~> 5.1.0'
 gem 'jquery-validation-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :test do
   gem 'database_cleaner'

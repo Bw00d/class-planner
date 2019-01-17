@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function(){
+  
   $('.datepicker').datepicker();
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
@@ -18,5 +19,11 @@ $(document).ready(function(){
 
   $('li.unit-instructor-name').click(function(){
     $(this).find('.destroy-instructor').toggle();
+  });
+
+  $('#show-calendar').click(function() {
+    $('#deliveries').hide();
+    // $('#calendar').show();
+
   });
 });
