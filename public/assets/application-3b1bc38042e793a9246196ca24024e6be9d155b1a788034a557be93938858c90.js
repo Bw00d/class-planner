@@ -47713,6 +47713,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+$(document).on("turbolinks:load", function() {
+
+  $('#calendar').fullCalendar({
+    events: '/deliveries.json',
+    eventColor: '#5FC0DD',
+    eventAfterRender: function (event, element, view) {
+        
+        if (event.number == "S-230") {
+            //event.color = "#FFB347"; //Em andamento
+            element.css('background-color', '#474747');
+            element.css('border', '#474747');
+        } else if (event.number == "S-330") {
+            //event.color = "#77DD77"; //Concluído OK
+            element.css('background-color', '#FD9727');
+            element.css('border', '#FD9727');
+        } else {
+            //event.color = "#AEC6CF"; //Não iniciado
+            element.css('background-color', '#AEC6CF');
+            element.css('border', '#AEC6CF');
+        }
+    }
+
+  });
+
+});
 // Replace Rails's default confirm popup with our own version
 $.rails.allowAction = function (link) {
     "use strict";
@@ -47751,7 +47776,7 @@ $.rails.showConfirmationDialog = function (link) {
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).ready(function(){
+$(document).on("turbolinks:load", function() {
   
   $('.datepicker').datepicker();
   /* Activating Best In Place */
@@ -47771,11 +47796,6 @@ $(document).ready(function(){
     $(this).find('.destroy-instructor').toggle();
   });
 
-  $('#show-calendar').click(function() {
-    $('#deliveries').hide();
-    // $('#calendar').show();
-
-  });
 });
 $(document).on("turbolinks:load", () => FontAwesome.dom.i2svg());
 // This file contains JS code which is used across the entire Rails application.
@@ -47981,7 +48001,5 @@ $(document).on("turbolinks:load", function() {
 
 
 
-$('#calendar').fullCalendar({
-  height: 650,
-  contentHeight: 600
-});
+
+;
