@@ -1,4 +1,5 @@
 class Delivery < ApplicationRecord
+  before_save :set_date
 
   acts_as_commontable dependent: :destroy
 
@@ -45,6 +46,20 @@ class Delivery < ApplicationRecord
     course = Course.find(id)
     return "#{course.course_number } - #{course.title},#{course.id}"
   end
+
+  def display_end_date
+    if self.end_date
+      self.end_date - 1.day
+    end
+  end
+
+  private 
+
+    def set_date
+      if self.end_date
+        self.end_date = self.end_date + 1.day
+      end
+    end
 
 end
 

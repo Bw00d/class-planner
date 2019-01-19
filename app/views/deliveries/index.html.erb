@@ -30,7 +30,7 @@
             <td class="hidden-xs hidden-sm"><%= delivery.course_number %></td>
             <td class="hidden-xs hidden-sm"><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
-            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
+            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.display_end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
             <td class="hidden-xs hidden-sm"><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
@@ -62,7 +62,7 @@
             <td class="hidden-xs hidden-sm"><%= delivery.course_number %></td>
             <td class="hidden-xs hidden-sm"><%= delivery.course.title %></td>
             <td><%= delivery.course.course_number %></td>
-            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.end_date.try(:strftime, "%b %e, %Y") %></td>
+            <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.display_end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
         </tr>

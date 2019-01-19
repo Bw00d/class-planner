@@ -3,8 +3,8 @@ $(document).on("turbolinks:load", function() {
   $('#calendar').fullCalendar({
     events: '/deliveries.json',
     eventColor: '#5FC0DD',
+    allDay: true,
     eventAfterRender: function (event, element, view) {
-        
         if (event.number == "S-230") {
             //event.color = "#FFB347"; //Em andamento
             element.css('background-color', '#474747');

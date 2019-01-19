@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-sm-4">
         <strong>Dates:</strong>
-          <%= @delivery.start_date.try(:strftime, '%b %e') %> - <%= @delivery.end_date.try(:strftime,'%b %e, %Y') %> 
+          <%= @delivery.start_date.try(:strftime, '%b %e') %> - <%= @delivery.display_end_date.try(:strftime,'%b %e, %Y') %> 
       </div>
       <div class="col-sm-4">
         <strong>Time:</strong>
