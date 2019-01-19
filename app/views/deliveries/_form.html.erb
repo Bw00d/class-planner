@@ -37,7 +37,7 @@
         <%= f.label :end_date %>
         <% if @delivery.end_date %>
           <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"}, 
-                                value: @delivery.end_date - 1.day,  class: "form-control", placeholder: "END DATE" %>
+                                value: @delivery.display_end_date,  class: "form-control", placeholder: "END DATE" %>
         <% else %>
           <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"}, class: "form-control", placeholder: "END DATE" %>
         <% end %>
