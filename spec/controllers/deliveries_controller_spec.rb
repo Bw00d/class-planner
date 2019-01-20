@@ -155,5 +155,4 @@ RSpec.describe DeliveriesController, type: :controller do
       expect(response).to redirect_to(deliveries_url)
     end
   end
-
 end

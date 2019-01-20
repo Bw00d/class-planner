@@ -8,7 +8,8 @@ RSpec.describe ApplicationHelper, type: :helper do
       alert: 'alert-warning',
       notice: 'alert-info'
     }.each do |flash_type, bootstrap_class|
-      it "uses the #{bootstrap_class} Bootstrap class for #{flash_type} flash messages" do
+      it "uses the #{bootstrap_class} Bootstrap class for #{flash_type} flash
+      messages" do
         expect(helper.bootstrap_class_for(flash_type.to_s)).to \
           eq(bootstrap_class)
       end
