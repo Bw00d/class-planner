@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     sequence(:email) { |n| "user#{n}@test.com" }
-    password {'V4lidp4ssword'}
+    password { 'V4lidp4ssword' }
     password_confirmation { 'V4lidp4ssword' }
     # Must use a string for a role to allow comparing with DB-stored roles
     role {'user'}

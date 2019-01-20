@@ -4,7 +4,7 @@ unless Rails.env.development?
         "You should not seed the #{Rails.env} environment database."
 end
 
-DEVELOPMENT_PASSWORD = 'Devpass1'
+DEVELOPMENT_PASSWORD = 'F00barbaz'.freeze
 
 # the production environment as this file (wich contains clear text passwords)
 # is available at the Git repository.
@@ -20,8 +20,9 @@ User.create!([
                  first_name: 'Admin',
                  last_name: 'User',
                  # Required when using Devise's Confirmable module
-                 confirmed_at: Time.zone.today,
-               }, {
+                 confirmed_at: Time.zone.today
+               },
+               {
                  # Ordinary user (non-admin)
                  email: 'user@test.com',
                  password: DEVELOPMENT_PASSWORD,
@@ -29,6 +30,6 @@ User.create!([
                  role: :user,
                  first_name: 'Ordinary',
                  last_name: 'User',
-                 confirmed_at: Time.zone.today,
+                 confirmed_at: Time.zone.today
                }
              ])

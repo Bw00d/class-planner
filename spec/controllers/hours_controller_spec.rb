@@ -23,13 +23,13 @@ RSpec.describe HoursController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Hour. As you add validations to Hour, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
+  let(:valid_attributes) do
     skip('Add a hash of attributes valid for your model')
-  }
+  end
 
-  let(:invalid_attributes) {
+  let(:invalid_attributes) do
     skip('Add a hash of attributes invalid for your model')
-  }
+  end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -89,12 +89,12 @@ RSpec.describe HoursController, type: :controller do
 
     context 'with invalid params' do
       it 'assigns a newly created but unsaved hour as @hour' do
-        post :create, params: {hour: invalid_attributes }, session: valid_session
+        post :create, params: { hour: invalid_attributes }, session: valid_session
         expect(assigns(:hour)).to be_a_new(Hour)
       end
 
       it 're-renders the "new" template' do
-        post :create, params: {hour: invalid_attributes }, session: valid_session
+        post :create, params: { hour: invalid_attributes }, session: valid_session
         expect(response).to render_template('new')
       end
     end
