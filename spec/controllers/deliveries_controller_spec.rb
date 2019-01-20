@@ -24,11 +24,11 @@ RSpec.describe DeliveriesController, type: :controller do
   # Delivery. As you add validations to Delivery, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    skip('Add a hash of attributes valid for your model')
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    skip('Add a hash of attributes invalid for your model')
   }
 
   # This should return the minimal set of values that should be in the session
@@ -36,122 +36,122 @@ RSpec.describe DeliveriesController, type: :controller do
   # DeliveriesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
-    it "assigns all deliveries as @deliveries" do
+  describe 'GET #index' do
+    it 'assigns all deliveries as @deliveries' do
       delivery = Delivery.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(assigns(:deliveries)).to eq([delivery])
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested delivery as @delivery" do
+  describe 'GET #show' do
+    it 'assigns the requested delivery as @delivery' do
       delivery = Delivery.create! valid_attributes
-      get :show, params: {id: delivery.to_param}, session: valid_session
+      get :show, params: { id: delivery.to_param }, session: valid_session
       expect(assigns(:delivery)).to eq(delivery)
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new delivery as @delivery" do
+  describe 'GET #new' do
+    it 'assigns a new delivery as @delivery' do
       get :new, params: {}, session: valid_session
       expect(assigns(:delivery)).to be_a_new(Delivery)
     end
   end
 
-  describe "GET #edit" do
-    it "assigns the requested delivery as @delivery" do
+  describe 'GET #edit' do
+    it 'assigns the requested delivery as @delivery' do
       delivery = Delivery.create! valid_attributes
-      get :edit, params: {id: delivery.to_param}, session: valid_session
+      get :edit, params: { id: delivery.to_param }, session: valid_session
       expect(assigns(:delivery)).to eq(delivery)
     end
   end
 
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new Delivery" do
+  describe 'POST #create' do
+    context 'with valid params' do
+      it 'creates a new Delivery' do
         expect {
-          post :create, params: {delivery: valid_attributes}, session: valid_session
+          post :create, params: {delivery: valid_attributes }, session: valid_session
         }.to change(Delivery, :count).by(1)
       end
 
-      it "assigns a newly created delivery as @delivery" do
-        post :create, params: {delivery: valid_attributes}, session: valid_session
+      it 'assigns a newly created delivery as @delivery' do
+        post :create, params: {delivery: valid_attributes }, session: valid_session
         expect(assigns(:delivery)).to be_a(Delivery)
         expect(assigns(:delivery)).to be_persisted
       end
 
-      it "redirects to the created delivery" do
-        post :create, params: {delivery: valid_attributes}, session: valid_session
+      it 'redirects to the created delivery' do
+        post :create, params: {delivery: valid_attributes }, session: valid_session
         expect(response).to redirect_to(Delivery.last)
       end
     end
 
-    context "with invalid params" do
-      it "assigns a newly created but unsaved delivery as @delivery" do
-        post :create, params: {delivery: invalid_attributes}, session: valid_session
+    context 'with invalid params' do
+      it 'assigns a newly created but unsaved delivery as @delivery' do
+        post :create, params: {delivery: invalid_attributes }, session: valid_session
         expect(assigns(:delivery)).to be_a_new(Delivery)
       end
 
-      it "re-renders the 'new' template" do
-        post :create, params: {delivery: invalid_attributes}, session: valid_session
-        expect(response).to render_template("new")
+      it 're-renders the "new" template' do
+        post :create, params: {delivery: invalid_attributes }, session: valid_session
+        expect(response).to render_template('new')
       end
     end
   end
 
-  describe "PUT #update" do
-    context "with valid params" do
+  describe 'PUT #update' do
+    context 'with valid params' do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        skip('Add a hash of attributes valid for your model')
       }
 
-      it "updates the requested delivery" do
+      it 'updates the requested delivery' do
         delivery = Delivery.create! valid_attributes
-        put :update, params: {id: delivery.to_param, delivery: new_attributes}, session: valid_session
+        put :update, params: { id: delivery.to_param, delivery: new_attributes }, session: valid_session
         delivery.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "assigns the requested delivery as @delivery" do
+      it 'assigns the requested delivery as @delivery' do
         delivery = Delivery.create! valid_attributes
-        put :update, params: {id: delivery.to_param, delivery: valid_attributes}, session: valid_session
+        put :update, params: { id: delivery.to_param, delivery: valid_attributes }, session: valid_session
         expect(assigns(:delivery)).to eq(delivery)
       end
 
-      it "redirects to the delivery" do
+      it 'redirects to the delivery' do
         delivery = Delivery.create! valid_attributes
-        put :update, params: {id: delivery.to_param, delivery: valid_attributes}, session: valid_session
+        put :update, params: { id: delivery.to_param, delivery: valid_attributes }, session: valid_session
         expect(response).to redirect_to(delivery)
       end
     end
 
-    context "with invalid params" do
-      it "assigns the delivery as @delivery" do
+    context 'with invalid params' do
+      it 'assigns the delivery as @delivery' do
         delivery = Delivery.create! valid_attributes
-        put :update, params: {id: delivery.to_param, delivery: invalid_attributes}, session: valid_session
+        put :update, params: { id: delivery.to_param, delivery: invalid_attributes }, session: valid_session
         expect(assigns(:delivery)).to eq(delivery)
       end
 
-      it "re-renders the 'edit' template" do
+      it 're-renders the "edit" template' do
         delivery = Delivery.create! valid_attributes
-        put :update, params: {id: delivery.to_param, delivery: invalid_attributes}, session: valid_session
-        expect(response).to render_template("edit")
+        put :update, params: { id: delivery.to_param, delivery: invalid_attributes }, session: valid_session
+        expect(response).to render_template('edit')
       end
     end
   end
 
-  describe "DELETE #destroy" do
-    it "destroys the requested delivery" do
+  describe 'DELETE #destroy' do
+    it 'destroys the requested delivery' do
       delivery = Delivery.create! valid_attributes
       expect {
-        delete :destroy, params: {id: delivery.to_param}, session: valid_session
+        delete :destroy, params: { id: delivery.to_param }, session: valid_session
       }.to change(Delivery, :count).by(-1)
     end
 
-    it "redirects to the deliveries list" do
+    it 'redirects to the deliveries list' do
       delivery = Delivery.create! valid_attributes
-      delete :destroy, params: {id: delivery.to_param}, session: valid_session
+      delete :destroy, params: { id: delivery.to_param }, session: valid_session
       expect(response).to redirect_to(deliveries_url)
     end
   end

@@ -47,7 +47,7 @@ RSpec.describe UnitInstructorsController, type: :controller do
   describe "GET #show" do
     it "assigns the requested unit_instructor as @unit_instructor" do
       unit_instructor = UnitInstructor.create! valid_attributes
-      get :show, params: {id: unit_instructor.to_param}, session: valid_session
+      get :show, params: { id: unit_instructor.to_param }, session: valid_session
       expect(assigns(:unit_instructor)).to eq(unit_instructor)
     end
   end
@@ -62,7 +62,7 @@ RSpec.describe UnitInstructorsController, type: :controller do
   describe "GET #edit" do
     it "assigns the requested unit_instructor as @unit_instructor" do
       unit_instructor = UnitInstructor.create! valid_attributes
-      get :edit, params: {id: unit_instructor.to_param}, session: valid_session
+      get :edit, params: { id: unit_instructor.to_param }, session: valid_session
       expect(assigns(:unit_instructor)).to eq(unit_instructor)
     end
   end
@@ -71,30 +71,30 @@ RSpec.describe UnitInstructorsController, type: :controller do
     context "with valid params" do
       it "creates a new UnitInstructor" do
         expect {
-          post :create, params: {unit_instructor: valid_attributes}, session: valid_session
+          post :create, params: {unit_instructor: valid_attributes }, session: valid_session
         }.to change(UnitInstructor, :count).by(1)
       end
 
       it "assigns a newly created unit_instructor as @unit_instructor" do
-        post :create, params: {unit_instructor: valid_attributes}, session: valid_session
+        post :create, params: {unit_instructor: valid_attributes }, session: valid_session
         expect(assigns(:unit_instructor)).to be_a(UnitInstructor)
         expect(assigns(:unit_instructor)).to be_persisted
       end
 
       it "redirects to the created unit_instructor" do
-        post :create, params: {unit_instructor: valid_attributes}, session: valid_session
+        post :create, params: {unit_instructor: valid_attributes }, session: valid_session
         expect(response).to redirect_to(UnitInstructor.last)
       end
     end
 
     context "with invalid params" do
       it "assigns a newly created but unsaved unit_instructor as @unit_instructor" do
-        post :create, params: {unit_instructor: invalid_attributes}, session: valid_session
+        post :create, params: {unit_instructor: invalid_attributes }, session: valid_session
         expect(assigns(:unit_instructor)).to be_a_new(UnitInstructor)
       end
 
       it "re-renders the 'new' template" do
-        post :create, params: {unit_instructor: invalid_attributes}, session: valid_session
+        post :create, params: {unit_instructor: invalid_attributes }, session: valid_session
         expect(response).to render_template("new")
       end
     end
@@ -108,20 +108,20 @@ RSpec.describe UnitInstructorsController, type: :controller do
 
       it "updates the requested unit_instructor" do
         unit_instructor = UnitInstructor.create! valid_attributes
-        put :update, params: {id: unit_instructor.to_param, unit_instructor: new_attributes}, session: valid_session
+        put :update, params: { id: unit_instructor.to_param, unit_instructor: new_attributes}, session: valid_session
         unit_instructor.reload
         skip("Add assertions for updated state")
       end
 
       it "assigns the requested unit_instructor as @unit_instructor" do
         unit_instructor = UnitInstructor.create! valid_attributes
-        put :update, params: {id: unit_instructor.to_param, unit_instructor: valid_attributes}, session: valid_session
+        put :update, params: { id: unit_instructor.to_param, unit_instructor: valid_attributes }, session: valid_session
         expect(assigns(:unit_instructor)).to eq(unit_instructor)
       end
 
       it "redirects to the unit_instructor" do
         unit_instructor = UnitInstructor.create! valid_attributes
-        put :update, params: {id: unit_instructor.to_param, unit_instructor: valid_attributes}, session: valid_session
+        put :update, params: { id: unit_instructor.to_param, unit_instructor: valid_attributes }, session: valid_session
         expect(response).to redirect_to(unit_instructor)
       end
     end
@@ -129,13 +129,13 @@ RSpec.describe UnitInstructorsController, type: :controller do
     context "with invalid params" do
       it "assigns the unit_instructor as @unit_instructor" do
         unit_instructor = UnitInstructor.create! valid_attributes
-        put :update, params: {id: unit_instructor.to_param, unit_instructor: invalid_attributes}, session: valid_session
+        put :update, params: { id: unit_instructor.to_param, unit_instructor: invalid_attributes }, session: valid_session
         expect(assigns(:unit_instructor)).to eq(unit_instructor)
       end
 
       it "re-renders the 'edit' template" do
         unit_instructor = UnitInstructor.create! valid_attributes
-        put :update, params: {id: unit_instructor.to_param, unit_instructor: invalid_attributes}, session: valid_session
+        put :update, params: { id: unit_instructor.to_param, unit_instructor: invalid_attributes }, session: valid_session
         expect(response).to render_template("edit")
       end
     end
@@ -145,13 +145,14 @@ RSpec.describe UnitInstructorsController, type: :controller do
     it "destroys the requested unit_instructor" do
       unit_instructor = UnitInstructor.create! valid_attributes
       expect {
-        delete :destroy, params: {id: unit_instructor.to_param}, session: valid_session
-      }.to change(UnitInstructor, :count).by(-1)
+        delete :destroy, params: { id: unit_instructor.to_param }, 
+        session: valid_session }.to change(UnitInstructor, :count).by(-1)
     end
 
     it "redirects to the unit_instructors list" do
       unit_instructor = UnitInstructor.create! valid_attributes
-      delete :destroy, params: {id: unit_instructor.to_param}, session: valid_session
+      delete :destroy, params: { id: unit_instructor.to_param }, 
+      session: valid_session
       expect(response).to redirect_to(unit_instructors_url)
     end
   end
