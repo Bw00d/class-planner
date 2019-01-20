@@ -1,7 +1,5 @@
-# Zen Rails Base Application
+# Application to mange fire classes for Clackamas Community College
 
-## Summary
-Application to mange fire classes for Clackamas Community College
 
 ## Features
 Rails 5.1.3 app base of zen-rails-base-app
