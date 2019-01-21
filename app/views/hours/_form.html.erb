@@ -27,6 +27,14 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :work_type %><br>
+    <%= f.label :work_type  , "Non-Instructional", :value => "Non-Instructional"  %>
+    <%= f.radio_button :work_type , "non-instructional" %>
+    <%= f.label :work_type  , "Instruction", :value => "Instruction" %>
+    <%= f.radio_button :work_type , "Instruction" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :comment %>
     <%= f.text_area :comment, id: :hour_comment, class: "form-control" %>
   </div>
