@@ -6,13 +6,12 @@ class HoursController < ApplicationController
   # GET /hours
   # GET /hours.json
   def index
-    @hours = current_user.hours
+    @hours = current_user.hours.order('start ASC')
   end
 
   # GET /hours/1
   # GET /hours/1.json
-  def show
-  end
+  def show; end
 
   # GET /hours/new
   def new
@@ -20,14 +19,12 @@ class HoursController < ApplicationController
   end
 
   # GET /hours/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /hours
   # POST /hours.json
   def create
     @hour = current_user.hours.build(hour_params)
-
     respond_to do |format|
       if @hour.save
         format.html { redirect_to @hour, notice: 'Hour was successfully created.' }
@@ -64,13 +61,14 @@ class HoursController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hour
-      @hour = Hour.find(params[:id])
-    end
+  
+  # Use callbacks to share common setup or constraints between actions.
+  def set_hour
+    @hour = Hour.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def hour_params
-      params.require(:hour).permit(:start, :end, :break, :comment, :user_id, :work_type)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def hour_params
+    params.require(:hour).permit(:start, :end, :break, :comment, :user_id, :work_type)
+  end
 end
