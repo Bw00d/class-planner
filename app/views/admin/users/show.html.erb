@@ -24,29 +24,42 @@
     <div>
       <%= check_box_tag 'Instructor', @user.instructor, @user.instructor %>   <%= label_tag "Instructor" %>
     </div>
-    <% if current_user.instructor? %>
-        <% if !@user.deliveries.empty? %>
-          <h4><strong><%= @user.first_name %>'s Deliveries</strong></h4>
-          <div>Lead</div>
-          <ul>
-          <% @leads.each do |d| %>
+    <% if current_user.instructor? && if !@user.deliveries.empty? %>
+      <h4>
+        <strong><%= @user.first_name %>'s Deliveries</strong>
+      </h4>
+      <div>
+        Lead
+      </div>
+      <ul>
+        <% @leads.each do |d| %>
           <%= link_to delivery_path(d) do %>
-            <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %></li>
-            <% end %>
+            <li>
+              <%= d.course.course_number %>  –  <%= d.course.title %>  |  
+              <%= d.start_date.try(:strftime, "%b %e") %> - 
+              <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  
+              <%= display_location(d) %>
+            </li>
           <% end %>
-          </ul>
         <% end %>
-        <% if !current_user.units.empty? %>
-        <div>Unit</div>
-          <ul>
+      </ul>
+      <% if !current_user.units.empty? %>
+        <div>
+          Unit
+        </div>
+        <ul>
           <% @units.each do |d| %>
-          <%= link_to delivery_path(d) do %>
-            <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %>  </li>
+            <%= link_to delivery_path(d) do %>
+              <li>
+                <%= d.course.course_number %>  –  <%= d.course.title %>  |  
+                <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  
+                <%= display_location(d) %>
+              </li>
             <% end %>
           <% end %>
-          </ul>
+        </ul>
         <% end %>
       <% end %>
-
+    <% end %>
   </div>
 </div>
