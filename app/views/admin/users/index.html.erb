@@ -65,7 +65,7 @@
           <% @users.each do |user| %>
             <%# Do not use #content_tag_for as it leaks record IDs %>
             <tr class="user" id="user_<%= user.slug %>">
-              <td class="email"><%= mail_to user.email %></td>
+              <td class="email"><%= link_to user.email, admin_user_path(user) %></td>
               <td class="role"><%= user.role %></td>
               <td class="full_name"><%= user.full_name %></td>
               <td class="actions">
