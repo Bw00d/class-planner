@@ -175,7 +175,7 @@ Devise.setup do |config|
   # to give user feedback and not to assert the e-mail validity.
   # Not necessary. Using an e-mail field in the view causes the browser to
   # perform basic e-mail format validation.
-  # config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this

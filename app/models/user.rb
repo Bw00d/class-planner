@@ -30,8 +30,8 @@ class User < ApplicationRecord
   # Callback to set the default role of new records
   after_initialize :set_default_role, if: :new_record?
 
-  devise :database_authenticatable, :lockable, :registerable,
-         :recoverable, :rememberable, :timeoutable, :trackable, :validatable
+  devise :database_authenticatable, , :registerable,
+         :recoverable, :rememberable, :timeoutable, :trackable, 
 
 
   scope :instructors, -> { where(instructor: true) }
