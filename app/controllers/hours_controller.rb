@@ -27,7 +27,7 @@ class HoursController < ApplicationController
     @hour = current_user.hours.build(hour_params)
     respond_to do |format|
       if @hour.save
-        format.html { redirect_to @hour, notice: 'Hour was successfully created.' }
+        format.html { redirect_to hours_path, notice: 'Hours were added.' }
         format.json { render :show, status: :created, location: @hour }
       else
         format.html { render :new }

@@ -33,16 +33,17 @@
           </td>
           <td>
             <% if hour.comment %>
-              <%= link_to fa_icon('comment'), 'javascript:;', class: 'comment-button' %>
+              <%= link_to fa_icon('comment'), 'javascript:;', class: 'comment-button', data: hour.id %>
             <% end %>
           </td>
           <td><%= link_to (fa_icon('eye')), hour %></td>
           <td><%= link_to (fa_icon('pencil-alt')), edit_hour_path(hour) %></td>
           <td><%= link_to (fa_icon('times')), hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <div id=<%= hour.id %><%= "-comment" %> class="hour-comment"><%= hour.comment %></div>
         </tr>
-        <div class="hour-comment">
-          <%#= hour.comment %>
-        </div>
+        
+         
+       
       <% end %>
     </tbody>
   </table>
