@@ -25,10 +25,11 @@ class HoursController < ApplicationController
   # POST /hours.json
   def create
     @hour = current_user.hours.build(hour_params)
+    @hours = current_user.hours.order('start ASC')
     respond_to do |format|
       if @hour.save
         format.html { redirect_to hours_path, notice: 'Hours were added.' }
-        format.json { render :show, status: :created, location: @hour }
+        format.json { render :index, status: :created, location: @hours }
       else
         format.html { render :new }
         format.json { render json: @hour.errors, status: :unprocessable_entity }
