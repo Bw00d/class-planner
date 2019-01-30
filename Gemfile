@@ -70,6 +70,8 @@ gem 'commontator', '~> 5.1.0'
 gem 'jquery-validation-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 group :test do
   gem 'database_cleaner'

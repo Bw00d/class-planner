@@ -10,6 +10,7 @@ class User < ApplicationRecord
     has_many :unit_quals
     has_many :unit_instructors
     has_many :hours
+    has_many :timesheets
     accepts_nested_attributes_for :lead_quals, allow_destroy: true
     # has_many :courses, through: :unit_quals
     # has_many :unit_quals
