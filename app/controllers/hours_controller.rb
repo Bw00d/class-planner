@@ -42,11 +42,11 @@ class HoursController < ApplicationController
   def update
     respond_to do |format|
       if @hour.update(hour_params)
-        format.html { redirect_to @hour, notice: 'Hour was successfully updated.' }
-        format.json { render :show, status: :ok, location: @hour }
+        format.html { redirect_to @hour, notice: 'hour was successfully updated.' }
+        format.json { respond_with_bip(@hour) }
       else
         format.html { render :edit }
-        format.json { render json: @hour.errors, status: :unprocessable_entity }
+        format.json { respond_with_bip(@hour) }
       end
     end
   end
@@ -70,6 +70,6 @@ class HoursController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def hour_params
-    params.require(:hour).permit(:start, :end, :break, :comment, :user_id, :work_type)
+    params.require(:hour).permit(:start, :end, :break, :comment, :user_id, :work_type, :submitted, :timesheet_id)
   end
 end

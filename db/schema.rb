@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 20190130060935) do
     t.datetime "updated_at", null: false
     t.string "work_type"
     t.integer "timesheet_id"
+    t.boolean "submitted", default: false
   end
 
   create_table "lead_quals", force: :cascade do |t|

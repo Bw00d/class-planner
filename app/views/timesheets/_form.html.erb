@@ -1,4 +1,4 @@
-<%= form_with(model: timesheet, local: true) do |form| %>
+<%= form_with(model: timesheet, local: true) do |f| %>
   <% if timesheet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(timesheet.errors.count, "error") %> prohibited this timesheet from being saved:</h2>
@@ -10,8 +10,53 @@
       </ul>
     </div>
   <% end %>
+  <div class="col-sm-12 col-lg-10 center-block"></div>
+
+  <h1>Hours</h1>
+
+  <table class="table delivery-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Start</th>
+        <th>End</th>
+        <th class="hidden-xs hidden-sm">Break</th>
+        <th>Total</th>
+        <th>Type</th>
+        <th colspan="1">Add</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @hours.each do |hour| %>
+        <% if !hour.comment.empty? %>
+          <div id=<%= hour.id %><%= "-comment" %> class="hour-comment arrow_box"><%= hour.comment %></div>
+        <% end %>
+        <tr>
+          <td><%= hour.start.to_time.strftime('%m/%d/%y') %></td>
+          <td><%= hour.start.to_time.strftime('%H:%M %p') %></td>
+          <td><%= hour.end.to_time.strftime('%H:%M %p') %></td>
+          <td class="hidden-xs hidden-sm"><%= hour.break %></td>
+          <td><%= hour.total %></td>
+          <td>
+            <% if hour.work_type == "Instruction" %>
+              <%= link_to fa_icon('graduation-cap'), 'javascript:;', class: '' %>
+            <% end %>
+          </td>
+          <td><span class="check-icon md-margin-right"> <%= best_in_place hour, :submitted, as: :checkbox, collection: {false: image_tag('square-regular.svg'), true: image_tag('check-square-regular.svg')} %></span>
+          </td> 
+    
+        </tr>
+        
+         
+       
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit "CREATE", class: "btn btn-success" %>
   </div>
 <% end %>

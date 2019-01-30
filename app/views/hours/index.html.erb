@@ -1,3 +1,4 @@
+<% content_for :title, "Hours"  %>
 <% content_for(:body_attributes) do %>
   data-turbolinks="false"
 <% end %>
@@ -54,4 +55,5 @@
   <br>
 
   <%= link_to 'New Entry', new_hour_path, class: 'btn btn-small btn-success' %>
+  <%= link_to 'Generate Timesheet', new_timesheet_path, class: 'btn btn-small btn-info right' %>
 </div>

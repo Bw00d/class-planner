@@ -1,5 +1,7 @@
 class TimesheetsController < ApplicationController
   before_action :set_timesheet, only: [:show, :edit, :update, :destroy]
+  include SkipAuthorization
+  skip_before_action :authenticate_user!
 
   # GET /timesheets
   # GET /timesheets.json
@@ -15,6 +17,7 @@ class TimesheetsController < ApplicationController
   # GET /timesheets/new
   def new
     @timesheet = Timesheet.new
+    @hours = current_user.hours.order('start ASC')
   end
 
   # GET /timesheets/1/edit
