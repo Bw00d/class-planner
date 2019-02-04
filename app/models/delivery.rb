@@ -1,7 +1,7 @@
 class Delivery < ApplicationRecord
   before_save :set_date
 
-  acts_as_commontable dependent: :destroy
+  acts_as_commentable dependent: :destroy
 
   validates :course_id, presence: true
   has_one :course
