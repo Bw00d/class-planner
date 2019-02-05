@@ -11,4 +11,14 @@ module HoursHelper
     end
     total
   end
+
+  def instruction(hours)
+    hours = hours.where(work_type: "Instruction")
+    total_hours(hours)
+  end
+
+  def non_instruction(hours)
+    hours = hours.where(work_type: "Non-Instructional")
+    total_hours(hours)
+  end
 end

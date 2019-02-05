@@ -10,7 +10,10 @@ class HoursController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "index"   # Excluding ".pdf" extension.
+        render pdf: "index",   # Excluding ".pdf" extension.
+        margin: { :bottom => 15 },
+        dpi: 300,
+        orientation: 'landscape'
       end
     end
   end
