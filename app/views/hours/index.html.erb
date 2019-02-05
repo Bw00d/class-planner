@@ -67,5 +67,4 @@
   <br>
 
   <%= link_to 'New Entry', new_hour_path, class: 'btn btn-small btn-success' %>
-  <%= link_to 'Generate Timesheet', new_timesheet_path, class: 'btn btn-small btn-info right' %>
-</div>
+  <%= link_to 'Generate Timesheet', request.original_url + ".pdf", class: 'btn btn-small btn-info right', :id=>"print_friendly" %>

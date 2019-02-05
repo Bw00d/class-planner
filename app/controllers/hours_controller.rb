@@ -7,6 +7,12 @@ class HoursController < ApplicationController
   # GET /hours.json
   def index
     @hours = current_user.hours.order('start ASC')
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "index"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   # GET /hours/1
@@ -62,7 +68,7 @@ class HoursController < ApplicationController
   end
 
   private
-  
+
   # Use callbacks to share common setup or constraints between actions.
   def set_hour
     @hour = Hour.find(params[:id])
