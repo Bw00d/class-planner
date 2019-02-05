@@ -9,6 +9,7 @@
   tfoot { display: table-row-group }
   tr { page-break-inside: avoid }
   .pdf-table {
+    margin-bottom: 10px;
     tr {
       line-height: 30px;
       border-spacing: 0;
@@ -28,5 +29,5 @@
   text-align: center;
 }
 h1, h2, h3, h4, h5 {
-  margin: 5px;
+  margin: 10px;
 }
