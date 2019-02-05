@@ -47807,6 +47807,19 @@ $(document).on("turbolinks:load", function() {
     // Select2 dropdowns
     $('.select2-dropdown').select2();
 });
+$(document).on("turbolinks:load", function() {
+  $('.comment-button').click(function() {
+    $('.hour-comment').hide();
+    id = $(this).attr("data");
+    $('#' + id + "-comment").show();
+  });
+  $('.hour-comment').click(function() {
+    $(this).hide();
+  });
+  $('.show-eye').click(function() {
+    $('#submitted-table').toggleClass('hidden');
+  });
+});
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 ;
