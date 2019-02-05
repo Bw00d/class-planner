@@ -13,8 +13,6 @@ port        ENV.fetch('PORT') { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-rackup      DefaultRackup
-port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
 
 # Specifies the number of `workers` to boot in clustered mode.
