@@ -45,10 +45,22 @@
           <td><%= link_to (fa_icon('pencil-alt')), edit_hour_path(hour) %></td>
           <td><%= link_to (fa_icon('times')), hour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-        
-         
-       
+
+
+
       <% end %>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= total_hours(@hours) %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 
