@@ -9,6 +9,7 @@
   tfoot { display: table-row-group }
   tr { page-break-inside: avoid }
   .pdf-table {
+    width: 100%;
     margin-bottom: 10px;
     tr {
       line-height: 30px;

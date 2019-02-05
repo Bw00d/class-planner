@@ -7,6 +7,8 @@ class HoursController < ApplicationController
   # GET /hours.json
   def index
     @hours = current_user.hours.order('start ASC')
+    @submitted = @hours.where(submitted: true)
+    @current_hours = @hours.where(submitted: false)
     respond_to do |format|
       format.html
       format.pdf do

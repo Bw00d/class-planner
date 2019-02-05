@@ -11,7 +11,12 @@
           <ul>
           <% @leads.each do |d| %>
           <%= link_to delivery_path(d) do %>
-            <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %></li>
+            <li>
+              <%= d.course.course_number %>  –
+              <%= d.course.title %>  |
+              <%= d.start_date.try(:strftime, "%b %e") %> -
+              <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |
+              <%= display_location(d) %></li>
             <% end %>
           <% end %>
           </ul>
@@ -21,7 +26,11 @@
           <ul>
           <% @units.each do |d| %>
           <%= link_to delivery_path(d) do %>
-            <li><%= d.course.course_number %>  –  <%= d.course.title %>  |  <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  <%= display_location(d) %>  </li>
+            <li><%= d.course.course_number %>  –
+              <%= d.course.title %>  |
+              <%= d.start_date.try(:strftime, "%b %e") %> -
+              <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |
+              <%= display_location(d) %>  </li>
             <% end %>
           <% end %>
           </ul>
