@@ -1,10 +1,13 @@
 .pdf-page {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   font-family: Arial, "Helvetica", sans-serif;
   tbody tr:nth-child(odd) {
     background-color: #D5E5FF;
   }
+  thead { display: table-header-group }
+  tfoot { display: table-row-group }
+  tr { page-break-inside: avoid }
   .pdf-table {
     tr {
       line-height: 30px;
@@ -14,4 +17,10 @@
       padding: 0px 10px;
     }
   }
+}
+#timesheet {
+  margin-top: 0 !important;
+}
+.form-footer {
+  text-align: center;
 }

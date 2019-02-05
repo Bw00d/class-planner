@@ -11,9 +11,9 @@ class HoursController < ApplicationController
       format.html
       format.pdf do
         render pdf: "index",   # Excluding ".pdf" extension.
-        margin: { bottom: 15, top: 25 },
+        margin: { bottom: 15 },
         dpi: 300,
-
+        footer: { html: { template: 'hours/pdf_footer'}},
         orientation: 'landscape'
       end
     end
