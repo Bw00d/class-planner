@@ -21,12 +21,15 @@
   </head>
   <body onload="number_pages()>
     <div id="content" class="pdf-page">
-      <div class="container centered">
+      <div class="">
         <div class="row">
-          <h4 class="float-right lg-margin-right"><%= Date.today.strftime('%m/%d/%y') %></h4>
+          <h4 class="float-right lg-margin-right">
+            <%= Date.today.strftime('%m/%d/%y') %>
+          </h4>
           <h2>Timesheet</h2>
           <h4>Name: <%= current_user.full_name %></h4>
-          <h4>Dates: <%= @hours.first.start.to_time.strftime('%m/%d/%y') %>  -
+          <h4>
+            Dates: <%= @hours.first.start.to_time.strftime('%m/%d/%y') %>  -
             <%= @hours.last.end.to_time.strftime('%m/%d/%y') %>
           </h4>
           <table class="pdf-table">
