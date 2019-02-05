@@ -18,7 +18,7 @@ module HoursHelper
   end
 
   def non_instruction(hours)
-    hours = hours.where(work_type: "Non-Instructional")
+    hours = hours.where(work_type: "Non-Instr.")
     total_hours(hours)
   end
 end
