@@ -7,4 +7,7 @@ $(document).on("turbolinks:load", function() {
   $('.hour-comment').click(function() {
     $(this).hide();
   });
+  $('.show-eye').click(function() {
+    $('#submitted-table').toggleClass('hidden');
+  });
 });

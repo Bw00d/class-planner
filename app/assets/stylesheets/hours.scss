@@ -43,5 +43,11 @@ input[type="radio"] {
   margin-right: 15px;
 }
 #submitted-hours {
-  margin-top: 30px !important;
+  display: inline-block;
 }
+.hour-buttons {
+  margin-bottom: 40px;
+}
+// #submitted-table {
+//   display: none;
+// }

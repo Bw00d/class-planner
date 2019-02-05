@@ -78,12 +78,14 @@
   </table>
 
   <br>
-
-  <%= link_to 'New Entry', new_hour_path, class: 'btn btn-small btn-success' %>
-  <%= link_to 'Generate Timesheet', request.original_url + ".pdf", class: 'btn btn-small btn-info right', :id=>"print_friendly" %>
+  <div class="hour-buttons">
+    <%= link_to 'New Entry', new_hour_path, class: 'btn btn-small btn-success' %>
+    <%= link_to 'Generate Timesheet', request.original_url + ".pdf", class: 'btn btn-small btn-info right', :id=>"print_friendly" %>
+  </div>
 
   <h1 id="submitted-hours">Submitted Hours</h1>
-  <table class="table delivery-table">
+  <span class="show-eye"><%= link_to (fa_icon('eye')), 'javascript:;', id: "show-submitted", class: 'sm-margin-left' %></span>
+  <table id="submitted-table" class="table hidden delivery-table">
     <thead>
       <tr>
         <th>Date</th>
