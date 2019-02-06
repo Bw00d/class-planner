@@ -15,6 +15,7 @@
         <th class="hidden-xs hidden-sm">Break</th>
         <th>Total</th>
         <th>Type</th>
+        <th>Dept.</th>
         <th colspan="1"></th>
         <th colspan="3"></th>
         <th colspan="1"><%= fa_icon('paper-plane') %></th>
@@ -39,6 +40,7 @@
               <%= link_to fa_icon('graduation-cap'), 'javascript:;' %>
             <% end %>
           </td>
+          <td><%= hour.department %></td>
           <td>
             <% if !hour.comment.empty? %>
               <%= link_to fa_icon('comment'), 'javascript:;',

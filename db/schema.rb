@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190130060935) do
+ActiveRecord::Schema.define(version: 20190206205648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 20190130060935) do
     t.string "work_type"
     t.integer "timesheet_id"
     t.boolean "submitted", default: false
+    t.string "department"
   end
 
   create_table "lead_quals", force: :cascade do |t|
@@ -179,6 +180,7 @@ ActiveRecord::Schema.define(version: 20190130060935) do
     t.boolean "instructor"
     t.string "cell_phone"
     t.string "work_phone"
+    t.string "ccc_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

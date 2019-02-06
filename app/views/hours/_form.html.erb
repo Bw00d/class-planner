@@ -37,6 +37,16 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :department %><br>
+    <%= f.label :department  , "Wildfire", :value => "WLFR"  %>
+    <%= f.radio_button :department , "WLFR", checked: true %>
+    <%= f.label :department  , "GIS", :value => "GIS" %>
+    <%= f.radio_button :department , "GIS" %>
+    <%= f.label :department  , "Emergency Managment", :value => "EMGT" %>
+    <%= f.radio_button :department , "EMGT" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :comment %>
     <%= f.text_area :comment, id: :hour_comment, class: "form-control" %>
   </div>
