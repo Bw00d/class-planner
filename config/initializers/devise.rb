@@ -156,7 +156,7 @@ Devise.setup do |config|
   config.remember_for = 1.year
 
   # Invalidates all the remember me tokens when the user signs out.
-  config.expire_all_remember_me_on_sign_out = true
+  config.expire_all_remember_me_on_sign_out = false
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
@@ -187,7 +187,7 @@ Devise.setup do |config|
   # :failed_attempts = Locks an account after a number of failed attempts to
   # sign in.
   # :none            = No lock strategy. You should handle locking by yourself.
-  config.lock_strategy = :failed_attempts
+  config.lock_strategy = :none
 
   # Defines which key will be used when locking and unlocking an account
   # config.unlock_keys = [:email]
