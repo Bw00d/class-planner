@@ -13467,6 +13467,16 @@ select {
 input[type="radio"] {
   margin-right: 15px;
 }
+
+/* line 46, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/hours.scss */
+#submitted-hours {
+  display: inline-block;
+}
+
+/* line 49, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/hours.scss */
+.hour-buttons {
+  margin-bottom: 40px;
+}
 /* line 1, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .pdf-page {
   width: 90%;
@@ -13491,38 +13501,39 @@ input[type="radio"] {
 }
 /* line 11, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .pdf-page .pdf-table {
+  width: 100%;
   margin-bottom: 10px;
 }
-/* line 13, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 14, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .pdf-page .pdf-table tr {
   line-height: 30px;
   border-spacing: 0;
 }
-/* line 17, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 18, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .pdf-page .pdf-table td {
   padding: 0px 10px;
 }
-/* line 21, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 22, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .pdf-page td.comment {
   line-height: 20px !important;
 }
 
-/* line 25, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 26, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 #timesheet {
   margin-top: 0 !important;
 }
 
-/* line 28, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 29, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 .form-footer {
   text-align: center;
 }
 
-/* line 31, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 32, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 h1, h2, h3, h4, h5 {
   margin: 10px;
 }
 
-/* line 34, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
+/* line 35, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/pdf.css.scss */
 #totals {
   margin-top: 10px;
 }
@@ -13546,6 +13557,11 @@ h1.welcome-message {
   padding-top: 20px;
   font-size: 2em;
   color: #5fc0dd;
+}
+
+/* line 16, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/users.css.scss */
+.delete-user-button {
+  margin-top: 50px;
 }
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
