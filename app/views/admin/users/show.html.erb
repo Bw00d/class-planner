@@ -1,12 +1,9 @@
 <% content_for :title, @user.full_name %>
 
-   
+
 <div class="row">
   <div id="show-user" class="col-md-8 center-block">
     <h1><%= t('.page_title') %></h1>
-    <div class="no-link-underline float-right">
-      <%= render partial: 'actions', locals: {user: @user} %>
-    </div>
     <div>
       <strong>Email:</strong>  <%= @user.email %>
     </div>
@@ -38,9 +35,9 @@
         <% @leads.each do |d| %>
           <%= link_to delivery_path(d) do %>
             <li>
-              <%= d.course.course_number %>  –  <%= d.course.title %>  |  
-              <%= d.start_date.try(:strftime, "%b %e") %> - 
-              <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  
+              <%= d.course.course_number %>  –  <%= d.course.title %>  |
+              <%= d.start_date.try(:strftime, "%b %e") %> -
+              <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |
               <%= display_location(d) %>
             </li>
           <% end %>
@@ -54,8 +51,8 @@
           <% @units.each do |d| %>
             <%= link_to delivery_path(d) do %>
               <li>
-                <%= d.course.course_number %>  –  <%= d.course.title %>  |  
-                <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |  
+                <%= d.course.course_number %>  –  <%= d.course.title %>  |
+                <%= d.start_date.try(:strftime, "%b %e") %> - <%= d.display_end_date.try(:strftime, "%b %e, %Y") %>  |
                 <%= display_location(d) %>
               </li>
             <% end %>
@@ -64,5 +61,15 @@
         <% end %>
       <% end %>
     <% end %>
+    <div class="no-link-underline float-left">
+      <% if current_user.admin? %>
+        </br>
+        <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@user), class: "btn edit-button btn-info"%></br>
+        <div class="delete-user-button">
+          <%= link_to "DELETE THIS USER", admin_user_path(@user), method: :delete,
+          data: { confirm: t('are_you_sure') }, class: "btn btn-danger" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
