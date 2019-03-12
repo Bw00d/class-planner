@@ -29,6 +29,7 @@ module Admin
       @leads = @user.deliveries.order(start_date: :asc)
       @units = @user.units
       @deliveries = @leads + @units
+      @current_hours = @user.hours.where(submitted: false)
     end
 
     # GET /admin/users/new
