@@ -150,16 +150,16 @@
               </li>
         <% end %>
       </ul>
-      <strong>Cost to Date:</strong> <%= number_to_currency(@delivery.cost_to_date) %>
-      <br><strong>Profit:</strong> <%= number_to_currency(@delivery.profit) %>
+      <%= link_to "ADD EXPENSE", 'javascript:;', class: "btn btn-success btn-xs", id: "add-cost-button" %>
     <% end %>
     <span id="cost-form">
       <h4>New Expense</h4>
       <%= render 'cost-form', delivery: @delivery %>
     </span>
-    <span id="add-cost-button">
-      <br><%= link_to "ADD EXPENSE", 'javascript:;', class: "btn btn-success btn-xs" %>
-    </span>
+    <div class="">
+      <strong>Cost to Date:</strong> <%= number_to_currency(@delivery.cost_to_date) %>
+      <br><strong>Profit:</strong> <%= number_to_currency(@delivery.profit) %>
+    </div>
   </div>
 
 
