@@ -6,6 +6,7 @@ class Delivery < ApplicationRecord
   validates :course_id, presence: true
   has_one :course
   has_many :unit_instructors, dependent: :destroy
+  has_many :costs
 
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
@@ -15,7 +16,7 @@ class Delivery < ApplicationRecord
   end
 
   def display_address
-    if self.address.present? 
+    if self.address.present?
       self.address + self.city + ', ' + "\n" + self.state + ' ' + self.zip
     else
       display_location(self)
@@ -23,8 +24,8 @@ class Delivery < ApplicationRecord
   end
 
   def display_location(place)
-    if place.city.present? && place.state.present? 
-      place.city + ', ' + place.state 
+    if place.city.present? && place.state.present?
+      place.city + ', ' + place.state
     elsif place.city.present? && !place.state.present?
       place.city
     elsif !place.city.present? && place.state.present?
@@ -53,7 +54,7 @@ class Delivery < ApplicationRecord
     end
   end
 
-  private 
+  private
 
     def set_date
       if self.end_date
@@ -62,4 +63,3 @@ class Delivery < ApplicationRecord
     end
 
 end
-

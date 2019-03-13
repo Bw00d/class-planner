@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :costs
   resources :timesheets
   resources :hours
   resources :unit_instructors

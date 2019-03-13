@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cost.price %>
+</p>
+
+<p>
+  <strong>Delivery:</strong>
+  <%= @cost.delivery_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cost.user_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @cost.comment %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cost.date %>
+</p>
+
+<%= link_to 'Edit', edit_cost_path(@cost) %> |
+<%= link_to 'Back', costs_path %>
