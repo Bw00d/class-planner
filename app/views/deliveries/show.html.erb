@@ -54,7 +54,9 @@
       </div>
       <div class="col-sm-4">
         <strong>Fees:</strong>
-        <%= @delivery.fees %>
+        $<%= @delivery.fees %>
+        <span class="md-margin-left"><strong>Profit:</strong>
+        <%= number_to_currency(@delivery.profit) %></span>
       </div>
       <div class="col-sm-4">
         <strong>Lead Instructor:</strong>
