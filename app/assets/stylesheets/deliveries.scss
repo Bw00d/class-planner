@@ -27,12 +27,12 @@ table.delivery-table tr:hover td {
 .comment_avatar {
   -moz-border-radius: 4em/4em;
     -webkit-border-radius: 4em 4em;
-    border-radius: 4em/4em; 
+    border-radius: 4em/4em;
     width:4em;
-    height:4em; 
+    height:4em;
     margin-bottom: 0;
 
-    overflow: hidden;  
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
@@ -52,7 +52,7 @@ table.delivery-table tr:hover td {
   /*color: #444;*/
   -moz-border-radius: .25em/.25em;
     -webkit-border-radius: .25em .25em;
-    border-radius: .25em/.25em; 
+    border-radius: .25em/.25em;
     padding: 5px 10px;
 }
 .comment_form_actions {
@@ -60,14 +60,14 @@ table.delivery-table tr:hover td {
     background-color: $gray-lighter !important;
     -moz-border-radius: .25em/.25em;
     -webkit-border-radius: .25em .25em;
-    border-radius: .25em/.25em; 
+    border-radius: .25em/.25em;
     border: none;
   }
 }
 .comment_form_field {
   textarea {
     height: 5em !important;
-    border-color: $gray-light !important; 
+    border-color: $gray-light !important;
     -moz-border-radius: 4px/4px;
     -webkit-border-radius: 4px 4px;
     border-radius: 4px/4px;
@@ -86,7 +86,7 @@ table.delivery-table tr:hover td {
     -moz-border-radius: 40px/40px;
     -webkit-border-radius: 40px 40px;
     border-radius: 40px/40px;
-    padding: 5px 15px; 
+    padding: 5px 15px;
     float: left;
     margin-right: 10px;
     a {
@@ -109,4 +109,6 @@ table.delivery-table tr:hover td {
 li.unit-instructor-name:hover {
    cursor: pointer;
  }
-
+#cost-form {
+  display: none;
+}

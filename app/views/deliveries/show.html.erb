@@ -127,9 +127,50 @@
     <strong>Notes:</strong>
     <%= easy_format(@delivery.notes) %>
   </p>
-  <% if current_user.admin? %>
-    <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
-  <% end %>
+  <div class="">
+    <% if current_user.admin? %>
+      <%= link_to (fa_icon('pencil-alt')),edit_delivery_path(@delivery), class: "btn edit-button btn-info"%></br>
+    <% end %>
+  </div>
   </br>
+  <div class="row">
+    <strong>Expenses:</strong>
+    <% if @delivery.costs %>
+      <ul>
+        <% @delivery.costs.each do |i| %>
+          <li><%= link_to i.description,  i %>
+              <span class="md-margin-left"><%= number_to_currency(i.price) %></span>
+              <span class="md-margin-left">
+                <%= link_to 'delete', i, method: :delete,
+                data: { confirm: 'Are you sure?' },
+                class: ' btn btn-danger btn-xs' %>
+              </span>
+              </li>
+        <% end %>
+      </ul>
+      <strong>Cost to Date:</strong> <%= number_to_currency(@delivery.cost_to_date) %>
+      <br><strong>Profit:</strong> <%= number_to_currency(@delivery.profit) %>
+    <% end %>
+    <span id="cost-form">
+      <h4>New Expense</h4>
+      <%= form_for @cost do |f| %>
+        <%= f.hidden_field :delivery_id, value: @delivery.id %>
+        <div class="form-group">
+          <%= f.label :description %></br>
+          <%= f.text_field :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+        <%= f.label :price %></br>
+        <%= f.text_field :price, class: 'form-control' %>
+        </div>
+        <%= f.submit "SUBMIT", id: "unit-instructor-submit", class: "btn btn-success btn-sm" %>
+      <% end %>
+    </span>
+    <span id="add-cost-button">
+      <br><%= link_to "ADD EXPENSE", 'javascript:;', class: "btn btn-success btn-xs" %>
+    </span>
+  </div>
+
+
   <div><%= commontator_thread(@delivery) %></div>
 </div>

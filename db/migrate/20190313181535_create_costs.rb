@@ -6,6 +6,7 @@ class CreateCosts < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.text :comment
       t.date :date
+      t.string :description
 
       t.timestamps
     end

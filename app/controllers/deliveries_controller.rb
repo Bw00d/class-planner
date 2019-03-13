@@ -12,6 +12,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries/1.json
   def show
     @unit_instructor = UnitInstructor.new
+    @cost = Cost.new
   end
 
   # GET /deliveries/new

@@ -1,5 +1,6 @@
 class CostsController < ApplicationController
   before_action :set_cost, only: [:show, :edit, :update, :destroy]
+  include SkipAuthorization
 
   # GET /costs
   # GET /costs.json
@@ -28,11 +29,11 @@ class CostsController < ApplicationController
 
     respond_to do |format|
       if @cost.save
-        format.html { redirect_to @cost, notice: 'Cost was successfully created.' }
-        format.json { render :show, status: :created, location: @cost }
+        format.html { redirect_back(fallback_location: @cost.delivery) }
+        # format.json { render :show, status: :created, location: @cost }
       else
-        format.html { render :new }
-        format.json { render json: @cost.errors, status: :unprocessable_entity }
+        format.html { redirect_back(fallback_location: @cost.delivery) }
+        # format.json { render json: @unit_instructor.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +57,7 @@ class CostsController < ApplicationController
   def destroy
     @cost.destroy
     respond_to do |format|
-      format.html { redirect_to costs_url, notice: 'Cost was successfully destroyed.' }
+      format.html { redirect_back(fallback_location: @cost.delivery)  }
       format.json { head :no_content }
     end
   end
@@ -69,6 +70,6 @@ class CostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cost_params
-      params.require(:cost).permit(:price, :delivery_id, :user_id, :comment, :date)
+      params.require(:cost).permit(:price, :delivery_id, :user_id, :comment, :date, :description)
     end
 end

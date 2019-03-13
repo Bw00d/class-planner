@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).on("turbolinks:load", function() {
-  
+
   $('.datepicker').datepicker();
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
@@ -21,4 +21,8 @@ $(document).on("turbolinks:load", function() {
     $(this).find('.destroy-instructor').toggle();
   });
 
+  $('#add-cost-button').click(function(){
+    $('#add-cost-button').hide();
+    $('#cost-form').show();
+  });
 });

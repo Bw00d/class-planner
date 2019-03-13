@@ -6,7 +6,7 @@ class Delivery < ApplicationRecord
   validates :course_id, presence: true
   has_one :course
   has_many :unit_instructors, dependent: :destroy
-  has_many :costs
+  has_many :costs, dependent: :destroy
 
   scope :scheduled, -> { where(booked: true) }
   scope :unscheduled, -> { where(booked: false) }
@@ -51,6 +51,22 @@ class Delivery < ApplicationRecord
   def display_end_date
     if self.end_date
       self.end_date - 1.day
+    end
+  end
+
+  def cost_to_date
+    if !self.costs.empty?
+      tally = 0
+      self.costs.each { |c| tally += c.price }
+      tally
+    else
+      0.00
+    end
+  end
+
+  def profit
+    if self.fees
+      self.fees.delete('^0-9').to_f - self.cost_to_date
     end
   end
 
