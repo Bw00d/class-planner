@@ -133,7 +133,7 @@
     <% end %>
   </div>
   </br>
-  <div class="row">
+  <div id="expenses-wrapper" class="row">
     <strong>Expenses:</strong>
     <% if @delivery.costs %>
       <ul>
@@ -153,18 +153,7 @@
     <% end %>
     <span id="cost-form">
       <h4>New Expense</h4>
-      <%= form_for @cost do |f| %>
-        <%= f.hidden_field :delivery_id, value: @delivery.id %>
-        <div class="form-group">
-          <%= f.label :description %></br>
-          <%= f.text_field :description, class: 'form-control', required: true %>
-        </div>
-        <div class="form-group">
-        <%= f.label :price %></br>
-        <%= f.text_field :price, class: 'form-control', required: true %>
-        </div>
-        <%= f.submit "SUBMIT", id: "unit-instructor-submit", class: "btn btn-success btn-sm" %>
-      <% end %>
+      <%= render 'cost-form', delivery: @delivery %>
     </span>
     <span id="add-cost-button">
       <br><%= link_to "ADD EXPENSE", 'javascript:;', class: "btn btn-success btn-xs" %>
