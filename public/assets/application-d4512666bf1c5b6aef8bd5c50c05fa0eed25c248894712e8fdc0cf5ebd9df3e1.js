@@ -47738,6 +47738,9 @@ $(document).on("turbolinks:load", function() {
   });
 
 });
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+;
 // Replace Rails's default confirm popup with our own version
 $.rails.allowAction = function (link) {
     "use strict";
@@ -47777,7 +47780,7 @@ $.rails.showConfirmationDialog = function (link) {
 // All this logic will automatically be available in application.js.
 
 $(document).on("turbolinks:load", function() {
-  
+
   $('.datepicker').datepicker();
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
@@ -47796,6 +47799,11 @@ $(document).on("turbolinks:load", function() {
     $(this).find('.destroy-instructor').toggle();
   });
 
+  $('#add-cost-button').click(function(){
+    $('#add-cost-button').hide();
+    $('#cost-form').show();
+  });
+  
 });
 $(document).on("turbolinks:load", () => FontAwesome.dom.i2svg());
 // This file contains JS code which is used across the entire Rails application.
@@ -47815,6 +47823,9 @@ $(document).on("turbolinks:load", function() {
   });
   $('.hour-comment').click(function() {
     $(this).hide();
+  });
+  $('.show-eye').click(function() {
+    $('#submitted-table').toggleClass('hidden');
   });
 });
 // Place all the behaviors and hooks related to the matching controller here.

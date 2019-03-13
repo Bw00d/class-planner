@@ -211,6 +211,11 @@ select {
   height: 30px;
 }
 
+/* line 324, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+.red-text {
+  color: #D20000;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -13091,6 +13096,17 @@ be a descendant of the grid when it is being dragged.
 .fc-unthemed .fc-list-empty {
   /* theme will provide own background */
   background-color: #eee; }
+/* line 4, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/costs.scss */
+#expenses-wrapper {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 8, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/costs.scss */
+.negative-income {
+  color: red;
+  font-weight: 600;
+}
 /* line 10, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 #deliveries {
   margin-bottom: 75px;
@@ -13212,6 +13228,11 @@ table.delivery-table tr:hover td {
 /* line 109, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
 li.unit-instructor-name:hover {
   cursor: pointer;
+}
+
+/* line 112, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/deliveries.scss */
+#cost-form {
+  display: none;
 }
 /* line 39, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 .page-header {
@@ -13412,6 +13433,11 @@ dt, dd {
 /* line 318, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 select {
   height: 30px;
+}
+
+/* line 324, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+.red-text {
+  color: #D20000;
 }
 /*// Place all the styles related to the Hours controller here.
 // They will automatically be included in application.css.
@@ -13762,6 +13788,11 @@ dt, dd {
 /* line 318, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
 select {
   height: 30px;
+}
+
+/* line 324, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/global.css.scss */
+.red-text {
+  color: #D20000;
 }
 
 /* line 5, /Users/bwood/code/rails/5.1/ccc-class-planner/app/assets/stylesheets/utility-classes.css.scss */
