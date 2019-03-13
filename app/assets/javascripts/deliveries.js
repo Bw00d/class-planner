@@ -25,4 +25,5 @@ $(document).on("turbolinks:load", function() {
     $('#add-cost-button').hide();
     $('#cost-form').show();
   });
+  
 });
