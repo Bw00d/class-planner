@@ -157,11 +157,11 @@
         <%= f.hidden_field :delivery_id, value: @delivery.id %>
         <div class="form-group">
           <%= f.label :description %></br>
-          <%= f.text_field :description, class: 'form-control' %>
+          <%= f.text_field :description, class: 'form-control', required: true %>
         </div>
         <div class="form-group">
         <%= f.label :price %></br>
-        <%= f.text_field :price, class: 'form-control' %>
+        <%= f.text_field :price, class: 'form-control', required: true %>
         </div>
         <%= f.submit "SUBMIT", id: "unit-instructor-submit", class: "btn btn-success btn-sm" %>
       <% end %>

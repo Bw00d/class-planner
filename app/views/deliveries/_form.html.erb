@@ -15,28 +15,32 @@
 
       <div class="form-group">
         <%= f.label :course_number %>
-        <%= f.text_field :course_number, id: :delivery_course_number, class: "form-control", placeholder: "COURSE NUMBER(EX. FRP-190)" %>
+        <%= f.text_field :course_number, id: :delivery_course_number,
+        class: "form-control", placeholder: "COURSE NUMBER(EX. FRP-190)" %>
       </div>
 
       <div class="form-group">
-        <%= f.select :course_id, options_for_select(Course.all.collect { | course | ["#{course.course_number} - #{(course.title)}", course.id] }, @delivery.course_id), {prompt: "CHOOSE COURSE"}, {} %>
+        <%= f.select :course_id, options_for_select(Course.all.collect {
+          | course | ["#{course.course_number} - #{(course.title)}", course.id]
+          }, @delivery.course_id), {prompt: "CHOOSE COURSE"}, {} %>
       </div>
 
       <div class="form-group">
         <%= f.label "Association" %>
-        <%= f.text_field :requestor, id: :delivery_requestor, class: "form-control", placeholder: "REQUEST ASSOCIATION" %>
+        <%= f.text_field :requestor, id: :delivery_requestor, class: "form-control",
+                         placeholder: "REQUEST ASSOCIATION" %>
       </div>
 
       <div class="form-group">
         <%= f.label :start_date %>
-        <%= f.text_field :start_date, id: :delivery_start_date, :data => {:provide => "datepicker"}, 
+        <%= f.text_field :start_date, id: :delivery_start_date, :data => {:provide => "datepicker"},
                          class: "form-control", placeholder: "START DATE" %>
       </div>
 
       <div class="form-group">
         <%= f.label :end_date %>
         <% if @delivery.end_date %>
-          <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"}, 
+          <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"},
                                 value: @delivery.display_end_date,  class: "form-control", placeholder: "END DATE" %>
         <% else %>
           <%= f.text_field :end_date, id: :delivery_end_date, :data => {:provide => "datepicker"}, class: "form-control", placeholder: "END DATE" %>
@@ -133,7 +137,7 @@
                 <%= f.label :invoiced, "Invoiced", id: :delivery_invoiced %></span>
 
        <span class='form-group md-margin-right'> <%= f.check_box :fac %>
-                     <%= f.label :fac, "FAC", id: :delivery_fac %></span>      
+                     <%= f.label :fac, "FAC", id: :delivery_fac %></span>
       </div>
 
       <div class="form-group">
@@ -147,5 +151,3 @@
     <% end %>
   </div>
 </div>
-
-
