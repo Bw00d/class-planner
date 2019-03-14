@@ -5,7 +5,7 @@
   <div id='deliveries' class="col-lg-10 col-sm-12 col-md-10 center-block">
     <h4>Deliveries</h4>
     <div class="table-responsive-sm">
-      
+
     <table class="table delivery-table">
       <thead>
         <tr>
@@ -16,14 +16,11 @@
           <th>Dates</th>
           <th>Association</th>
           <th>Location</th>
-          <th class="hidden-xs hidden-sm">Flyer</th>
-          <th class="hidden-xs hidden-sm">Sent</th>
-          <th class="hidden-xs hidden-sm">Reg Form</th>
           <th class="hidden-xs hidden-sm">Lead</th>
         </tr>
       </thead>
       <tbody>
-          
+
           <% @deliveries.scheduled.each_with_index do |delivery, n| %>
         <tr data-link="<%= delivery_path(delivery) %>" class="delivery-row" >
             <td><%= n+1 %></td>
@@ -33,9 +30,6 @@
             <td><%= delivery.start_date.try(:strftime, "%b %e") %> - <%= delivery.display_end_date.try(:strftime, "%b %e, %Y") %></td>
             <td><%= delivery.requestor %></td>
             <td><%= display_location(delivery) %></td>
-            <td class="hidden-xs hidden-sm"><%= check_box_tag 'Flyer made', delivery.flyer_made, delivery.flyer_made, disabled: true %> </td>
-            <td class="hidden-xs hidden-sm"><%= check_box_tag 'Flyer sent', delivery.flyer_sent, delivery.flyer_sent, disabled: true %> </td>
-            <td class="hidden-xs hidden-sm" ><%= check_box_tag 'Reg Form', delivery.reg_form, delivery.reg_form, disabled: true %> </td>
             <td class="hidden-xs hidden-sm" ><% if delivery.lead_instructor %><%= delivery.display_lead_instructor.last_name %><% end %> </td>
         </tr>
       <% end %>
@@ -71,15 +65,15 @@
     </table>
     <% end %>
     </div>
-     
-  
+
+
 
     <div><%= link_to 'New Delivery', new_delivery_path, class: 'btn btn-primary' %></div>
     </div>
   </div>
 
 
-<script type="text/javascript"> 
+<script type="text/javascript">
 
 
   $("tr[data-link]").click(function() {
