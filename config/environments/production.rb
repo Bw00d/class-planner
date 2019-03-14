@@ -8,6 +8,8 @@ Rails.application.configure do
                           exception_recipients: %w[bwoodreid@gmail.com]
                         }
 
+  config.action_mailer.default_url_options = { host: 'ccc-planner.herokuapp.com' }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
