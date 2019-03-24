@@ -3,14 +3,18 @@
     <p id="notice"><%= notice %></p>
 
       <p>
+        <strong>Description:</strong>
+        <%= @cost.description %>
+      </p>
+      <p>
         <strong>Price:</strong>
         <%= number_to_currency(@cost.price) %>
       </p>
 
-      <p>
+      <!-- <p>
         <strong>Delivery:</strong>
-        <%= @cost.delivery_id %>
-      </p>
+        <%#= @cost.delivery_id %>
+      </p> -->
 
       <p>
         <strong>User:</strong>

@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :cost_description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :price %>
     <%= form.text_field :price, id: :cost_price, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :delivery_id %>
-    <%= form.number_field :delivery_id, id: :cost_delivery_id, class: "form-control" %>
+    <%#= form.label :delivery_id %>
+    <%#= form.number_field :delivery_id, id: :cost_delivery_id, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :cost_user_id, class: "form-control" %>
+    <%#= form.label :user_id %>
+    <%#= form.number_field :user_id, id: :cost_user_id, class: "form-control" %>
   </div>
 
   <div class="form-group">
