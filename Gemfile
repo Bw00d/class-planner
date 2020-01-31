@@ -72,6 +72,7 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'rb-readline'
 
 group :test do
   gem 'database_cleaner'

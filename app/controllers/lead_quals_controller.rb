@@ -1,7 +1,7 @@
 class LeadQualsController < ApplicationController
 
   def create
-    @lead_qual = LeadQual.new(leaad_qual_params)
+    @lead_qual = LeadQual.new(lead_qual_params)
   end
   private
   def lead_qual_params
