@@ -5,7 +5,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries
   # GET /deliveries.json
   def index
-    @deliveries = Delivery.all.order('start_date ASC')
+    @deliveries = Delivery.where('extract(year  from start_date) = ?', 2020).order(start_date: :asc)
   end
 
   # GET /deliveries/1
