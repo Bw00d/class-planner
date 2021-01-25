@@ -36,6 +36,11 @@
           </ul>
         <% end %>
       <% end %>
-
+    </div>
+    <div class="col-md-8 center-block">
+      <% delivery_dates(@current_user.deliveries).each do |dd|  %>
+      <h3><%=  dd %></h3>
+      <% end %>
+    </div>
   </div>
 </div>
