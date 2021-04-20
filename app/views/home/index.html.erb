@@ -1,11 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 center-block">
-      <h1 class="welcome-message"><strong>
-        Welcome <%= current_user.first_name %></strong></h1>
-
-        <p><%= @username %>
-              <%= @password %></p>
+      <h1 class="welcome-message"><strong>zWelcome <%= current_user.first_name %></strong></h1>
       <p>You can see all of your deliveries at this page. You can keep track of your hours by
       clicking on your name and following the link to 'hours' in the drop-down menu.</p>
       <% if current_user.instructor? %>
