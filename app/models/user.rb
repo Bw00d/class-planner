@@ -64,7 +64,7 @@ class User < ApplicationRecord
   def units
     deliveries = []
     self.unit_instructors.each do |i|
-      if i && i.delivery.start_date.year == 2021
+      if i && i.delivery.start_date.year == 2022
         deliveries << Delivery.find(i.delivery_id)
       end
     end
